@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f7188ce-2ee2-4994-b32f-ce2d5d8844ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\postventa\custInfo\servicios\bloqueoDesbloqueoLineaIfi\contratos\desbloqueoLinea.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommonsException.xsd" MetadataType="Schema" ID="a00b9ab3-ffdb-4e0d-b9d9-a6f21dc8ec7b" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/CommonsException.xsd" />
+    <MetadataFile FileName="BloqueoDesbloqueoLineaIFI.wsdl" MetadataType="Wsdl" ID="189f8080-45cf-45b2-92eb-761ef6e87001" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/contratos/desbloqueoLinea.wsdl" />
+    <MetadataFile FileName="desbloqueoLinea.xsd" MetadataType="Schema" ID="62fb03a1-9106-4465-904d-c825e300a97a" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/desbloqueoLinea.xsd" />
+    <MetadataFile FileName="HeaderGeneric_v1.xsd" MetadataType="Schema" ID="b6d8abd8-1ce7-4ead-8d39-e9577f027292" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/HeaderGeneric_v1.0.xsd" />
+    <MetadataFile FileName="baseSchema.xsd" MetadataType="Schema" ID="86c9d592-6185-49b8-9a2e-aa7fa470693c" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/baseSchema.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

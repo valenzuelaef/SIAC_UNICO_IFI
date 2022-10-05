@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/ws" xmlns="" name="BloqueoDesbloqueoIMEIWSServiceDefinitions" targetNamespace="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <xs:schema xmlns:tns="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="BloqueoDesbloqueoIMEIRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para el bloqueo desbloqueo</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IMEI" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BloqueoDesbloqueoIMEIResponse">
+        <xs:annotation>
+          <xs:documentation>Documento de respuesta de hlr</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" />
+      <xs:element name="bloqueoIMEI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" ref="bloq:BloqueoDesbloqueoIMEIRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="bloqueoIMEIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" ref="bloq:BloqueoDesbloqueoIMEIResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="desbloqueoIMEI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" ref="bloq:BloqueoDesbloqueoIMEIRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="desbloqueoIMEIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/hlr/bloqueodesbloqueoimei/schemas/BloqueoDesbloqueoIMEI.xsd" ref="bloq:BloqueoDesbloqueoIMEIResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="bloqueoIMEI">
+    <s0:part name="parameters" element="s1:bloqueoIMEI" />
+  </s0:message>
+  <s0:message name="bloqueoIMEIResponse">
+    <s0:part name="parameters" element="s1:bloqueoIMEIResponse" />
+  </s0:message>
+  <s0:message name="desbloqueoIMEI">
+    <s0:part name="parameters" element="s1:desbloqueoIMEI" />
+  </s0:message>
+  <s0:message name="desbloqueoIMEIResponse">
+    <s0:part name="parameters" element="s1:desbloqueoIMEIResponse" />
+  </s0:message>
+  <s0:portType name="BloqueoDesbloqueoIMEIWS">
+    <s0:operation name="bloqueoIMEI" parameterOrder="parameters">
+      <s0:input message="s1:bloqueoIMEI" />
+      <s0:output message="s1:bloqueoIMEIResponse" />
+    </s0:operation>
+    <s0:operation name="desbloqueoIMEI" parameterOrder="parameters">
+      <s0:input message="s1:desbloqueoIMEI" />
+      <s0:output message="s1:desbloqueoIMEIResponse" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="BloqueoDesbloqueoIMEIWSServiceSoapBinding" type="s1:BloqueoDesbloqueoIMEIWS">
+    <s2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="bloqueoIMEI">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="desbloqueoIMEI">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="BloqueoDesbloqueoIMEIWSService">
+    <s0:port name="BloqueoDesbloqueoIMEIWSSoapPort" binding="s1:BloqueoDesbloqueoIMEIWSServiceSoapBinding">
+      <s2:address location="http://limdeseaiv22.tim.com.pe:8909/HLRBloqueoDesbloqueoIMEIWS/BloqueoDesbloqueoIMEIWS" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

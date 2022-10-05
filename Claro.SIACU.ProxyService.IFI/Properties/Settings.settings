@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Claro.SIACU.ProxyService.IFI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_RegistroAuditoriaWS_RegistroAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv25.tim.com.pe:8903/RegistroAuditoria/RegistroAuditoriaPortSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_ConsultaOpcionesAuditoriaWS_ConsultaOpcionesAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv25.tim.com.pe:8903/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_AuditoriaWS_EbsAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/AuditoriaWS/EbsAuditoria</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_ServiciosPostpagoWS_ServiciosPostPagoWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv24.tim.com.pe:8909/ServiciosPostPagoWS/ServiciosPostPagoWS</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_SIACU_EnvioCorreoSB_EnvioCorreoSBPortTypeSOAP11BindingQSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_WSGeneratePDF_EngineService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.223:8909/EngineService/EngineService</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_TransaccionOCC_TransaccionOCC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdesosbv05.tim.com.pe:8909/Billing_Services/BSCS/Transaction/TransaccionOCC</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_WSBRMS_REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://LIM-5S37KC2:8080/</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_IFI_SIACU_DigitalSignature_PRS_FirmaDigital_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.17.26.51:21000/PRS_FirmaDigital/SRV_PRS_FirmaDigital/Service/Exposition/EXP_FirmaDigital</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

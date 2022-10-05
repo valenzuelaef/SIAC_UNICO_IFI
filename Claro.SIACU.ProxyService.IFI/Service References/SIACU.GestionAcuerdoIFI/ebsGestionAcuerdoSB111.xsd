@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/postventa/gestionacuerdo/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/postventa/gestionacuerdo/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/GestionAcuerdoWS/ebsGestionAcuerdoSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="obtenerReintegroEquipoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="msisdn" type="xsd:string" />
+        <xsd:element name="coId" type="xsd:string" />
+        <xsd:element name="fechaTransaccion" type="xsd:string" />
+        <xsd:element name="cargoFijoNuevo" type="xsd:string" />
+        <xsd:element name="motivoApadece" type="xsd:string" />
+        <xsd:element name="flagEquipo" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerReintegroEquipoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="acuerdoOrigen" type="xsd:string" />
+        <xsd:element name="acuerdoId" type="xsd:string" />
+        <xsd:element name="coId" type="xsd:string" />
+        <xsd:element name="customerId" type="xsd:string" />
+        <xsd:element name="acuerdoEstado" type="xsd:string" />
+        <xsd:element name="acuerdoMontoApacedeTotal" type="xsd:string" />
+        <xsd:element name="acuerdoVigenciaMeses" type="xsd:string" />
+        <xsd:element name="acuerdoFechaInicio" type="xsd:string" />
+        <xsd:element name="acuerdoFechaFin" type="xsd:string" />
+        <xsd:element name="mesesAntiguedad" type="xsd:string" />
+        <xsd:element name="mesesPendientes" type="xsd:string" />
+        <xsd:element name="diasPendientes" type="xsd:string" />
+        <xsd:element name="codPlazoAcuerdo" type="xsd:string" />
+        <xsd:element name="descPlazoAcuerdo" type="xsd:string" />
+        <xsd:element name="acuerdoCaducado" type="xsd:string" />
+        <xsd:element name="diasVigencia" type="xsd:string" />
+        <xsd:element name="descripcionEstadoAcuerdo" type="xsd:string" />
+        <xsd:element name="montoApadece" type="xsd:string" />
+        <xsd:element name="cargoFijoDiario" type="xsd:string" />
+        <xsd:element name="precioLista" type="xsd:string" />
+        <xsd:element name="precioVenta" type="xsd:string" />
+        <xsd:element name="diasBloqueo" type="xsd:string" />
+        <xsd:element name="finVigenciaReal" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerConsultaAcuerdoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="valor" type="xsd:string" />
+        <xsd:element name="tipo" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="acuerdoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="acuerdo">
+        <xsd:complexType>
+          <xsd:attribute name="acuerdoId" type="xsd:string" />
+          <xsd:attribute name="coId" type="xsd:string" />
+          <xsd:attribute name="nroContrato" type="xsd:string" />
+          <xsd:attribute name="customerId" type="xsd:string" />
+          <xsd:attribute name="custcode" type="xsd:string" />
+          <xsd:attribute name="numeroTelefono" type="xsd:string" />
+          <xsd:attribute name="tipo" type="xsd:string" />
+          <xsd:attribute name="origen" type="xsd:string" />
+          <xsd:attribute name="numeroPcs" type="xsd:string" />
+          <xsd:attribute name="diasBloqSusp" type="xsd:string" />
+          <xsd:attribute name="tipoPenalidadId" type="xsd:string" />
+          <xsd:attribute name="acuerdoPor" type="xsd:string" />
+          <xsd:attribute name="fechaRenovacion" type="xsd:string" />
+          <xsd:attribute name="fechaActivacion" type="xsd:string" />
+          <xsd:attribute name="plazoAcuerdo" type="xsd:string" />
+          <xsd:attribute name="finVigenciaIni" type="xsd:string" />
+          <xsd:attribute name="finVigenciaReal" type="xsd:string" />
+          <xsd:attribute name="estadoAcuerdo" type="xsd:string" />
+          <xsd:attribute name="estadoAcuerdoDes" type="xsd:string" />
+          <xsd:attribute name="estadoContrato" type="xsd:string" />
+          <xsd:attribute name="estadoContratoDes" type="xsd:string" />
+          <xsd:attribute name="tipoAcuerdo" type="xsd:string" />
+          <xsd:attribute name="tipoAcuerdoDes" type="xsd:string" />
+          <xsd:attribute name="tmcode" type="xsd:string" />
+          <xsd:attribute name="codPlazoAcuerdo" type="xsd:string" />
+          <xsd:attribute name="flagRenovacionEquipo" type="xsd:string" />
+          <xsd:attribute name="flagReposicion" type="xsd:string" />
+          <xsd:attribute name="fechaContrato" type="xsd:string" />
+          <xsd:attribute name="nombreCliente" type="xsd:string" />
+          <xsd:attribute name="razonSocial" type="xsd:string" />
+          <xsd:attribute name="direccion" type="xsd:string" />
+          <xsd:attribute name="desCampana" type="xsd:string" />
+          <xsd:attribute name="precioLista" type="xsd:string" />
+          <xsd:attribute name="precioLista6Meses" type="xsd:string" />
+          <xsd:attribute name="codEquipo" type="xsd:string" />
+          <xsd:attribute name="precioVenta" type="xsd:string" />
+          <xsd:attribute name="precioVenta6Meses" type="xsd:string" />
+          <xsd:attribute name="desPlanTarif" type="xsd:string" />
+          <xsd:attribute name="montoPenalidad" type="xsd:string" />
+          <xsd:attribute name="fechaFinAcuerdo" type="xsd:string" />
+          <xsd:attribute name="fechaBloqSusp" type="xsd:string" />
+          <xsd:attribute name="flagApadece" type="xsd:string" />
+          <xsd:attribute name="flagExigible" type="xsd:string" />
+          <xsd:attribute name="diasExigible" type="xsd:string" />
+          <xsd:attribute name="flagExigibleDes" type="xsd:string" />
+          <xsd:attribute name="nroFacturas" type="xsd:string" />
+          <xsd:attribute name="montoApadeceAnterior" type="xsd:string" />
+          <xsd:attribute name="pagoPenalidad" type="xsd:string" />
+          <xsd:attribute name="flagPenalidadOrigen" type="xsd:string" />
+          <xsd:attribute name="vigenciaMeses" type="xsd:string" />
+          <xsd:attribute name="total" type="xsd:string" />
+          <xsd:attribute name="fechaFin" type="xsd:string" />
+          <xsd:attribute name="origenAcuerdo" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="obtenerConsultaAcuerdoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaAcuerdosResponse" type="acuerdoType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

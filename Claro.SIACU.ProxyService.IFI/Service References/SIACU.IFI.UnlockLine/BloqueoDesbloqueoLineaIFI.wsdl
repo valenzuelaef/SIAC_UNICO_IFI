@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:gen="http://claro.com.pe/generic/messageFormat/v1.0/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:com="http://claro.com.pe/eai/ebs/xsd/CommonsException" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/types" name="BloqueoDesbloqueoLineaIFI" targetNamespace="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:ns1="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/v1" elementFormDefault="qualified">
+      <xsd:import schemaLocation="../esquemas/HeaderGeneric_v1.0.xsd" namespace="http://claro.com.pe/generic/messageFormat/v1.0/" />
+      <xsd:import schemaLocation="../esquemas/CommonsException.xsd" namespace="http://claro.com.pe/eai/ebs/xsd/CommonsException" />
+      <xsd:import schemaLocation="../esquemas/desbloqueoLinea.xsd" namespace="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/types" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="headerRequest">
+    <wsdl:part name="HeaderRequest" element="gen:HeaderRequest" />
+  </wsdl:message>
+  <wsdl:message name="headerResponse">
+    <wsdl:part name="HeaderResponse" element="gen:HeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="desbloqueoLineaRequestMsg">
+    <wsdl:part name="request" element="ns1:desbloqueoLineaRequest" />
+  </wsdl:message>
+  <wsdl:message name="desbloqueoLineaResponseMsg">
+    <wsdl:part name="response" element="ns1:desbloqueoLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fault">
+    <wsdl:part name="Fault" element="com:IntegrationError" />
+  </wsdl:message>
+  <wsdl:portType name="BloqueoDesbloqueoLineaIFIPortType">
+    <wsdl:operation name="desbloqueoLinea">
+      <wsdl:input message="tns:desbloqueoLineaRequestMsg" />
+      <wsdl:output message="tns:desbloqueoLineaResponseMsg" />
+      <wsdl:fault name="Fault" message="tns:Fault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BloqueoDesbloqueoLineaIFIPortTypeSOAP11Binding" type="tns:BloqueoDesbloqueoLineaIFIPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="desbloqueoLinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/desbloqueoLinea" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:headerRequest" part="HeaderRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:headerResponse" part="HeaderResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BloqueoDesbloqueoLineaIFIPortTypeSOAP12Binding" type="tns:BloqueoDesbloqueoLineaIFIPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="desbloqueoLinea">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/desbloqueoLinea" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:headerRequest" part="HeaderRequest" use="literal" />
+        <soap12:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:headerResponse" part="HeaderResponse" use="literal" />
+        <soap12:body use="literal" parts="response" />
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap12:fault use="literal" name="Fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BloqueoDesbloqueoLineaIFIService">
+    <wsdl:port name="ebsBloqueoDesbloqueoLineaIFISB11Port" binding="tns:BloqueoDesbloqueoLineaIFIPortTypeSOAP11Binding">
+      <soap:address location="http://172.17.26.44:20000/BloqueoDesbloqueoLineaIFI/ebsBloqueoDesbloqueoLineaIFISB11Port" />
+    </wsdl:port>
+    <wsdl:port name="ebsBloqueoDesbloqueoLineaIFISB12Port" binding="tns:BloqueoDesbloqueoLineaIFIPortTypeSOAP12Binding">
+      <soap12:address location="http://172.17.26.44:20000/BloqueoDesbloqueoLineaIFI/ebsBloqueoDesbloqueoLineaIFISB12Port" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6421b087-1e89-44d7-8782-fe2b59f1802c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53727/PostIFIService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PostIFIService141.xsd" MetadataType="Schema" ID="d466e25d-245b-4a30-bcf1-cb2f5a602720" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd14" />
+    <MetadataFile FileName="PostIFIService16.xsd" MetadataType="Schema" ID="04e5c579-e3b3-4f98-8d89-823d7ec7e1f6" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd17" />
+    <MetadataFile FileName="PostIFIService21.xsd" MetadataType="Schema" ID="164d20ea-dad5-4c54-90a0-1d1235199fa3" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd22" />
+    <MetadataFile FileName="PostIFIService23.xsd" MetadataType="Schema" ID="27d3f96f-e144-4b0e-a036-fc400030b48c" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd41" />
+    <MetadataFile FileName="PostIFIService211.xsd" MetadataType="Schema" ID="5eff5c05-3a5c-4e0f-bc7d-ac25309a6192" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd25" />
+    <MetadataFile FileName="PostIFIService9.xsd" MetadataType="Schema" ID="94c70a06-e487-4384-b22a-92b25687dd9a" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd9" />
+    <MetadataFile FileName="PostIFIService212.xsd" MetadataType="Schema" ID="8d5bda1a-dc60-4a7c-a296-400534f1341a" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd24" />
+    <MetadataFile FileName="PostIFIService22.xsd" MetadataType="Schema" ID="48c46f9f-dd62-4117-8ee4-7faf78c0aa91" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd40" />
+    <MetadataFile FileName="PostIFIService213.xsd" MetadataType="Schema" ID="023b67e8-b96a-401d-98d9-8ac3c1082fcf" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd27" />
+    <MetadataFile FileName="PostIFIService1.xsd" MetadataType="Schema" ID="6188f682-2255-4edd-9d69-71f1cc7fe8b5" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PostIFIService11.xsd" MetadataType="Schema" ID="969bd224-bed7-4cd0-b8e2-5991f0a58849" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd11" />
+    <MetadataFile FileName="PostIFIService10.xsd" MetadataType="Schema" ID="5a1a9cc1-126b-4e07-8860-2a932fd31f9f" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd10" />
+    <MetadataFile FileName="PostIFIService221.xsd" MetadataType="Schema" ID="466bd4b8-6311-4574-bcbc-14fcc8a0d709" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd39" />
+    <MetadataFile FileName="PostIFIService13.xsd" MetadataType="Schema" ID="75525358-7fd8-4a7c-84b0-d481d367fd6a" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd13" />
+    <MetadataFile FileName="PostIFIService222.xsd" MetadataType="Schema" ID="f8bceb62-b180-41d0-b1bd-b1956a5a1d69" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd38" />
+    <MetadataFile FileName="PostIFIService20.xsd" MetadataType="Schema" ID="ed03eba2-06cf-4728-96ed-ee56c88f44bd" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd21" />
+    <MetadataFile FileName="PostIFIService19.xsd" MetadataType="Schema" ID="90c783f2-0687-4290-8ff7-b06310340ef7" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd20" />
+    <MetadataFile FileName="PostIFIService214.xsd" MetadataType="Schema" ID="82d7d2fb-dbd4-4d48-bd3a-5394006c6e96" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd23" />
+    <MetadataFile FileName="PostIFIService7.xsd" MetadataType="Schema" ID="39633d90-8dd6-406e-979a-5292cf622366" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PostIFIService26.xsd" MetadataType="Schema" ID="f37c3eed-6d91-4f39-a24a-17fd8ff57778" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd45" />
+    <MetadataFile FileName="PostIFIService8.xsd" MetadataType="Schema" ID="44785155-2f61-4225-b77b-0a633cbb6018" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd8" />
+    <MetadataFile FileName="PostIFIService215.xsd" MetadataType="Schema" ID="ecc5b21c-aa78-4797-90f5-52c4673e07be" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd30" />
+    <MetadataFile FileName="PostIFIService18.xsd" MetadataType="Schema" ID="ce45ab7b-1489-46d9-8fc0-6b8ed64368ab" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd19" />
+    <MetadataFile FileName="PostIFIService216.xsd" MetadataType="Schema" ID="b32781d9-8d71-4322-a9d6-37e8d646855b" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd28" />
+    <MetadataFile FileName="PostIFIService2.xsd" MetadataType="Schema" ID="74626ea2-b303-4ff1-b4f4-b0c3f67fcb36" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd7" />
+    <MetadataFile FileName="PostIFIService27.xsd" MetadataType="Schema" ID="f932d85d-5fb4-4799-9e05-964f44c78910" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd46" />
+    <MetadataFile FileName="PostIFIService217.xsd" MetadataType="Schema" ID="99be3e56-e956-453b-83cf-20716addf2ec" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd36" />
+    <MetadataFile FileName="PostIFIService218.xsd" MetadataType="Schema" ID="df5ed2a6-b126-49e2-b386-c3fe17ef3fd2" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd29" />
+    <MetadataFile FileName="PostIFIService5.xsd" MetadataType="Schema" ID="7cd48be9-7517-4b34-b3a6-d08e100a16ff" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PostIFIService24.xsd" MetadataType="Schema" ID="52963108-8220-48df-a6d9-bde27074e67f" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd42" />
+    <MetadataFile FileName="PostIFIService17.xsd" MetadataType="Schema" ID="b2449942-2101-4542-99f6-17547aaef932" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd18" />
+    <MetadataFile FileName="PostIFIService4.xsd" MetadataType="Schema" ID="c21e005d-ddad-496d-8a6e-bce010e1cdf3" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PostIFIService241.xsd" MetadataType="Schema" ID="96c34ca6-425a-463f-8b8c-d397f7bd1060" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd43" />
+    <MetadataFile FileName="PostIFIService219.xsd" MetadataType="Schema" ID="1db34373-edd7-484f-9e71-e98034dccf3e" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd32" />
+    <MetadataFile FileName="PostIFIService2110.xsd" MetadataType="Schema" ID="bfc25c35-75a3-4415-a14f-c06e858583a2" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd35" />
+    <MetadataFile FileName="PostIFIService2111.xsd" MetadataType="Schema" ID="7486b841-2aca-47cf-9185-693faf0189a2" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd34" />
+    <MetadataFile FileName="PostIFIService2112.xsd" MetadataType="Schema" ID="174bfe8f-ec60-4be7-b467-69cd57b81bc1" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd33" />
+    <MetadataFile FileName="PostIFIService2113.xsd" MetadataType="Schema" ID="a3ffe963-82d6-487d-8e2c-da052b9ec6dd" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd37" />
+    <MetadataFile FileName="PostIFIService.xsd" MetadataType="Schema" ID="789c33d7-be27-4442-9219-73555777a2b5" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PostIFIService15.xsd" MetadataType="Schema" ID="9c7ba07a-581c-43e0-b09d-1967a4039963" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd16" />
+    <MetadataFile FileName="PostIFIService3.xsd" MetadataType="Schema" ID="0758b325-c46c-445a-b6a3-665a301b7299" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd6" />
+    <MetadataFile FileName="PostIFIService2114.xsd" MetadataType="Schema" ID="4a407be5-2e42-4f75-b4aa-2eeb36f69fb3" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd31" />
+    <MetadataFile FileName="PostIFIService2115.xsd" MetadataType="Schema" ID="1a7f6e59-63c6-4582-a711-06200b77b07f" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd26" />
+    <MetadataFile FileName="PostIFIService.wsdl" MetadataType="Wsdl" ID="d0833565-0d45-402f-b9ac-d06a968a2349" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?wsdl" />
+    <MetadataFile FileName="PostIFIService6.xsd" MetadataType="Schema" ID="7e3f54fa-ce31-48cf-9f42-54d8033b99db" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PostIFIService25.xsd" MetadataType="Schema" ID="89042397-95fa-4b8a-bb50-b1cfce8fcbab" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd44" />
+    <MetadataFile FileName="PostIFIService12.xsd" MetadataType="Schema" ID="39bee4f8-a662-40dc-ad05-5d90ed615115" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd12" />
+    <MetadataFile FileName="PostIFIService14.xsd" MetadataType="Schema" ID="faa180b5-0e0a-41b0-be57-d336012c5fde" SourceId="1" SourceUrl="http://localhost:53727/PostIFIService.svc?xsd=xsd15" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

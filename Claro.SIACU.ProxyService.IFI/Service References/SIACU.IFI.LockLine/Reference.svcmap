@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15cdb100-008f-4211-a150-b5a9f1874d6c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\postventa\custInfo\servicios\bloqueoDesbloqueoLineaIfi\contratos\bloqueoLinea.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="bloqueoLinea.xsd" MetadataType="Schema" ID="dc89b0dd-a119-4030-82c9-2488c818c59b" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/bloqueoLinea.xsd" />
+    <MetadataFile FileName="CommonsException.xsd" MetadataType="Schema" ID="8642e59c-4cc3-4552-8cb9-dd60f8aa35f9" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/CommonsException.xsd" />
+    <MetadataFile FileName="HeaderGeneric_v1.xsd" MetadataType="Schema" ID="5e1193f8-4a38-49f7-b77a-60c07fcf3e55" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/HeaderGeneric_v1.0.xsd" />
+    <MetadataFile FileName="baseSchema.xsd" MetadataType="Schema" ID="ee5dae52-90fd-4ae1-837f-5f19c6cdb818" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/esquemas/baseSchema.xsd" />
+    <MetadataFile FileName="BloqueoDesbloqueoLineaIFI.wsdl" MetadataType="Wsdl" ID="1b44d0e8-3511-4dbd-b577-acd70fcae13a" SourceId="1" SourceUrl="file:///C:/postventa/custInfo/servicios/bloqueoDesbloqueoLineaIfi/contratos/bloqueoLinea.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

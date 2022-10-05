@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AC8C921-DE6D-426E-B16E-80E7CCF0B7F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Claro.SIACU.ProxyService.IFI</RootNamespace>
+    <AssemblyName>Claro.SIACU.ProxyService.IFI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RedirectWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACFixed.CustomerHFC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACFixed.CustomerLTE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACFixed.PCRFConnectorLTE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACFixed.ServAddHFC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACFixed.ServAddLTE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACPost.Customer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACSecurity.Permissions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.BillingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.ConsultIGV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.GestionAcuerdoIFI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.IFI.LockLine\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.IFI.TransaccionInteracciones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.IFI.UnlockLine\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.LockEquipment\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.OnBaseLoadDocumentIFI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACU.TriacionPostpagoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIACUConsultaSeguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransaccionesInternetLTEWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AuditoriaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ConsultaOpcionesAuditoriaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RegistroAuditoriaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiciosPostpagoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SIACU.DigitalSignature\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SIACU.EnvioCorreoSB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TransaccionOCC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSBRMS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSGeneratePDF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.ListaResponseOpcional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.ListaSesionesObtenidas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.obtenerSesionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.parametrosAuditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.registrarComunicacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\Claro.SIACU.ProxyService.IFI.RedirectWS.validarComunicacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RedirectWS\ValidarCredencialesSUService.wsdl" />
+    <None Include="Service References\RedirectWS\ValidarCredencialesSUWSSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.actualizarDireccionInstalacionEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarCodigoClientePorLineaCuentaEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarDatosPorCodigoClienteEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarDatosPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarLineasDesactivasPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarListaTelefonoPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarServicioPorCodigoClienteEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.consultarServicioPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.desactivarContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerHFC.obtenerCuentasPorFiltroEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerHFC\ebsClienteHFC.wsdl" />
+    <None Include="Service References\SIACFixed.CustomerHFC\ebsClienteHFC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.actualizarDireccionInstalacionEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.buscarPorNumeroServicioEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarCodigoClientePorLineaCuentaEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarDatosPorCodigoClienteEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarDatosPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarLineasDesactivasPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarListaTelefonoPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarServicioPorCodigoClienteEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.consultarServicioPorCodigoContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.desactivarContratoEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.CustomerLTE.obtenerCuentasPorFiltroEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.CustomerLTE\ClienteLTEWS.wsdl" />
+    <None Include="Service References\SIACFixed.CustomerLTE\ebsClientesLTESB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.PCRFConnectorLTE.consultarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\PCRFConnectorWS.wsdl" />
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\PCRFWSSOAP11Port.wsdl" />
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\PCRFWSSOAP11Port.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddHFC.activarServiciosAdicionalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddHFC.desactivarServiciosAdicionalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddHFC.ejecutarReconexionServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddHFC.ejecutarSuspencionServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddHFC.ParametroType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\ebsServiciosHFCSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddHFC\ebsServiciosHFCService.wsdl" />
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.activaDesactivaServiciosProgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.activaDesactivaServiciosProgResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.activDesactivServicioComercialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.activDesactivServicioComercialResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutaActivaDesactivaServiciosProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutaActivaDesactivaServiciosProgramadoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutarReconexionServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutarReconexionServicioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutarSuspencionServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.ejecutarSuspencionServicioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasConsultarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasConsultarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasEditarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasEditarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasEliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasEliminarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasRegistrarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.tareasProgramadasRegistrarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.validarActivaDesactivaServiciosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\Claro.SIACU.ProxyService.IFI.SIACFixed.ServAddLTE.validarActivaDesactivaServiciosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACFixed.ServAddLTE\ServiciosLTEService.wsdl" />
+    <None Include="Service References\SIACFixed.ServAddLTE\ServiciosLTEWSSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.compromisoPago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.ConsultaTriados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.contrato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.datosClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.HistCambioSIMLinea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.HistEstadosLinea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.historicoAcciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.HistPlanLinea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.ListaFechaFactura.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.ListaServicios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.obtenerDatosBscsExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.penalidad_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\Claro.SIACU.ProxyService.IFI.SIACPost.Customer.ServiciosLinea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACPost.Customer\SIACPostpagoConsultasWSServiceDefinitions.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.AccesoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.AplicativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.DireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.EmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.JerarquiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerAplicativosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerDatosEmpleadoPorAreaModalidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerDatosEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerDatosUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerDireccionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerEmpleadosPorAreaModalidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerEmpleadosPorAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerJerarquiasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerModalidadesPorAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerOpcionesPorUsuarioPorAppResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerOpcionesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerPaginaOpcionesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerPerfilesPorAppResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerRangosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.leerUsuariosPorAppPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.ModalidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.OpcionesUsuarioAppResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.OpcionesUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.PaginaOpcionesUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.PerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.RangosHLRResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.registroAuditoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.RegistroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\Claro.SIACU.ProxyService.IFI.SIACSecurity.Permissions.UsuariosAppPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACSecurity.Permissions\EbsAuditoriaServiceDefinitions.wsdl" />
+    <None Include="Service References\SIACU.BillingService\Claro.SIACU.ProxyService.IFI.SIACU.BillingService.AuditType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.BillingService\TransaccionOCC.wsdl" />
+    <None Include="Service References\SIACU.BillingService\TransaccionOCC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.ConsultIGV\Claro.SIACU.ProxyService.IFI.SIACU.ConsultIGV.consultarIGVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.ConsultIGV\ConsultaIGV.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.ConsultIGV\ConsultaIGV1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.ConsultIGV\ConsultaIGVWS.wsdl" />
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\Claro.SIACU.ProxyService.IFI.SIACU.GestionAcuerdoIFI.obtenerConsultaAcuerdoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\Claro.SIACU.ProxyService.IFI.SIACU.GestionAcuerdoIFI.obtenerReintegroEquipoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\ebsGestionAcuerdoSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\ebsGestionAcuerdoSB111.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\GestionAcuerdoWS.wsdl" />
+    <None Include="Service References\SIACU.IFI.LockLine\baseSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.LockLine\BloqueoDesbloqueoLineaIFI.wsdl" />
+    <None Include="Service References\SIACU.IFI.LockLine\bloqueoLinea.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.LockLine\Claro.SIACU.ProxyService.IFI.SIACU.IFI.LockLine.bloqueoLineaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.LockLine\Claro.SIACU.ProxyService.IFI.SIACU.IFI.LockLine.HeaderResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.LockLine\CommonsException.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.LockLine\HeaderGeneric_v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\Claro.SIACU.ProxyService.IFI.SIACU.IFI.TransaccionInteracciones.auditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\Claro.SIACU.ProxyService.IFI.SIACU.IFI.TransaccionInteracciones.AuditType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\Claro.SIACU.ProxyService.IFI.SIACU.IFI.TransaccionInteracciones.ListaResponseOpcional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\TransaccionInteracciones.wsdl" />
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\TransaccionInteracciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\TransaccionInteracciones1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\baseSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\BloqueoDesbloqueoLineaIFI.wsdl" />
+    <None Include="Service References\SIACU.IFI.UnlockLine\Claro.SIACU.ProxyService.IFI.SIACU.IFI.UnlockLine.desbloqueoLineaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\Claro.SIACU.ProxyService.IFI.SIACU.IFI.UnlockLine.HeaderResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\CommonsException.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\desbloqueoLinea.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.IFI.UnlockLine\HeaderGeneric_v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIACU.LockEquipment\BloqueoDesbloqueoIMEIWSServiceDefinitions.wsdl" />
+    <None Include="Service References\SIACU.LockEquipment\Claro.SIACU.ProxyService.IFI.SIACU.LockEquipment.BloqueoDesbloqueoIMEIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.OnBaseLoadDocumentIFI\Claro.SIACU.ProxyService.IFI.SIACU.OnBaseLoadDocumentIFI.DocumentosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.OnBaseLoadDocumentIFI\item.wsdl" />
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.activaTriacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.ActivaTriacionResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.actualizaDatosMenoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.BloqueaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.BloquearContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.bscs_cambioDatosMenoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.bscs_cambioDireccionPostal_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.bscs_cambioNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.bscs_DesbloqueaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.cambioDireccionPostalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.cambioNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.DesbloquearContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.EjecutaTriacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.listarTicklersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.listarTicklersResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.listarTriacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Claro.SIACU.ProxyService.IFI.SIACU.TriacionPostpagoWS.listarTriacionesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\SIACPostpagoTxWSServiceDefinitions.wsdl" />
+    <None Include="Service References\SIACUConsultaSeguridad\Claro.SIACU.ProxyService.IFI.SIACUConsultaSeguridad.leerOpcionesMenuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACUConsultaSeguridad\Claro.SIACU.ProxyService.IFI.SIACUConsultaSeguridad.menuType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACUConsultaSeguridad\Claro.SIACU.ProxyService.IFI.SIACUConsultaSeguridad.seguridadType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACUConsultaSeguridad\Claro.SIACU.ProxyService.IFI.SIACUConsultaSeguridad.verificaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIACUConsultaSeguridad\ConsultaSeguridad.wsdl" />
+    <None Include="Service References\TransaccionesInternetLTEWS\Claro.SIACU.ProxyService.IFI.TransaccionesInternetLTEWS.desactivarContratoResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransaccionesInternetLTEWS\ebstransaccionesinternetlteSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransaccionesInternetLTEWS\ebstransaccionesinternetlteSB111.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransaccionesInternetLTEWS\TransaccionesInternetLTEWS.wsdl" />
+    <None Include="Web References\AuditoriaWS\AccesoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\AplicativoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\DireccionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\EbsAuditoriaServiceDefinitions.wsdl" />
+    <None Include="Web References\AuditoriaWS\EmpleadoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\JerarquiaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\ModalidadResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\OpcionesUsuarioAppResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\OpcionesUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\PaginaOpcionesUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\PerfilResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\RangosHLRResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuditoriaWS\RegistroResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriaWS\UsuariosAppPerfilResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\ConsultaOpcionesAuditoriaPortSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\ConsultaOpcionesAuditoriaPortSB110.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\ConsultaOpcionesAuditoriaService.wsdl" />
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerDatosEmpleadoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerDatosUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerOpcionesPorDefaultResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerOpcionesPorProductoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerOpcionesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerPaginaOpcionesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\leerUsuariosPorAppPerfilResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConsultaOpcionesAuditoriaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RegistroAuditoriaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RegistroAuditoriaWS\RegistroAuditoriaPortSB11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RegistroAuditoriaWS\registroAuditoriaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RegistroAuditoriaWS\RegistroAuditoriaService.wsdl" />
+    <None Include="Web References\ServiciosPostpagoWS\consultaServicioEstadoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\contratosTelefonoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\registraServicioComercialResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\serviciosBSCSServComercialResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\serviciosContratoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiciosPostpagoWS\ServiciosPostPagoWSServiceDefinitions.wsdl" />
+    <None Include="Web References\SIACU.DigitalSignature\EXP_FirmaDigital.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SIACU.DigitalSignature\EXP_FirmaDigital0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SIACU.DigitalSignature\EXP_FirmaDigital1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SIACU.DigitalSignature\EXP_FirmaDigital2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SIACU.DigitalSignature\firmarDocumentoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SIACU.DigitalSignature\PRS_FirmaDigital_v1.wsdl" />
+    <None Include="Web References\SIACU.DigitalSignature\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SIACU.EnvioCorreoSB\AuditTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SIACU.EnvioCorreoSB\EnvioCorreoSB.wsdl" />
+    <None Include="Web References\SIACU.EnvioCorreoSB\EnvioCorreoSB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SIACU.EnvioCorreoSB\ParametroOpcionalComplexType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SIACU.EnvioCorreoSB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TransaccionOCC\AuditType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TransaccionOCC\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TransaccionOCC\TransaccionOCC.wsdl" />
+    <None Include="Web References\TransaccionOCC\TransaccionOCC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSBRMS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSBRMS\REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService.wsdl" />
+    <None Include="Web References\WSBRMS\REGLASAUTOMATIZACIONDEDOCUMENTOSResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSGeneratePDF\EngineService.wsdl" />
+    <None Include="Web References\WSGeneratePDF\EngineService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSGeneratePDF\ewsComposeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSGeneratePDF\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\RedirectWS\" />
+    <WCFMetadataStorage Include="Service References\SIACFixed.CustomerHFC\" />
+    <WCFMetadataStorage Include="Service References\SIACFixed.CustomerLTE\" />
+    <WCFMetadataStorage Include="Service References\SIACFixed.PCRFConnectorLTE\" />
+    <WCFMetadataStorage Include="Service References\SIACFixed.ServAddHFC\" />
+    <WCFMetadataStorage Include="Service References\SIACFixed.ServAddLTE\" />
+    <WCFMetadataStorage Include="Service References\SIACPost.Customer\" />
+    <WCFMetadataStorage Include="Service References\SIACSecurity.Permissions\" />
+    <WCFMetadataStorage Include="Service References\SIACU.BillingService\" />
+    <WCFMetadataStorage Include="Service References\SIACU.ConsultIGV\" />
+    <WCFMetadataStorage Include="Service References\SIACU.GestionAcuerdoIFI\" />
+    <WCFMetadataStorage Include="Service References\SIACU.IFI.LockLine\" />
+    <WCFMetadataStorage Include="Service References\SIACU.IFI.TransaccionInteracciones\" />
+    <WCFMetadataStorage Include="Service References\SIACU.IFI.UnlockLine\" />
+    <WCFMetadataStorage Include="Service References\SIACU.LockEquipment\" />
+    <WCFMetadataStorage Include="Service References\SIACU.OnBaseLoadDocumentIFI\" />
+    <WCFMetadataStorage Include="Service References\SIACU.TriacionPostpagoWS\" />
+    <WCFMetadataStorage Include="Service References\SIACUConsultaSeguridad\" />
+    <WCFMetadataStorage Include="Service References\TransaccionesInternetLTEWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransaccionesInternetLTEWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransaccionesInternetLTEWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransaccionesInternetLTEWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACUConsultaSeguridad\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACUConsultaSeguridad\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACUConsultaSeguridad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RedirectWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RedirectWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RedirectWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.17.26.51:21000/PRS_FirmaDigital/SRV_PRS_FirmaDigital/Service/Exposition/EXP_FirmaDigital%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SIACU.DigitalSignature\</RelPath>
+      <UpdateFromURL>http://172.17.26.51:21000/PRS_FirmaDigital/SRV_PRS_FirmaDigital/Service/Exposition/EXP_FirmaDigital%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_SIACU_DigitalSignature_PRS_FirmaDigital_WS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.139:8909/Billing_Services/BSCS/Transaction/TransaccionOCC%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TransaccionOCC\</RelPath>
+      <UpdateFromURL>http://172.19.74.139:8909/Billing_Services/BSCS/Transaction/TransaccionOCC%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_TransaccionOCC_TransaccionOCC</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SIACU.EnvioCorreoSB\</RelPath>
+      <UpdateFromURL>http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_SIACU_EnvioCorreoSB_EnvioCorreoSBPortTypeSOAP11BindingQSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.202:8909/AuditoriaWS/EbsAuditoria%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AuditoriaWS\</RelPath>
+      <UpdateFromURL>http://172.19.74.202:8909/AuditoriaWS/EbsAuditoria%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_AuditoriaWS_EbsAuditoriaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.206:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ConsultaOpcionesAuditoriaWS\</RelPath>
+      <UpdateFromURL>http://172.19.74.206:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_ConsultaOpcionesAuditoriaWS_ConsultaOpcionesAuditoriaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.206:8909/RegistroAuditoria/RegistroAuditoriaPortSB11%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RegistroAuditoriaWS\</RelPath>
+      <UpdateFromURL>http://172.19.74.206:8909/RegistroAuditoria/RegistroAuditoriaPortSB11%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_RegistroAuditoriaWS_RegistroAuditoriaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.74.223:8909/EngineService/EngineService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSGeneratePDF\</RelPath>
+      <UpdateFromURL>http://172.19.74.223:8909/EngineService/EngineService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_WSGeneratePDF_EngineService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lim-5s37kc2:8080/%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSBRMS\</RelPath>
+      <UpdateFromURL>http://lim-5s37kc2:8080/%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_WSBRMS_REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://limdeseaiv24.tim.com.pe:8909/ServiciosPostPagoWS/ServiciosPostPagoWS%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiciosPostpagoWS\</RelPath>
+      <UpdateFromURL>http://limdeseaiv24.tim.com.pe:8909/ServiciosPostPagoWS/ServiciosPostPagoWS%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Claro_SIACU_ProxyService_IFI_ServiciosPostpagoWS_ServiciosPostPagoWSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.ConsultIGV\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.ConsultIGV\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.ConsultIGV\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddHFC\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddHFC\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddHFC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddLTE\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddLTE\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.ServAddLTE\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerHFC\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerHFC\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerHFC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerLTE\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerLTE\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.CustomerLTE\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACPost.Customer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACPost.Customer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACPost.Customer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACSecurity.Permissions\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACSecurity.Permissions\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACSecurity.Permissions\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACFixed.PCRFConnectorLTE\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.TriacionPostpagoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.BillingService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.BillingService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.BillingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.GestionAcuerdoIFI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.LockEquipment\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.LockEquipment\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.LockEquipment\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.OnBaseLoadDocumentIFI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.OnBaseLoadDocumentIFI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.OnBaseLoadDocumentIFI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.TransaccionInteracciones\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.LockLine\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.LockLine\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.LockLine\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.UnlockLine\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.UnlockLine\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIACU.IFI.UnlockLine\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

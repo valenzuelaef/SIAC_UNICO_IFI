@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/postventa/transaccionesinternetltews/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/postventa/transaccionesinternetltews/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.44:20000/TransaccionesInternetLTEWS/ebstransaccionesinternetlteSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="desactivarContratoRequest" type="desactivarContratoRequestType" />
+  <xsd:element name="desactivarContratoResponse" type="desactivarContratoResponseType" />
+  <xsd:complexType name="desactivarContratoRequestType">
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="base:auditRequestType" />
+      <xsd:element name="codigoCliente" type="xsd:string" />
+      <xsd:element name="codigoCuenta" type="xsd:string" />
+      <xsd:element name="codigoContrato" type="xsd:string" />
+      <xsd:element name="codigoServicio" type="xsd:string" />
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="reason" type="xsd:string" />
+      <xsd:element name="FechaProgramacion" type="xsd:string" />
+      <xsd:element name="FechaProgramacionSOT" type="xsd:string" />
+      <xsd:element name="franjaHoraria" type="xsd:string" />
+      <xsd:element name="tipTra" type="xsd:string" />
+      <xsd:element name="montoPenalidad" type="xsd:string" />
+      <xsd:element name="tipoCliente" type="xsd:string" />
+      <xsd:element name="areaPCS" type="xsd:string" />
+      <xsd:element name="motivoPCS" type="xsd:string" />
+      <xsd:element name="subMotivoPCS" type="xsd:string" />
+      <xsd:element name="cicloFacturacion" type="xsd:string" />
+      <xsd:element name="numeroDocumento" type="xsd:string" />
+      <xsd:element name="usuarioAsesor" type="xsd:string" />
+      <xsd:element name="tipoServicio" type="xsd:string" />
+      <xsd:element name="observaciones" type="xsd:string" />
+      <xsd:element name="flagOccApadece" type="xsd:string" />
+      <xsd:element name="flagNdPcs" type="xsd:string" />
+      <xsd:element name="cacDac" type="xsd:string" />
+      <xsd:element name="montoPCS" type="xsd:string" />
+      <xsd:element name="montoFidelizacion" type="xsd:string" />
+      <xsd:element name="trace" type="xsd:string" />
+      <xsd:element name="fechaActual" type="xsd:string" />
+      <xsd:element name="codigoPlano" type="xsd:string" />
+      <xsd:element name="codigoMotivo" type="xsd:string" />
+      <xsd:element name="mailUsuarioAplicacion" type="xsd:string" />
+      <xsd:element name="codigoInteraccion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="listaRequestOpcional" type="base:ListaRequestOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="desactivarContratoResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="responseStatus" type="base:ResponseStatus" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="responseData" type="ResponseData" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseData">
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="base:auditResponseType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaAdicionalResponse" type="base:ListaResponseOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

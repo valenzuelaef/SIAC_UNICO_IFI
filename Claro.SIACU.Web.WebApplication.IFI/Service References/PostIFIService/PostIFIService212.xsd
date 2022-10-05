@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.IsOkGetKey" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.IsOkGetKey" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="IsOkGetKeyRequestCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IsOkGetKeyRequestCommon" nillable="true" type="tns:IsOkGetKeyRequestCommon" />
+</xs:schema>

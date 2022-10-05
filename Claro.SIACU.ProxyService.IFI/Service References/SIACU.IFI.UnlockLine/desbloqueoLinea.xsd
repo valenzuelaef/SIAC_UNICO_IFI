@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns:tns="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/postventa/bloqueodesbloqueolineaifi/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="baseSchema.xsd" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="desbloqueoLineaRequest" type="tns:desbloqueoLineaRequest" />
+  <xsd:element name="desbloqueoLineaResponse" type="tns:desbloqueoLineaResponse" />
+  <xsd:complexType name="desbloqueoLineaRequest">
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="base:auditRequestType" />
+      <xsd:element name="desbloqueo" type="tns:desbloqueoType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="desbloqueoLineaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="requestId" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="requestLte" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codMsg" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="messague" type="xsd:string" />
+      <xsd:element name="auditResponse" type="base:auditResponseType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="desbloqueoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="coId" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ticklerCode" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="userName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

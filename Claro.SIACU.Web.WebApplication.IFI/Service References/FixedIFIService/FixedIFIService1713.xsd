@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" />
+  <xs:complexType name="PCRFPaquetesAdicRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:PCRFPaquetesAdicMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicRequest" nillable="true" type="tns:PCRFPaquetesAdicRequest" />
+  <xs:complexType name="PCRFPaquetesAdicMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PCRFPaquetesAdicBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:PCRFPaquetesAdicHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicMessageRequest" nillable="true" type="tns:PCRFPaquetesAdicMessageRequest" />
+  <xs:complexType name="PCRFPaquetesAdicBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consultarRequest" nillable="true" type="tns:PCRFPaquetesAdicConsultarRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicBodyRequest" nillable="true" type="tns:PCRFPaquetesAdicBodyRequest" />
+  <xs:complexType name="PCRFPaquetesAdicConsultarRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantDias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flagHistorico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicConsultarRequest" nillable="true" type="tns:PCRFPaquetesAdicConsultarRequest" />
+  <xs:complexType name="PCRFPaquetesAdicHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q2:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicHeaderRequest" nillable="true" type="tns:PCRFPaquetesAdicHeaderRequest" />
+  <xs:complexType name="PCRFPaquetesAdicBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consultarPaquetesResponseType" nillable="true" type="tns:consultarPaquetesResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdicBodyResponse" nillable="true" type="tns:PCRFPaquetesAdicBodyResponse" />
+  <xs:complexType name="consultarPaquetesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseData" nillable="true" type="tns:responseData" />
+      <xs:element minOccurs="0" name="responseStatus" nillable="true" type="tns:responseStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="consultarPaquetesResponse" nillable="true" type="tns:consultarPaquetesResponse" />
+  <xs:complexType name="responseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataPCRF" nillable="true" type="tns:responsedataPCRF" />
+      <xs:element minOccurs="0" name="listaFact" nillable="true" type="tns:ArrayOfPCRFPaquetesAdqueridos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseData" nillable="true" type="tns:responseData" />
+  <xs:complexType name="responsedataPCRF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datosConsumidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="motivoDegradacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paqueteComprado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="velocidadDegradada" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responsedataPCRF" nillable="true" type="tns:responsedataPCRF" />
+  <xs:complexType name="ArrayOfPCRFPaquetesAdqueridos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PCRFPaquetesAdqueridos" nillable="true" type="tns:PCRFPaquetesAdqueridos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPCRFPaquetesAdqueridos" nillable="true" type="tns:ArrayOfPCRFPaquetesAdqueridos" />
+  <xs:complexType name="PCRFPaquetesAdqueridos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="canal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cargoFijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cicloFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaAct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCPR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="motivoDeg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="planBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoProducto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCRFPaquetesAdqueridos" nillable="true" type="tns:PCRFPaquetesAdqueridos" />
+  <xs:complexType name="responseStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseStatus" nillable="true" type="tns:responseStatus" />
+</xs:schema>

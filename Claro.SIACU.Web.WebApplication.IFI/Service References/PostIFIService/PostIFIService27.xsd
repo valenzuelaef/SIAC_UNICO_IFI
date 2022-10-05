@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" />
+  <xs:complexType name="validarCoberturaMessageRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:validarMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="validarCoberturaMessageRequest" nillable="true" type="tns:validarCoberturaMessageRequest" />
+  <xs:complexType name="validarMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:BodyRequestValidarCobertura" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:validarHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarMessageRequest" nillable="true" type="tns:validarMessageRequest" />
+  <xs:complexType name="BodyRequestValidarCobertura">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="validarCoberturaRequest" nillable="true" type="tns:ValidarCoberturaItemRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BodyRequestValidarCobertura" nillable="true" type="tns:BodyRequestValidarCobertura" />
+  <xs:complexType name="ValidarCoberturaItemRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" nillable="true" type="tns:cliente" />
+      <xs:element minOccurs="0" name="codAplicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="tns:direccion" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="latitud" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longitud" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="motivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="solicitud" nillable="true" type="tns:solicitud" />
+      <xs:element minOccurs="0" name="tipoTecnologia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidarCoberturaItemRequest" nillable="true" type="tns:ValidarCoberturaItemRequest" />
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDoc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cliente" nillable="true" type="tns:cliente" />
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="direccion" nillable="true" type="tns:direccion" />
+  <xs:complexType name="solicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="equipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="plan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="venta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="solicitud" nillable="true" type="tns:solicitud" />
+  <xs:complexType name="validarHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q2:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarHeaderRequest" nillable="true" type="tns:validarHeaderRequest" />
+  <xs:complexType name="validarCoberturaMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:validarMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarCoberturaMessageResponse" nillable="true" type="tns:validarCoberturaMessageResponse" />
+  <xs:complexType name="validarMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:validarBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:validarHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarMessageResponse" nillable="true" type="tns:validarMessageResponse" />
+  <xs:complexType name="validarBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="validarCoberturaResponse" nillable="true" type="tns:validarCoberturaResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarBodyResponse" nillable="true" type="tns:validarBodyResponse" />
+  <xs:complexType name="validarCoberturaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseData" nillable="true" type="tns:responseData" />
+      <xs:element minOccurs="0" name="responseStatus" nillable="true" type="tns:responseStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarCoberturaResponse" nillable="true" type="tns:validarCoberturaResponse" />
+  <xs:complexType name="responseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codPlano" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="exiteCobertura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaTecnologiasDisponibles" nillable="true" type="tns:ArrayOfListaTecnologiasDisponibles" />
+      <xs:element minOccurs="0" name="tipoTecnologia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseData" nillable="true" type="tns:responseData" />
+  <xs:complexType name="ArrayOfListaTecnologiasDisponibles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListaTecnologiasDisponibles" nillable="true" type="tns:ListaTecnologiasDisponibles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListaTecnologiasDisponibles" nillable="true" type="tns:ArrayOfListaTecnologiasDisponibles" />
+  <xs:complexType name="ListaTecnologiasDisponibles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codPlano" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTecnologiasDisponibles" nillable="true" type="tns:ListaTecnologiasDisponibles" />
+  <xs:complexType name="responseStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="detalleError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacionError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseStatus" nillable="true" type="tns:responseStatus" />
+  <xs:complexType name="validarHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validarHeaderResponse" nillable="true" type="tns:validarHeaderResponse" />
+</xs:schema>

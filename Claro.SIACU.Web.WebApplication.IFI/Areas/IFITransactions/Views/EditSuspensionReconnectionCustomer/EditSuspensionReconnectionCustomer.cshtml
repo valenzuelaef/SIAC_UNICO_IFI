@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="ContentEditSuspension">
+
+
+    <div class="container-fluid">
+
+
+        <div class="col-md-12">
+            <div id="tabChangePhoneNumber" role="tabpanel" percent="0%">
+                <div class="panel claro-panel-primary">
+                    <div class="panel-heading">
+                        SUSPENSIÓN / RECONEXIÓN TEMPORAL
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" style="text-align:left">Fecha Suspensión:</label>
+                                <div class=" col-sm-3">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm" id="txtDateSuspension" placeholder="DD/MM/AAAA">
+                                        <label id="calendartxtStartDate" class="btn transaction-button input-group-addon" for="txtDateSuspension">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" style="text-align:left">Fecha  Reactivación:</label>
+                                <div class=" col-sm-3">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm" id="txtDateReact" placeholder="DD/MM/AAAA">
+                                        <label id="calendartxtEndDate" class="btn transaction-button input-group-addon" for="txtDateReact">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" style="text-align:left">Costo de reconexión (S/ Inc. IGV):</label>
+                                <div class=" col-sm-3">
+                                    <input type="text" style="text-align:right;" id="txtImpPagar" class="form-control input-sm" readonly />
+                                </div>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="chkRetencion" />
+                                    <strong>Fidelizar</strong>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label text-left" style="text-align:left">Envío por E-mail:</label>
+
+                                <div class="col-sm-1" style="width:12px;">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="chkEmail" type="checkbox" value="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control input-sm" id="txtEmail" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label text-left" for="ddlCACDAC" style="text-align:left">Punto de Atención:</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control input-sm" id="ddlCACDAC"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtNotas" class="col-sm-3 control-label" style="text-align:left">Notas:</label>
+                                <div class="col-sm-6">
+                                    <textarea id="txtNotas" class="form-control" rows="6"></textarea>
+                                </div>
+                            </div>
+
+                            <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert" style="display:none">
+                                <button type="button" id="closeErrorAlert" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong><span id="lblErrorMessage"></span></strong>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-12 text-center">
+                                    <button id="btnSave" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                    <button id="btnClose" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                    <button id="btnConstancy" type="button" class="btn transaction-button" data-toggle="modal" data-target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ReadRecordPDF/ReadRecord")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/EditSuspensionReconnectionCustomer")
+
+
+
+
+

@@ -1,0 +1,157 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="PackageHistory" class="container-fluid" style="background-color:white">
+    <div class=" form-group" style="display:none;">
+    </div>
+    <div class="row">
+
+        <div>
+            <center>
+                <div class="form-inline ">
+                    @* INI - RF-04 - Evalenzs*@
+
+                    <div class="col-sm-12col-sm-offset-2">
+                        <div class="panel panel-default">
+
+                            <div >
+                                <div class="panel-body" style="padding-bottom:4px">
+                                    <center>
+
+                                        <table class="table table-condensed " style="width:50%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-sm-5" style="border:hidden;"><label class="control-label">Código Cliente:</label></td>
+                                                    <td class="col-sm-5" style="border:hidden;"><label id="lblCodCliente" class="text-message-info"></label></td>
+                                                    <td class="col-md-4" style="border:hidden;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-5" style="border:hidden;"><label class="control-label">Nombre y Apellido Cliente:</label></td>
+                                                    <td class="col-sm-5" style="border:hidden;"><label id="lblCliente" class="text-message-info"></label></td>
+                                                    <td class="col-md-4" style="border:hidden;" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-5" style="border:hidden;"><label class="control-label">Nombre y Apellido Contacto:</label></td>
+                                                    <td class="col-sm-5" style="border:hidden;"><label id="lblContacto" class="text-message-info"></label></td>
+                                                    <td class="col-md-4" style="border:hidden;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-5" style="border:hidden;"><label class="control-label">Ciclo de facturación:</label></td>
+                                                    <td class="col-sm-5" style="border:hidden;"><label id="lblCiclo" class="text-message-info"></label></td>
+                                                    <td class="col-md-4" style="border:hidden;"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </center>
+
+                                 
+            </div>
+            </div>
+            </div>
+
+                        <div>
+                            <br />
+                            <center>
+                                <div class="form-inline ">
+
+                                    <div class="col-md-8">
+                                        <div class="col-sm-4">
+                                            <br />
+                                            <label class="control-label" style="vertical-align: middle;">&nbsp;&nbsp;Fecha de Adquisición   </label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="control-label">Desde:</label>
+
+                                            <div class="input-daterange input-group input-group-sm">
+                                                <input type="text" class="form-control" id="txtfecInicio" name="" autocomplete="off" placeholder="DD/MM/YYYY"  />
+                                                <label class="input-group-addon btn transaction-button" for="txtfecInicio" style="padding: 3px 12px;">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </label>
+                                            </div>
+
+                                            <br />
+                                            <br />
+                                            <label class="control-label">Hasta:</label>
+
+                                            <div class="input-daterange input-group input-group-sm">
+                                                <input type="text" class="form-control" id="txtfecFin" name="" autocomplete="off" placeholder="DD/MM/YYYY" />
+                                                <label class="input-group-addon btn transaction-button" for="txtfecFin" style="padding: 3px 12px;">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Tipo de paquete:</label>
+                                                <select id="cboTipoPaquete" class="form-control input-sm"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <center>
+                                            <div class="form-inline ">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn transaction-button btn-sm" id="btnBuscar"><span class="glyphicon glyphicon-search">&nbsp;</span>Buscar </button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="button" class="btn transaction-button btn-sm" id="btnLimpiar"><span class="glyphicon glyphicon-remove">&nbsp;</span>Limpiar </button>
+                                                </div>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+
+            </div>
+
+
+            @* FIN - RF-04 - Evalenzs*@
+            </div>
+            </center>
+        </div>
+
+
+        <div>
+            <div id="table-prototipe" class="table">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="tblPackageHistory" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                <thead>
+                                    <tr class="claro-bg-primary">
+                                        <th class="col-md-3">Bolsa <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                        <th>Vigencia-Fecha Vencimiento <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                        <th>Costo S/. <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                        <th>Tipo de Paquete<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                        <th>Fecha de Adquisicion<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                        <th>Estado  <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+<input id="hidFechaIni" type="hidden" name="hidFechaIni" />
+<input id="hidFechaFin" type="hidden" name="hidFechaFin" />
+<script type="text/javascript">
+    var TiposPaquetesHistoricoPaquetes = "@ViewData["TiposPaquetesHistoricoPaquetes"]";
+    var RangoDiasHistoricoPaquetes = "@ViewData["RangoDiasHistoricoPaquetes"]";
+</script>
+
+
+    @Scripts.Render("~/bundles/IFITransactions/PackageHistory-siacu")
+    @*<script src="~/Areas/IFITransactions/Scripts/PackageHistory/PackageHistory.js"></script>*@

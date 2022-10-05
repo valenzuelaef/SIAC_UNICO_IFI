@@ -1,0 +1,1588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DF58FF7-AA00-4B43-B11C-795FC1253147}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Claro.SIACU.Web.WebApplication.IFI</RootNamespace>
+    <AssemblyName>Claro.SIACU.Web.WebApplication.IFI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Framework\Binaries\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Framework\Binaries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\Common.cs" />
+    <Compile Include="App_Start\BundleConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\IFITransactions\Admin\BundleConfig.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\AuthController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ChangeBillingCycleController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ChangeServiceAddressController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\DuplicateReceiptsController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ChangePostalAddressController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\IFIPackagePurchaseServicesController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\MailReceiptController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ChangeMinorController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\PackageHistoryController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\PCRFConsultationController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\PlanMigrationController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ScheduledTasksController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\ServiceLockController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\RedirectController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\UnlockServiceController.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\DgFechasTypeVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\EstCivTypeVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\InteriorType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\LastInvoiceData.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ManzanaType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\NacTypeVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ScheduledTasksHelper\CacDacType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ScheduledTasksHelper\EstCivType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ScheduledTasksHelper\ScheduledTransaction.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ScheduledTasksHelper\StateType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ScheduledTasksHelper\TransactionType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\UbigeoType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\UrbType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ViaType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ZoneType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\PostpaidServices\ServicesBSCSType.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\PostpaidServices\ServicesType.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ChangeMinorModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ChangePostalAddressModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ChangeServiceAddressModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\WebResponse.cs" />
+    <Compile Include="Areas\IFITransactions\Models\SolicitudModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\DireccionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ClienteModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ClientDataAddModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ConsultIGVModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ConsultSecurityModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\DuplicateReceiptsModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\IFIPackagePurchaseServicesModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\MailReceiptModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\NotificacionDireccionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\PCRFConsultationModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\PlanMigrationModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ScheduledTasksModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ScheduledTransactionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\SecurityModel.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\CommonServicesController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\RetentionCancelServicesController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\SuspensionReconnectionCustomerBaseController.cs" />
+    <Compile Include="Areas\IFITransactions\Controllers\SuspensionReconnectionCustomerController.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\CacDacTypeVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\CustomerData.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\Fixed\OrderSubTypeViewModel.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\Fixed\StringManipulation.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\GenericItem.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\ListItemVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\TimeZoneVM.cs" />
+    <Compile Include="Areas\IFITransactions\Helpers\CommonServices\Typification.cs" />
+    <Compile Include="Areas\IFITransactions\IFITransactionsAreaRegistration.cs" />
+    <Compile Include="Areas\IFITransactions\Models\CommonServices.cs" />
+    <Compile Include="Areas\IFITransactions\Models\InteractionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\RetentionCancelServicesModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\SendEmailModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\SendEmailSBModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ServiceLockModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\SuspensionReconnectionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\TemplateInteractionModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\TypificationModel.cs" />
+    <Compile Include="Areas\IFITransactions\Models\ValidarCoberturaModel.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mappings\AutoMapperConfig.cs" />
+    <Compile Include="Mappings\ServiceModelToViewModelMappings.cs" />
+    <Compile Include="Mappings\ViewModelToServiceModelMappings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CommonIFIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FixedIFIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PostIFIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecurityAudit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WirelessIFIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\IFITransactions\Content\bootstrap.css" />
+    <Content Include="Areas\IFITransactions\Content\bootstrap.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap-theme.css" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap-theme.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap.css" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap4.css" />
+    <Content Include="Areas\IFITransactions\Content\css\dataTables.bootstrap.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\datepicker.css" />
+    <Content Include="Areas\IFITransactions\Content\css\font-awesome.css" />
+    <Content Include="Areas\IFITransactions\Content\css\font-awesome.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\Footer.css" />
+    <Content Include="Areas\IFITransactions\Content\css\GeoDir\leaflet.css" />
+    <Content Include="Areas\IFITransactions\Content\css\Header.css" />
+    <Content Include="Areas\IFITransactions\Content\css\isotope.css" />
+    <Content Include="Areas\IFITransactions\Content\css\jquery-ui.css" />
+    <Content Include="Areas\IFITransactions\Content\css\jquery.bar.css" />
+    <Content Include="Areas\IFITransactions\Content\css\jquery.dataTables.min.css" />
+    <Content Include="Areas\IFITransactions\Content\css\jquery.dataTables.select.css" />
+    <Content Include="Areas\IFITransactions\Content\css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Areas\IFITransactions\Content\css\magic-check.css" />
+    <Content Include="Areas\IFITransactions\Content\css\MyContainer.css" />
+    <Content Include="Areas\IFITransactions\Content\css\Site-Transaction.css" />
+    <Content Include="Areas\IFITransactions\Content\css\Site.css" />
+    <Content Include="Areas\IFITransactions\Content\css\stilo1.css" />
+    <Content Include="Areas\IFITransactions\Content\css\TreeView.css" />
+    <Content Include="Areas\IFITransactions\Content\Lib\bootstrap-datepicker.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\bootstrap.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\bootstrap.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\dataTables.bootstrap.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\GeoDir\siacu_ifi_mapa_cobertura.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\hoverIntent-touch.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-1.8.3.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-1.9.1.min.js" />
+    <None Include="Areas\IFITransactions\Content\Lib\jquery-2.0.0.intellisense.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-2.0.0.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-2.0.0.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-ui.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.bar.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.blockUI.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.dataTables.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.dataTables.select.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.numeric.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.scrollbar.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.scrollbar.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.smartmenus.bootstrap.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.smartmenus.bootstrap.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.smartmenus.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.smartmenus.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.sticky.js" />
+    <None Include="Areas\IFITransactions\Content\Lib\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.validate.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.validate.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\moment-es.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\moment.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\respond.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\respond.matchmedia.addListener.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\respond.matchmedia.addListener.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\respond.min.js" />
+    <None Include="Areas\IFITransactions\Content\Lib\_references.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\AuthUser\AuthUser.js" />
+    <Content Include="Areas\IFITransactions\Scripts\AuthUser\AuthUser.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ChangeBillingCycle\ChangeBillingCycle.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ChangeMinor\ChangeMinor.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroAppCommon.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroCommon.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroLayout.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroModalLoad.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroModalTemplate.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroOptionsDefault.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroRedirect.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroSession.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ClaroValidate.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ContactoGrilla.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\EditSuspensionReconnectionCustomer.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ChangePostalAddress\ChangePostalAddress.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ChangeServiceAddress\ChangeServiceAddress.js" />
+    <Content Include="Areas\IFITransactions\Scripts\DuplicateReceipts\DuplicateReceipts.js" />
+    <Content Include="Areas\IFITransactions\Scripts\IFIPackagePurchaseServices\IFIPackagePurchaseServices.js" />
+    <Content Include="Areas\IFITransactions\Scripts\MailReceipt\MailReceipt.js" />
+    <Content Include="Areas\IFITransactions\Scripts\PackageHistory\PackageHistory.js" />
+    <Content Include="Areas\IFITransactions\Scripts\PCRFConsultation\PCRFConsultation.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\plupload.full.min.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\ReadRecordPdf\ReadRecord.js" />
+    <Content Include="Areas\IFITransactions\Scripts\PlanMigration\ChooseCoreServicesByPlan.js" />
+    <Content Include="Areas\IFITransactions\Scripts\PlanMigration\ChoosePlan.js" />
+    <Content Include="Areas\IFITransactions\Scripts\PlanMigration\PlanMigration.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ScheduledTasks\ScheduledTasks.js" />
+    <Content Include="Areas\IFITransactions\Scripts\ServiceLock\ServiceLock.js" />
+    <Content Include="Areas\IFITransactions\Scripts\UnlockService\UnlockService.js" />
+    <Content Include="Areas\IFITransactions\Content\Site.css" />
+    <Content Include="Areas\IFITransactions\Scripts\ServiceLock\ValidateServiceLock.js" />
+    <Content Include="Areas\IFITransactions\Scripts\TestSecurity\TestSecurity.js" />
+    <Content Include="Areas\IFITransactions\Scripts\UnlockService\ValidateUnlockService.js" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\Footer.css" />
+    <Content Include="Content\css\Header.css" />
+    <Content Include="Content\css\isotope.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquery.bar.css" />
+    <Content Include="Content\css\jquery.dataTables.min.css" />
+    <Content Include="Content\css\jquery.dataTables.select.css" />
+    <Content Include="Content\css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Content\css\jquery.steps.css" />
+    <Content Include="Content\css\magic-check.css" />
+    <Content Include="Content\css\MyContainer.css" />
+    <Content Include="Content\css\Site-Transaction.css" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\stilo1.css" />
+    <Content Include="Content\css\TreeView.css" />
+    <Content Include="Content\Lib\BloqueoF12.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\GeoDir\Control.FullScreen.js" />
+    <Content Include="Areas\IFITransactions\Content\Lib\GeoDir\leaflet.js" />
+    <Content Include="Content\Lib\jquery.steps.js" />
+    <Content Include="Content\Lib\jquery.steps.min.js" />
+    <Content Include="Content\Scripts\Redirect\Redirect.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\RetentionCancelServices.js" />
+    <Content Include="Areas\IFITransactions\Content\Scripts\SuspensionReconnectionCustomer.js" />
+    <Content Include="Content\css\bootstrap4.css" />
+    <Content Include="Content\Lib\bootstrap-datepicker.js" />
+    <Content Include="Content\Lib\bootstrap.js" />
+    <Content Include="Content\Lib\bootstrap.min.js" />
+    <Content Include="Content\Lib\dataTables.bootstrap.min.js" />
+    <Content Include="Content\Lib\hoverIntent-touch.js" />
+    <Content Include="Content\Lib\jquery-1.8.3.min.js" />
+    <Content Include="Content\Lib\jquery-1.9.1.min.js" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap-theme.css.map" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap.css.map" />
+    <Content Include="Areas\IFITransactions\Content\css\bootstrap.min.css.map" />
+    <Content Include="Areas\IFITransactions\Content\Lib\jquery-2.0.0.min.map" />
+    <Content Include="Areas\IFITransactions\Views\Redirect\BritgeRedirect.cshtml" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Areas\IFITransactions\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\Auth\AuthUserHtml.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\UnlockService\Index.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\PCRFConsultation\PCRFConsultation.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ScheduledTasks\ScheduledTasks.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\EditSuspensionReconnectionCustomer\EditSuspensionReconnectionCustomer.cshtml" />
+    <Content Include="Areas\IFITransactions\Template\ScheduledTasksLTE.xlsx" />
+    <Content Include="Areas\IFITransactions\Views\MailReceipt\MailReceipt.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ChangeMinor\ChangeMinor.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\DuplicateReceipts\DuplicateReceipts.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ChangePostalAddress\ChangePostalAddress.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\PlanMigration\PlanMigration.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ChangeBillingCycle\ChangeBillingCycle.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\UnlockService\ShowBiometrics.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ServiceLock\Index.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ServiceLock\QuestionSecurity.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\PlanMigration\ChoosePlan.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\PlanMigration\ChooseServicesByPlan.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\IFIPackagePurchaseServices\IFIPackagePurchaseServices.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\PackageHistory\PackageHistory.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ChangeServiceAddress\ChangeServiceAddress.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\ChangeServiceAddress\ChangeServiceGeoDir.cshtml" />
+    <None Include="Content\Lib\jquery-2.0.0.intellisense.js" />
+    <Content Include="Content\Lib\jquery-2.0.0.js" />
+    <Content Include="Content\Lib\jquery-2.0.0.min.js" />
+    <Content Include="Content\Lib\jquery-ui.js" />
+    <Content Include="Content\Lib\jquery.bar.js" />
+    <Content Include="Content\Lib\jquery.blockUI.js" />
+    <Content Include="Content\Lib\jquery.dataTables.min.js" />
+    <Content Include="Content\Lib\jquery.dataTables.select.js" />
+    <Content Include="Content\Lib\jquery.numeric.js" />
+    <Content Include="Content\Lib\jquery.scrollbar.js" />
+    <Content Include="Content\Lib\jquery.scrollbar.min.js" />
+    <Content Include="Content\Lib\jquery.smartmenus.bootstrap.js" />
+    <Content Include="Content\Lib\jquery.smartmenus.bootstrap.min.js" />
+    <Content Include="Content\Lib\jquery.smartmenus.js" />
+    <Content Include="Content\Lib\jquery.smartmenus.min.js" />
+    <Content Include="Content\Lib\jquery.sticky.js" />
+    <None Include="Content\Lib\jquery.validate-vsdoc.js" />
+    <Content Include="Content\Lib\jquery.validate.js" />
+    <Content Include="Content\Lib\jquery.validate.min.js" />
+    <Content Include="Content\Lib\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Lib\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Lib\moment-es.js" />
+    <Content Include="Content\Lib\moment.js" />
+    <Content Include="Content\Lib\respond.js" />
+    <Content Include="Content\Lib\respond.matchmedia.addListener.js" />
+    <Content Include="Content\Lib\respond.matchmedia.addListener.min.js" />
+    <Content Include="Content\Lib\respond.min.js" />
+    <Content Include="Content\Lib\steps.js" />
+    <None Include="Content\Lib\_references.js" />
+    <Content Include="Content\Scripts\ClaroAppCommon.js" />
+    <Content Include="Content\Scripts\ClaroCommon.js" />
+    <Content Include="Content\Scripts\ClaroLayout.js" />
+    <Content Include="Content\Scripts\ClaroModalLoad.js" />
+    <Content Include="Content\Scripts\ClaroModalTemplate.js" />
+    <Content Include="Content\Scripts\ClaroOptionsDefault.js" />
+    <Content Include="Content\Scripts\ClaroRedirect.js" />
+    <Content Include="Content\Scripts\ClaroSession.js" />
+    <Content Include="Content\Scripts\ClaroValidate.js" />
+    <Content Include="Content\Scripts\ContactoGrilla.js" />
+    <Content Include="Content\Scripts\plupload.full.min.js" />
+    <Content Include="DataIFI\IFIData.xml" />
+    <Content Include="DataIFI\PlanMigrationConstancy.xml" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\IFITransactions\Views\web.config" />
+    <Content Include="Areas\IFITransactions\Views\Shared\_Layout.cshtml" />
+    <Content Include="Images\btn_Buscar.gif" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\cross_hover.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\details_close.png" />
+    <Content Include="Images\details_open.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\hm_tim.gif" />
+    <Content Include="Images\IFI.png" />
+    <Content Include="Images\img_claro.png" />
+    <Content Include="Images\img_marca.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading2.gif" />
+    <Content Include="Images\logo-claro.png" />
+    <Content Include="Images\marker-home.png" />
+    <Content Include="Images\sort_asc.png" />
+    <Content Include="Images\sort_asc_disabled.png" />
+    <Content Include="Images\sort_both.png" />
+    <Content Include="Images\sort_desc.png" />
+    <Content Include="Areas\IFITransactions\Views\RetentionCancelServices.cshtml" />
+    <Content Include="Areas\IFITransactions\Views\SuspensionReconnectionCustomer.cshtml" />
+    <Content Include="Content\Lib\jquery-2.0.0.min.map" />
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.BusinessRulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CacDacTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DatTempInteractionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EvaluateAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.FileDefaultImpersonationResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GenerateConstancyResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GeneratePDFDataResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetClientResponseComon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetEmployerDateResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertGeneralResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertInteractHFCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertInteractResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertIntResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertLogTrxResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertTemplateGeneralResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertTemplateInteractionResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsTemplateInteractionResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.MotiveSotResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberEAIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberGWPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ParameterDataResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ParameterTerminalTPIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SaveAuditMResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SendEmailResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TypificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ValidateCommunicationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.WorkTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="DataIFI\IFIConfig.config" />
+    <Content Include="DataIFI\IFIConfigMsg.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\IFI_Transac_Front.pubxml" />
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CheckingUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ReadOptionsByUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SaveAuditResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertEvidenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.BusinessInteraction2ResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.StateTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TransactionTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UpdatexInter30Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EstCivTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NacTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ValidateMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InterioresTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ManzanasTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UbigeosTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UrbsTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ViasTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ZonesTypeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.LastInvoiceDataResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetCaseLaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.IsOkGetKeyResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.QueuesCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SequenceCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UploadDocumentOnBaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SendEmailWithBase64Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ConsultIGVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.OfficeResponseCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.VerifyUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.PagOptionXuserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DigitalSignatureResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.PaquetesAdquiridosHistoricoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonIFIService\Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ObtenerTipoTecnologia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CommonIFIService\CommonIFIService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService151.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService152.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService153.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService154.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService155.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService203.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService204.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService271.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService272.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService273.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService274.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService275.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService276.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\configuration91.svcinfo" />
+    <None Include="Service References\CommonIFIService\configuration.svcinfo" />
+    <None Include="Service References\CommonIFIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.AddDayWorkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CaseInsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CaseTemplate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultationServiceByContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ETAFlowResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ExecuteSuspensionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertDetailServiceInteractionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertInteractionBusinessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.Interaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InteractionServiceResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.JobTypesResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ListScheduledTransactionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.MotiveSOTByTypeJobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.OrderSubTypesResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.OrderTypesResponseHfc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PostSuspensionLteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ReconeServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ReconexionLteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.RetentionCancelServicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.TransactionScheduledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.UpdateInter29Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.UpdateProgTaskLteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ValidateCustomerIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CommonIFIService\CommonIFIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService50.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService55.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService56.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService59.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService68.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService69.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonIFIService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonIFIService\CommonTransacService.wsdl" />
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PCRFConnectorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.DeleteScheduledTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ComprarPaquetesBodyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultarClaroPuntosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultarPaqDisponiblesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PCRFPaquetesAdicBodyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ComprarPaquetesBodyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultarClaroPuntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultarPaqDisponiblesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PCRFPaquetesAdicBodyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FixedIFIService\Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.Client.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FixedIFIService\configuration91.svcinfo" />
+    <None Include="Service References\FixedIFIService\configuration.svcinfo" />
+    <None Include="Service References\FixedIFIService\FixedIFIService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService171.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1710.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1711.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1712.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1713.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1714.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1715.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1716.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1717.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService172.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService173.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService174.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService175.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService176.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService177.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService178.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService179.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService91.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.AmountIncomingCallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DataLineResponsePostPaid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.TypeTransactionBRMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FixedIFIService\FixedIFIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedIFIService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedIFIService\FixedTransacService.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorClarifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetActivateServiceMailIFIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetLinesTelephoneIFIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DataCustomerResponsePostPaid1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangePostalAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetStatedebtIFIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveDuplicateReceiptsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.TestSecurityIFIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorFijoClarifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorClientDataAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ClientDataAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.BillingCycleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.CurrentLockResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DeleteLockEquipmentResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DeleteLockLineResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ImeisResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertLockEquipmentPerResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertLockLinePerResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertTerminalLockUnlockEquipmentResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.LockUnlockEquipmentResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ServiceLockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UnlockServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockEquipmentCodeResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockEquipmentResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockLineCodeResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockLineRollbackResponseIFI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.PlanServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.PlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ServicesByCurrentPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.EquipmentByCurrentPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.PlanMigrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GenericItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.registrarDireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostIFIService\Claro.SIACU.Web.WebApplication.IFI.PostIFIService.validarCoberturaMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\PostIFIService\PostIFIService.wsdl" />
+    <None Include="Service References\PostIFIService\PostIFIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService211.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2110.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2111.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2112.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2113.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2114.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService2115.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService212.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService213.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService214.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService215.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService216.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService217.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService218.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService219.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService221.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService222.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService241.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostIFIService\PostIFIService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityAudit\configuration91.svcinfo" />
+    <None Include="Service References\SecurityAudit\configuration.svcinfo" />
+    <None Include="Service References\SecurityAudit\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PostIFIService\configuration91.svcinfo" />
+    <None Include="Service References\PostIFIService\configuration.svcinfo" />
+    <None Include="Service References\PostIFIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\WirelessIFIService\Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.TransactionScheduledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WirelessIFIService\Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.OCCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WirelessIFIService\Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.ApadeceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WirelessIFIService\configuration91.svcinfo" />
+    <None Include="Service References\WirelessIFIService\configuration.svcinfo" />
+    <None Include="Service References\WirelessIFIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Service References\SecurityAudit\Audit.wsdl" />
+    <None Include="Service References\SecurityAudit\Audit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityAudit\Audit1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityAudit\Audit2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityAudit\Audit3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityAudit\Audit4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessIFIService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WirelessIFIService\WirelessTransacService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\IFITransactions\Content\Style\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CommonIFIService\" />
+    <WCFMetadataStorage Include="Service References\FixedIFIService\" />
+    <WCFMetadataStorage Include="Service References\PostIFIService\" />
+    <WCFMetadataStorage Include="Service References\SecurityAudit\" />
+    <WCFMetadataStorage Include="Service References\WirelessIFIService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Claro.SIACU\Claro.SIACU.csproj">
+      <Project>{0b643a37-2757-48e9-a3e7-c15561aa1b86}</Project>
+      <Name>Claro.SIACU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Entity\Claro.Entity.csproj">
+      <Project>{5b432611-cd37-4a2b-bcba-7509064e68ba}</Project>
+      <Name>Claro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Helpers\Claro.Helpers.csproj">
+      <Project>{30d05e88-1f9b-4e7e-895c-df4cc60889a9}</Project>
+      <Name>Claro.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Security\Claro.Security.csproj">
+      <Project>{d558ea9e-478c-48d3-9c53-805c8f5669db}</Project>
+      <Name>Claro.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Web\Claro.Web.csproj">
+      <Project>{1630f11c-9caa-4a49-9bb2-7a3ccba1cd17}</Project>
+      <Name>Claro.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro\Claro.csproj">
+      <Project>{3126dd91-815a-4367-bb9e-8b241c73f4d0}</Project>
+      <Name>Claro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65178</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65178/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

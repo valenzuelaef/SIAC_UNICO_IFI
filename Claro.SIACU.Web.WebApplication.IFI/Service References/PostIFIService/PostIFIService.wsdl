@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PostIFIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataLine" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd4" namespace="AuditService" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetAmountIncomingCall" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTypeTransactionBRMS" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinor" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClarify" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLinesTelephone" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataCustomer" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDuplicateReceipts" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTestSecurity" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangePostalAddress" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetStatedebt" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorFijoClarify" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClientDataAdd" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetClientDataAdd" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetBillingCycle" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.ServiceLock" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDataPower" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.IsOkGetKey" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.CurrentLock" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockLinePer" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockEquipmentPer" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetImeis" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UnlockService" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineCode" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipmentCode" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockLine" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineRollback" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipment" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockEquipment" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetPlans" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByPlan" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByCurrentPlan" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetEquipmentByCurrentPlan" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeServiceAddress" />
+      <xsd:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPostIFIService_GetDataLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataLine" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetDataLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetAmountIncomingCall_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmountIncomingCall" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetAmountIncomingCall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmountIncomingCallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetTypeTransactionBRMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeTransactionBRMS" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetTypeTransactionBRMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeTransactionBRMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinor" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorClarify_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorClarify" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorClarify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorClarifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetActivateServiceMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivateServiceMail" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetActivateServiceMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivateServiceMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetLinesTelephone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesTelephone" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetLinesTelephone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesTelephoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetDataCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetDataCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveDuplicateReceipts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDuplicateReceipts" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveDuplicateReceipts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDuplicateReceiptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetTestSecurity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestSecurity" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetTestSecurity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestSecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetSaveChangePostalAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveChangePostalAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetSaveChangePostalAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveChangePostalAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetStatedebt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatedebt" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetStatedebt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatedebtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorFijoClarify_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorFijoClarify" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorFijoClarify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorFijoClarifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorClientDataAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorClientDataAdd" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_SaveChangeMinorClientDataAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeMinorClientDataAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetClientDataAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientDataAdd" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetClientDataAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientDataAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetBillingCycle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillingCycle" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetBillingCycle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillingCycleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServiceLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceLock" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServiceLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_CurrentBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:CurrentBlock" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_CurrentBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CurrentBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentLock" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentUnLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUnLock" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentUnLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUnLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertLockLinePer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLockLinePer" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertLockLinePer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLockLinePerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertLockEquipmentPer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLockEquipmentPer" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertLockEquipmentPer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLockEquipmentPerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetImeis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImeis" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetImeis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImeisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetUnlockService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnlockService" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetUnlockService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnlockServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockLineCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockLineCode" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockLineCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockLineCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockEquipmentCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockEquipmentCode" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockEquipmentCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockEquipmentCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_DeleteLockLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLockLine" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_DeleteLockLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLockLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockLineRollback_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockLineRollback" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockLineRollback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockLineRollbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertTerminalLockUnlockEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTerminalLockUnlockEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_InsertTerminalLockUnlockEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTerminalLockUnlockEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_UpdateUnlockEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnlockEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_DeleteLockEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLockEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_DeleteLockEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLockEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlans" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServicesByPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByPlan" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServicesByPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServicesByCurrentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByCurrentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetServicesByCurrentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByCurrentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentByCurrentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentByCurrentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_GetEquipmentByCurrentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentByCurrentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_PostPlanMigration_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostPlanMigration" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_PostPlanMigration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostPlanMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_obtenerParametrosPorTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerParametrosPorTipo" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_obtenerParametrosPorTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerParametrosPorTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_registrarDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_registrarDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_consultarCoberturaDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarCoberturaDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IPostIFIService_consultarCoberturaDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarCoberturaDireccionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPostIFIService">
+    <wsdl:operation name="GetDataLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetDataLine" message="tns:IPostIFIService_GetDataLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetDataLineResponse" message="tns:IPostIFIService_GetDataLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmountIncomingCall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetAmountIncomingCall" message="tns:IPostIFIService_GetAmountIncomingCall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetAmountIncomingCallResponse" message="tns:IPostIFIService_GetAmountIncomingCall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeTransactionBRMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetTypeTransactionBRMS" message="tns:IPostIFIService_GetTypeTransactionBRMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetTypeTransactionBRMSResponse" message="tns:IPostIFIService_GetTypeTransactionBRMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinor" message="tns:IPostIFIService_SaveChangeMinor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorResponse" message="tns:IPostIFIService_SaveChangeMinor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorClarify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorClarify" message="tns:IPostIFIService_SaveChangeMinorClarify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorClarifyResponse" message="tns:IPostIFIService_SaveChangeMinorClarify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivateServiceMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetActivateServiceMail" message="tns:IPostIFIService_GetActivateServiceMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetActivateServiceMailResponse" message="tns:IPostIFIService_GetActivateServiceMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinesTelephone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetLinesTelephone" message="tns:IPostIFIService_GetLinesTelephone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetLinesTelephoneResponse" message="tns:IPostIFIService_GetLinesTelephone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetDataCustomer" message="tns:IPostIFIService_GetDataCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetDataCustomerResponse" message="tns:IPostIFIService_GetDataCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDuplicateReceipts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/SaveDuplicateReceipts" message="tns:IPostIFIService_SaveDuplicateReceipts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/SaveDuplicateReceiptsResponse" message="tns:IPostIFIService_SaveDuplicateReceipts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestSecurity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetTestSecurity" message="tns:IPostIFIService_GetTestSecurity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetTestSecurityResponse" message="tns:IPostIFIService_GetTestSecurity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveChangePostalAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetSaveChangePostalAddress" message="tns:IPostIFIService_GetSaveChangePostalAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetSaveChangePostalAddressResponse" message="tns:IPostIFIService_GetSaveChangePostalAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatedebt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetStatedebt" message="tns:IPostIFIService_GetStatedebt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetStatedebtResponse" message="tns:IPostIFIService_GetStatedebt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorFijoClarify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorFijoClarify" message="tns:IPostIFIService_SaveChangeMinorFijoClarify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorFijoClarifyResponse" message="tns:IPostIFIService_SaveChangeMinorFijoClarify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorClientDataAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorClientDataAdd" message="tns:IPostIFIService_SaveChangeMinorClientDataAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/SaveChangeMinorClientDataAddResponse" message="tns:IPostIFIService_SaveChangeMinorClientDataAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientDataAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetClientDataAdd" message="tns:IPostIFIService_GetClientDataAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetClientDataAddResponse" message="tns:IPostIFIService_GetClientDataAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillingCycle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetBillingCycle" message="tns:IPostIFIService_GetBillingCycle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetBillingCycleResponse" message="tns:IPostIFIService_GetBillingCycle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetServiceLock" message="tns:IPostIFIService_GetServiceLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetServiceLockResponse" message="tns:IPostIFIService_GetServiceLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrentBlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/CurrentBlock" message="tns:IPostIFIService_CurrentBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/CurrentBlockResponse" message="tns:IPostIFIService_CurrentBlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentLock" message="tns:IPostIFIService_GetEquipmentLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentLockResponse" message="tns:IPostIFIService_GetEquipmentLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUnLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentUnLock" message="tns:IPostIFIService_GetEquipmentUnLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentUnLockResponse" message="tns:IPostIFIService_GetEquipmentUnLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLockLinePer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/InsertLockLinePer" message="tns:IPostIFIService_InsertLockLinePer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/InsertLockLinePerResponse" message="tns:IPostIFIService_InsertLockLinePer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLockEquipmentPer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/InsertLockEquipmentPer" message="tns:IPostIFIService_InsertLockEquipmentPer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/InsertLockEquipmentPerResponse" message="tns:IPostIFIService_InsertLockEquipmentPer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImeis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetImeis" message="tns:IPostIFIService_GetImeis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetImeisResponse" message="tns:IPostIFIService_GetImeis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnlockService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetUnlockService" message="tns:IPostIFIService_GetUnlockService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetUnlockServiceResponse" message="tns:IPostIFIService_GetUnlockService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockLineCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockLineCode" message="tns:IPostIFIService_UpdateUnlockLineCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockLineCodeResponse" message="tns:IPostIFIService_UpdateUnlockLineCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockEquipmentCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockEquipmentCode" message="tns:IPostIFIService_UpdateUnlockEquipmentCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockEquipmentCodeResponse" message="tns:IPostIFIService_UpdateUnlockEquipmentCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLockLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/DeleteLockLine" message="tns:IPostIFIService_DeleteLockLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/DeleteLockLineResponse" message="tns:IPostIFIService_DeleteLockLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockLineRollback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockLineRollback" message="tns:IPostIFIService_UpdateUnlockLineRollback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockLineRollbackResponse" message="tns:IPostIFIService_UpdateUnlockLineRollback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTerminalLockUnlockEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/InsertTerminalLockUnlockEquipment" message="tns:IPostIFIService_InsertTerminalLockUnlockEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/InsertTerminalLockUnlockEquipmentResponse" message="tns:IPostIFIService_InsertTerminalLockUnlockEquipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockEquipment" message="tns:IPostIFIService_UpdateUnlockEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/UpdateUnlockEquipmentResponse" message="tns:IPostIFIService_UpdateUnlockEquipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLockEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/DeleteLockEquipment" message="tns:IPostIFIService_DeleteLockEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/DeleteLockEquipmentResponse" message="tns:IPostIFIService_DeleteLockEquipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetPlans" message="tns:IPostIFIService_GetPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetPlansResponse" message="tns:IPostIFIService_GetPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetServicesByPlan" message="tns:IPostIFIService_GetServicesByPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetServicesByPlanResponse" message="tns:IPostIFIService_GetServicesByPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByCurrentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetServicesByCurrentPlan" message="tns:IPostIFIService_GetServicesByCurrentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetServicesByCurrentPlanResponse" message="tns:IPostIFIService_GetServicesByCurrentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentByCurrentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentByCurrentPlan" message="tns:IPostIFIService_GetEquipmentByCurrentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/GetEquipmentByCurrentPlanResponse" message="tns:IPostIFIService_GetEquipmentByCurrentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPlanMigration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/PostPlanMigration" message="tns:IPostIFIService_PostPlanMigration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/PostPlanMigrationResponse" message="tns:IPostIFIService_PostPlanMigration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerParametrosPorTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/obtenerParametrosPorTipo" message="tns:IPostIFIService_obtenerParametrosPorTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/obtenerParametrosPorTipoResponse" message="tns:IPostIFIService_obtenerParametrosPorTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/registrarDireccion" message="tns:IPostIFIService_registrarDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/registrarDireccionResponse" message="tns:IPostIFIService_registrarDireccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCoberturaDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostIFIService/consultarCoberturaDireccion" message="tns:IPostIFIService_consultarCoberturaDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostIFIService/consultarCoberturaDireccionResponse" message="tns:IPostIFIService_consultarCoberturaDireccion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPostIFIService" type="tns:IPostIFIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataLine">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetDataLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmountIncomingCall">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetAmountIncomingCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeTransactionBRMS">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetTypeTransactionBRMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinor">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/SaveChangeMinor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorClarify">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/SaveChangeMinorClarify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivateServiceMail">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetActivateServiceMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinesTelephone">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetLinesTelephone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetDataCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDuplicateReceipts">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/SaveDuplicateReceipts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestSecurity">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetTestSecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveChangePostalAddress">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetSaveChangePostalAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatedebt">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetStatedebt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorFijoClarify">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/SaveChangeMinorFijoClarify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeMinorClientDataAdd">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/SaveChangeMinorClientDataAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientDataAdd">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetClientDataAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillingCycle">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetBillingCycle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceLock">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetServiceLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrentBlock">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/CurrentBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentLock">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetEquipmentLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUnLock">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetEquipmentUnLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLockLinePer">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/InsertLockLinePer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLockEquipmentPer">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/InsertLockEquipmentPer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImeis">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetImeis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnlockService">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetUnlockService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockLineCode">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/UpdateUnlockLineCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockEquipmentCode">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/UpdateUnlockEquipmentCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLockLine">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/DeleteLockLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockLineRollback">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/UpdateUnlockLineRollback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTerminalLockUnlockEquipment">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/InsertTerminalLockUnlockEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnlockEquipment">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/UpdateUnlockEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLockEquipment">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/DeleteLockEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlans">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetPlans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByPlan">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetServicesByPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByCurrentPlan">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetServicesByCurrentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentByCurrentPlan">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/GetEquipmentByCurrentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPlanMigration">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/PostPlanMigration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerParametrosPorTipo">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/obtenerParametrosPorTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarDireccion">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/registrarDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCoberturaDireccion">
+      <soap:operation soapAction="http://tempuri.org/IPostIFIService/consultarCoberturaDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostIFIService">
+    <wsdl:port name="BasicHttpBinding_IPostIFIService" binding="tns:BasicHttpBinding_IPostIFIService">
+      <soap:address location="http://localhost:53727/PostIFIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

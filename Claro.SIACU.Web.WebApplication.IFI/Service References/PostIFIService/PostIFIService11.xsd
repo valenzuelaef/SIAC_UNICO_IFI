@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="GetActivateServiceMailIFIRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="pCuenta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pNumCla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pObjID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pTelConfSMS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pTelRef" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetActivateServiceMailIFIRequest" nillable="true" type="tns:GetActivateServiceMailIFIRequest" />
+  <xs:complexType name="GetActivateServiceMailIFIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="strMensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetActivateServiceMailIFIResponse" nillable="true" type="tns:GetActivateServiceMailIFIResponse" />
+</xs:schema>

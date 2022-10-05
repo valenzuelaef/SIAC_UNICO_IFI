@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" />
+  <xs:complexType name="PlanMigrationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:PlanMigrationMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlanMigrationRequest" nillable="true" type="tns:PlanMigrationRequest" />
+  <xs:complexType name="PlanMigrationMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PlanMigrationBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:PlanMigrationHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationMessageRequest" nillable="true" type="tns:PlanMigrationMessageRequest" />
+  <xs:complexType name="PlanMigrationBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountLoyalPenalty" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountPenaltyCharge" type="xs:double" />
+      <xs:element minOccurs="0" name="CalculatedPenalty" type="xs:double" />
+      <xs:element minOccurs="0" name="CodId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConstancyParameter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactObjId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescCoSer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagLoyalPenalty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagPenalty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagReg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdeaiWS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpClient" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" minOccurs="0" name="MainInteraction" nillable="true" type="q2:Interaction" />
+      <xs:element minOccurs="0" name="OCCConceptPenalty" type="xs:double" />
+      <xs:element minOccurs="0" name="OCCPenalty" type="xs:int" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" minOccurs="0" name="PlusInteraction" nillable="true" type="q3:TemplateInteraction" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Repayment" type="xs:double" />
+      <xs:element minOccurs="0" name="ServcAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServcState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServdProgDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ServerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiCoser" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" minOccurs="0" name="ServiceList" nillable="true" type="q4:ArrayOfServiceByPlan" />
+      <xs:element minOccurs="0" name="ServvEmailUserApp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServvMsisd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServvTypeService" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServvUserApp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServvUserSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SimCard" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" minOccurs="0" name="SnCodeList" nillable="true" type="q5:ArrayOfServiceByPlan" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeReg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tmCodeCurrent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tmCodeNew" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationBodyRequest" nillable="true" type="tns:PlanMigrationBodyRequest" />
+  <xs:complexType name="PlanMigrationHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q6:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationHeaderRequest" nillable="true" type="tns:PlanMigrationHeaderRequest" />
+  <xs:complexType name="PlanMigrationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:PlanMigrationMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationResponse" nillable="true" type="tns:PlanMigrationResponse" />
+  <xs:complexType name="PlanMigrationMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PlanMigrationBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:PlanMigrationHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationMessageResponse" nillable="true" type="tns:PlanMigrationMessageResponse" />
+  <xs:complexType name="PlanMigrationBodyResponse">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="Fault" nillable="true" type="q7:Fault" />
+      <xs:element minOccurs="0" name="codigoArbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rutaConstancia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationBodyResponse" nillable="true" type="tns:PlanMigrationBodyResponse" />
+  <xs:complexType name="PlanMigrationHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q8:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanMigrationHeaderResponse" nillable="true" type="tns:PlanMigrationHeaderResponse" />
+</xs:schema>

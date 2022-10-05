@@ -1,0 +1,304 @@
+﻿@model Claro.SIACU.Web.WebApplication.IFI.Areas.IFITransactions.Models.NotificacionDireccionModel
+@{
+    Layout = null;
+}
+<script type="text/javascript">
+    var strCostChangeServiceAddress = "@Model.strCosto";
+    var strErrChangeServiceAddress = "@Model.strError";
+    var strViewChangeServiceAddress = "@Model.strVer";
+    var strSaveChangeServiceAddress = "@Model.strRegistro";
+    var strTotalChangeServiceAddress = "@Model.strTotal";
+    var strCobertChangeServiceAddress = "@Model.strCobertura";
+</script>
+<div id="INTChangeServiceAddress" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-md-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+                    <div class="panel-body" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <input id="hidMonto" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidMonto">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Nro.Servicio:</label></td>
+                                    <td class="col-sm-6"><label id="lblNroTelefono"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Contrato:</label></td>
+                                    <td class="col-sm-6"><label id="lblContrato"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Customer ID:</label></td>
+                                    <td class="col-sm-6"><label id="lblCustomerId"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Contacto:</label></td>
+                                    <td class="col-sm-6"><label id="lblContacto"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                    <td class="col-sm-6"><label id="lblDniRuc"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                    <td class="col-sm-6"><label id="lblRepreLegal"></label></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Plan Actual:</label></td>
+                                    <td class="col-sm-6"><label id="lblPlan"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Fecha de Activación:</label></td>
+                                    <td class="col-sm-6"><label id="lblFecAct"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Ciclo de Facturación:</label></td>
+                                    <td class="col-sm-6"><label id="lblCicloFact"></label> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="customerDataHead2" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" href="#customerDataCollapse2" aria-expanded="true" data-parent="#DataCustomer2" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color">Dirección de Facturación</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse in" id="customerDataCollapse2" role="tabpanel" aria-labelledby="customerDataHead2">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Dirección:</label></td>
+                                    <td class="col-sm-6"><label id="lblDireccion"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                                    <td class="col-sm-6"><label id="lblNotasDirec"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">País:</label></td>
+                                    <td class="col-sm-6"><label id="lblPais"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                                    <td class="col-sm-6"><label id="lblDepartamento"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                                    <td class="col-sm-6"><label id="lblProvincia"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                                    <td class="col-sm-6"><label id="lblDistrito"></label> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+
+        <div class="col-md-9">
+                <div class="panel claro-panel-primary">
+                    <div class="panel-heading">
+                        CAMBIO DE DIRECCIÓN DE USO DEL SERVICIO
+                    </div>
+                    <div class="panel-body">
+                        <div id="frmChangeServiceAddresst" class="col-md-12">
+                            <form id="frmChangeServiceAddress">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-6 text-left" style="color:red;font-weight:bold;padding-top:15px;">¿Cliente tiene cobertura?</label>
+                                    <div id="divCobertura" style="padding-top:15px">
+                                        <label id="lblSi" class="radio-inline col-sm-1"><input type="radio" id="rdbSi" name="NmrdbSolicitante" value="1">Si</label>
+                                        <label id="lblNo" class="radio-inline col-sm-1"><input type="radio" id="rdbNo" name="NmrdbSolicitante" value="2">No</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="col-sm-3 text-left">
+                                        <button id="btnCobertura" type="button" class="btn transaction-button" style="padding-bottom:5px"><span class="glyphicon glyphicon-equalizer"></span> Validar Cobertura</button>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="panel panel-default " id="pnlMotivo">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-3"><label><u>Nueva Dirección de Uso del Servicio</u></label></div>
+                                            <input id="hidContadorD1" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                                            <input id="hidContadorD2" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Calle/Av./Jr<span class="text-right label-red-service"> (*):</span></label></div>
+                                            <div class="col-sm-3 error-input"><select class="form-control select-list" id="cboTipoVia" name="nmcboTipoVia"></select></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Nombre Calle/Av./Jr<span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtNomVia" name="nmtxtNomTipoVia" maxlength="100" disabled="disabled" /></div>
+                                            <div class="col-sm-2"><label>Número</label></div>
+                                            <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtNumeroCalle" name="nmNumeroCalle" maxlength="5" /></div>
+                                            <div class="col-sm-1"><label>S/N</label></div>
+                                            <div class="col-sm-1" style="width: 35px;"><input id="chkSN" type="checkbox" class="form-check-input" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Mz/Bloque/Edif</label></div>
+                                            <div class="col-sm-3"><select class="form-control select-list" id="cboTipoMz"></select></div>
+                                            <div class="col-sm-2"><label>Número</label></div>
+                                            <div class="col-sm-2 error-input"><input type="text" class="form-control input-sm" id="txtNroMz" name="nmtxtNroMz" disabled /></div>
+                                            <div class="col-sm-1"><label>Lote</label></div>
+                                            <div class="col-sm-1 error-input"><input type="text" class="form-control input-sm" id="txtLote" name="nmtxtLote" maxlength="5" disabled /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Tipo Dpto/Int</label></div>
+                                            <div class="col-sm-3"><select class="form-control select-list" id="cboTipoInterior" name="nmcboTipoInterior"></select></div>
+                                            <div class="col-sm-2"><label>Nro Dpto/Int</label></div>
+                                            <div class="col-sm-1 error-input"><input type="text" class="form-control input-sm" id="txtInterior" name="nmtxtInterior" maxlength="5" disabled /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Urb/Res/Pje<span class="text-right label-red-service"> (**):</span></label></div>
+                                            <div class="col-sm-3 error-input"><select class="form-control select-list" id="cboTipoUrb" name="nmcboTipoUrb"></select></div>
+                                            <div class="col-sm-2"><label>Nombre Urb/Res/Pje</label></div>
+                                            <div class="col-sm-4"><input type="text" class="form-control input-sm" id="txtUrb" name="nmtxtUrb" maxlength="100" disabled /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Zona/Etapa<span class="text-right label-red-service"> (**):</span></label></div>
+                                            <div class="col-sm-3 error-input"><select class="form-control select-list" id="cboTipoZona" name="nmcboTipoZona"></select></div>
+                                            <div class="col-sm-2"><label>Nombre Zona/Etapa</label></div>
+                                            <div class="col-sm-4"><input type="text" class="form-control input-sm" id="txtZona" name="nmtxtZona" maxlength="100" disabled /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Referencias<span class="text-right label-red-service"> (**):</span></label></div>
+                                            <div class="col-sm-8 error-input"><input class="form-control input-sm" id="txtReferencia" name="nmtxtReferencia" maxlength="50" /></div>
+                                            <div class="col-sm-2"><label></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Telefono de referencia<span class="text-right label-red-service"> :</span></label></div>
+                                            <div class="col-sm-3 error-input"><input class="form-control input-sm" id="txtTelefonoReferencia" name="nmtxtTelReferencia" maxlength="20"/></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>País:</label></div>
+                                            <div class="col-sm-3"><select class="form-control select-list" id="cboPaisMod"></select></div>
+                                            <div class="col-sm-2"><label>Departamento<span class="text-right label-red-service"> (*):</span></label></div>
+                                            <div class="col-sm-4 error-input"><select class="form-control select-list" id="cboDepMod" name="nmcboDepMod"></select></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Provincia<span class="text-right label-red-service"> (*):</span></label></div>
+                                            <div class="col-sm-3 error-input"><select class="form-control select-list" id="cboProvinciaMod" name="nmcboProvinciaMod"></select></div>
+                                            <div class="col-sm-2"><label>Distrito<span class="text-right label-red-service"> (*):</span></label></div>
+                                            <div class="col-sm-4 error-input"><select class="form-control select-list" id="cboDistritoMod" name="nmcboDistritoMod"></select></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Cod Postal</label></div>
+                                            <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtCodPostalMod" disabled /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        <div class="col-sm-6 text-left" style="color:red;font-weight:bold;"><label>(*) Campos Obligatorios</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label class="col-sm-6 text-left" style="color:red;font-weight:bold;">(**) Obligatorio llenar uno de los campos marcados como minimo.</label>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="panel panel-default " id="pnlFidelizar" style="display:run-in">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <br />
+                                            <div class="col-sm-3"><label>Importe a Pagar&nbsp;(Incluido IGV):</label></div>
+                                            <div class="col-sm-3 error-input"><input type="text" name="nmtxtImporte" class="form-control input-sm" id="txtImporte" disabled="disabled" /></div>
+                                            <div class="col-sm-2"><input id="chkFidelizar" type="checkbox" class="form-check-input" /> <b>Fidelizar</b></div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <br />
+                                            <div class="col-sm-2"><label>CAC/DAC:</label></div>
+                                            <div class="col-sm-4 error-input"><select id="cboCacDac" name="nmcboCacDac" class="form-control select-list"></select></div>
+                                            <div class="col-sm-4"><input type="text" class="form-control input-sm" id="txtDireccion" style="visibility:hidden" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2"><label>Notas:</label></div>
+                                            <div class="col-sm-6"><textarea id="txtNote" class="form-control" placeholder="Agregar Notas" rows="4" maxlength="3800"></textarea></div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <center>
+                                            <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                            <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                        </center>
+                                    </div>
+                                </div>
+                                
+                                <input id="hidCheck" style="WIDTH: 10px; HEIGHT: 18px" type="hidden" size="1" name="hidAccion">
+                                <br />
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span> <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....</span>
+    </div>
+@*</div>*@
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<input id="hidFidelizar" type="hidden" name="hidFidelizar" />
+<input id="hidCodOpcion" type="hidden" name="hidCodOpcion" />
+<input id="hidAccion" type="hidden" name="hidAccion" />
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ChangeServiceAddress")
+<script src="~/Areas/IFITransactions/Scripts/AuthUser/AuthUser.js"></script>
+<script src="~/Areas/IFITransactions/Content/Scripts/ClaroSession.js"></script>

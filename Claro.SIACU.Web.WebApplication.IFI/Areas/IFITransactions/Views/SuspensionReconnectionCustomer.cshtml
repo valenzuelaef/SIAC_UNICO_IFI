@@ -1,0 +1,218 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+
+<div class="container-fluid">
+    <div class="col-md-3">
+        <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel claro-panel-primary">
+                <div id="customerDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <a data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                </div>
+                <div class="panel-body" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Contrato</label></td>
+                                <td class="col-sm-6">
+                                    <label id="lblContrato" class="text-message-info"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Customer ID</label></td>
+                                <td class="col-sm-6"><label id="lblCustomerId" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Tipo de Cliente</label></td>
+                                <td class="col-sm-6"><label id="lblCustomerType" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                <td class="col-sm-6"><label id="lblCustomerName" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Contacto:</label></td>
+                                <td class="col-sm-6"><label id="lblContact" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                <td class="col-sm-6"><label id="lblIdentificationDocument" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                <td class="col-sm-6"><label id="lblLegalRepresentative" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Plan Actual:</label></td>
+                                <td><label id="lblPlan" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Fecha Activación:</label></td>
+                                <td class="col-sm-6"><label id="lblActivationDate" class="text-message-info"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Ciclo de Facturación:</label></td>
+                                <td class="col-sm-6"><label id="lblBillingCycle" class="text-message-info"></label> </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Límite Crédito:</label></td>
+                                <td class="col-sm-6"><label id="lblLimitCredit" class="text-message-info"></label> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="addressDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Dirección:</label></td>
+                            <td class="col-sm-6"><label id="lblAddress" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                            <td class="col-sm-6"><label id="lblNoteAddress" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Pais:</label></td>
+                            <td class="col-sm-6"><label id="lblCountry" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                            <td class="col-sm-6"><label id="lblDepartment" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                            <td class="col-sm-6"><label id="lblProvince" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                            <td class="col-sm-6"><label id="lblDistrict" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Código de Plano:</label></td>
+                            <td class="col-sm-6"><label id="lblPlaneCode" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Código Ubigeo:</label></td>
+                            <td class="col-sm-6"><label id="lblInvoiceUbigeo" class="text-message-info"></label></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="businessRulesHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                    <div id="divRules">
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="col-md-9">
+        <div id="tabChangePhoneNumber" role="tabpanel" percent="0%">
+            <div class="panel claro-panel-primary">
+                <div class="panel-heading">
+                    SUSPENSIÓN / RECONEXIÓN TEMPORAL
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" style="text-align:left">Fecha Suspensión:</label>
+                            <div class=" col-sm-3">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control input-sm" id="txtDateSuspension" placeholder="DD/MM/AAAA">
+                                    <label id="calendartxtStartDate" class="btn transaction-button input-group-addon" for="txtDateSuspension">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" style="text-align:left">Fecha  Reactivación:</label>
+                            <div class=" col-sm-3">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control input-sm" id="txtDateReact" placeholder="DD/MM/AAAA">
+                                    <label id="calendartxtEndDate" class="btn transaction-button input-group-addon" for="txtDateReact">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" style="text-align:left">Costo de reconexión (S/ Inc. IGV):</label>
+                            <div class=" col-sm-3">
+                                <input type="text" style="text-align:right;" id="txtImpPagar" class="form-control input-sm" disabled />
+                            </div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="chkRetencion" />
+                                <strong>Fidelizar</strong>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" style="text-align:left">Envío por E-mail:</label>
+
+                            <div class="col-sm-1" style="width:12px;">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="chkEmail" type="checkbox" value="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control input-sm" id="txtEmail" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="ddlCACDAC" style="text-align:left">Punto de Atención:</label>
+                            <div class="col-sm-3">
+                                <select class="form-control input-sm" id="ddlCACDAC"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtNotas" class="col-sm-3 control-label" style="text-align:left">Notas:</label>
+                            <div class="col-sm-6">
+                                <textarea id="txtNotas" class="form-control" rows="6"></textarea>
+                            </div>
+                        </div>
+
+                        <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert" style="display:none">
+                            <button type="button" id="closeErrorAlert" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong><span id="lblErrorMessage"></span></strong>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-12 text-center">
+                                <button id="btnSave" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                <button id="btnClose" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                <button id="btnConstancy" type="button" class="btn transaction-button" data-toggle="modal" data-target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/SuspensionReconnectionCustomer")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ReadRecordPDF/ReadRecord")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/Auth/AuthUser")
+

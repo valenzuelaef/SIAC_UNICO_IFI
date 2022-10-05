@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @*<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    @*<meta http-equiv="X-UA-Compatible" content="IE=9">*@
+    <title>- SIAC Único</title>
+    <link rel="shortcut icon" href="@Url.Content("~/images/favicon.ico")" />    
+    @System.Web.Optimization.Styles.Render("~/bundles/bootstrap-addon-css-siacu-ifi")    
+    @System.Web.Optimization.Styles.Render("~/bundles/jquery-addon-css-siacu-ifi")
+    @System.Web.Optimization.Styles.Render("~/bundles/site-css-siacu-ifi")
+    @System.Web.Optimization.Styles.Render("~/bundles/Site-TransactionsIFI-ifi")    
+    @RenderSection("styles", required: false)
+
+    <script>
+        var Session = {};
+    </script>
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery-siacu-ifi")
+    <style>
+        .modal-open {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body id="divBody" class="bodynotscroll transac-body">
+    <div class="transaction-header claro-red">
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+        <h4><strong><span id="spnMainTitle"><label id="lblTitle"></label></span></strong></h4>
+    </div>
+            <div class="col-xs-4 text-right">
+                <h5>
+                    <span class="label label-danger">Nodo <span class="badge" style="font-size:10px;"><span id="lblNode">0</span></span></span>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="scroll-content">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery-addon-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/datepicker-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/moment-js-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/Claro-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/numeric-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryval-siacu-ifi")
+    @System.Web.Optimization.Scripts.Render("~/bundles/stepsIFI-ifi")  
+    
+    <script>
+        $(window).bind('mousewheel DOMMouseScroll', function (event) {
+            if (event.ctrlKey == true) {
+                $('#content').css({ 'height': "auto" });
+            }
+        });
+
+    </script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

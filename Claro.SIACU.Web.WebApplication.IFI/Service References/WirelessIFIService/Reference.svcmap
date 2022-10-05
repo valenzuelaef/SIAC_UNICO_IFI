@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="14cd167a-1244-458a-8383-d374beb57447" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53727/WirelessIFIService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WirelessIFIService7.xsd" MetadataType="Schema" ID="e52ce961-f35d-4114-b2bb-8613fe352eb0" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd7" />
+    <MetadataFile FileName="WirelessIFIService.xsd" MetadataType="Schema" ID="9c259267-2db0-437c-863e-e8228d7863ab" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd6" />
+    <MetadataFile FileName="WirelessIFIService1.xsd" MetadataType="Schema" ID="f277f032-c66d-4f00-81a5-5c91dd64cc1a" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd5" />
+    <MetadataFile FileName="WirelessIFIService2.xsd" MetadataType="Schema" ID="33f28502-971d-4f70-9a68-d0a79635afcb" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="WirelessIFIService3.xsd" MetadataType="Schema" ID="aeb1a7c9-2306-43ee-aaac-ec310af818f0" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WirelessIFIService4.xsd" MetadataType="Schema" ID="8a5aff82-9e67-42a0-9e24-e37bac2b91d5" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WirelessIFIService5.xsd" MetadataType="Schema" ID="b45f2c76-291f-47a7-8a2e-0c3be18ed235" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WirelessIFIService6.xsd" MetadataType="Schema" ID="e3719d67-4a5b-4aaf-927e-85c6224df340" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WirelessTransacService.wsdl" MetadataType="Wsdl" ID="aa66676f-9824-486c-933f-fea0fef40fe3" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?wsdl" />
+    <MetadataFile FileName="WirelessIFIService8.xsd" MetadataType="Schema" ID="ee333de1-7a1a-4c63-8a09-82ff6b2b4631" SourceId="1" SourceUrl="http://localhost:53727/WirelessIFIService.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

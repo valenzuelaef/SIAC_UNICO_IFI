@@ -1,0 +1,135 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    .table-responsive > table > thead > tr > th,
+    .dataTables_scrollHeadInner > table > thead > tr > th {
+        background-color: rgba(218, 41, 28, 1) !important;
+    }
+    .control-label {
+        margin-top: 6px;
+    }
+   
+</style>
+<div id="ScheduledTasksForm" class="container-fluid">
+    <div class="col-md-12">
+        <form class="form-group">
+            <div class="panel panel-info ">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-2"><label class="control-label">Contrato:</label></div>
+                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtContract" /> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-2"><label class="control-label">Cuenta:</label></div>
+                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtAccount" /> </div>
+                        <div class="col-sm-1"><label class="control-label">Teléfono:</label></div>
+                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtPhoneNumber" /> </div>
+                        <div class="col-sm-2"><label class="control-label">Estado:</label></div>
+                        <div class="col-sm-3"><select class="form-control input-sm" id="ddlStatus" name="ddlStatus"></select> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-2"><label class="control-label">Programación desde:</label></div>
+                        <div class="col-sm-2">
+                            <div class="input-group input-daterange">
+                                <input type="text" class="form-control input-sm" id="txtDateProgStart" placeholder="DD/MM/AAAA">
+                                <label id="calendartxtStartDate" class="btn transaction-button input-group-addon" for="txtDateProgStart">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><label class="control-label">Hasta:</label></div>
+                        <div class="col-sm-2">
+                            <div class="input-group input-daterange">
+                                <input type="text" class="form-control input-sm" id="txtDateProgEnd" placeholder="DD/MM/AAAA">
+                                <label id="calendartxtStartDate" class="btn transaction-button input-group-addon" for="txtDateProgEnd">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2"><label class="control-label">Tipo de Transacción:</label></div>
+                        <div class="col-sm-3"><select class="form-control input-sm" id="ddlTypeTransaction" name="ddlTypeTransaction"></select> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-2"><label class="control-label">Código de Transacción:</label></div>
+                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtCodeTransaction" /> </div>
+                        <div class="col-sm-1"><label class="control-label">Asesor:</label></div>
+                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtAdvisor" /> </div>
+                        <div class="col-sm-2"><label class="control-label">Punto de Atención:</label></div>
+                        <div class="col-sm-3"><select class="form-control input-sm" id="ddlCacDac" name="ddlCacDac"></select> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button id="btnSearch" type="button" class="btn btn-sm transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Consultar</button>
+                            <button id="btnClose" type="button" class="btn btn-sm transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                            <button id="btnExport" type="button" class="btn btn-sm transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Exportar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+
+        </form>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                <span class="glyphicon glyphicon-list" style="color: rgb(255, 255, 255);">
+                </span>
+                <a style="color: rgb(255, 255, 255);">
+                    Tareas Programadas
+                </a>
+            </div>
+
+            <div id="divScheduledTaskTable">
+                <div class="panel-body" style="padding-bottom:15px">
+                    <div class="col-md-12" style="text-align:center">
+                        <div class="table-responsive" style="overflow-x: auto">
+                            <table id="tblScheduledTask" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                <thead class="btn-danger">
+                                    <tr>
+                                        <th class="text-center">Contrato</th>
+                                        <th class="text-center">Código Cliente</th>
+                                        <th class="text-center">Fecha Programación</th>
+                                        <th class="text-center">Fecha Registro</th>
+                                        <th class="text-center">Fecha Ejecución</th>
+                                        <th class="text-center">Estado</th>
+                                        <th class="text-center">Descripción Servicio</th>
+                                        <th class="text-center">Cuenta</th>
+                                        <th class="text-center">Tipo Servicio</th>
+                                        <th class="text-center">Acción</th>
+                                        <th class="text-center"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    <tr>
+                                        <td class="odd text-center" colspan="10">Sin resultados disponibles para la búsqueda.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="myModalLoad" style="display: none;">
+                                <span>
+                                    <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ScheduledTasks")
+

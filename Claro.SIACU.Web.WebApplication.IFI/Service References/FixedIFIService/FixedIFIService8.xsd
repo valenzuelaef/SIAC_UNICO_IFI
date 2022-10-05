@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="AddDayWorkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodError" type="xs:int" />
+          <xs:element minOccurs="0" name="DesError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaResultado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDias" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddDayWorkRequest" nillable="true" type="tns:AddDayWorkRequest" />
+  <xs:complexType name="AddDayWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodError" type="xs:int" />
+      <xs:element minOccurs="0" name="DescError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaResultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddDayWorkResponse" nillable="true" type="tns:AddDayWorkResponse" />
+</xs:schema>

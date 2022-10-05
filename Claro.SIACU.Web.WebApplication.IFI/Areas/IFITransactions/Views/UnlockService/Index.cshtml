@@ -1,0 +1,482 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    .modal-header {
+        color: #ffffff;
+        background-color: #d9534f !important;
+    }
+
+    #formLock .error {
+        background: #ffffff !important;
+        padding: 0px !important;
+        position: relative;
+        margin-top: 5px;
+        color: #a94442;
+    }
+</style>
+<div id="UnlockServiceForm" class="container-fluid">
+    <div class="scrollbudy">
+    <div class="col-sm-3">
+        <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel claro-panel-primary">
+                <div id="customerDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-user"></span>
+
+                        <a data-toggle="collapse"  aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                </div>
+                    <div class="panel-body" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                    <td class="col-sm-6"><label class="control-label">Número de Servicio:</label></td>
+                                <td class="col-sm-6">
+                                        <label id="lblNroTelefono"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Customer ID:</label></td>
+                                <td class="col-sm-6"><label id="lblCustomerID"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                <td class="col-sm-6"><label id="lblCliente"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Contacto:</label></td>
+                                <td class="col-sm-6"><label id="lblContacto"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                <td class="col-sm-6"><label id="lblDNI_RUC"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                <td class="col-sm-6"><label id="lblRepren_Legal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Plan Actual:</label></td>
+                                <td><label id="lblPlan"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Fecha Activación:</label></td>
+                                <td class="col-sm-6"><label id="lblFechaActivacion"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Ciclo de Facturación:</label></td>
+                                <td class="col-sm-6"><label id="lblCicloFact"></label> </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Límite Crédito:</label></td>
+                                <td class="col-sm-6"><label id="lblLimiteCred"></label> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="addressDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <a data-toggle="collapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                </div>
+                <div class="panel-body" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Dirección:</label></td>
+                            <td class="col-sm-6"><label id="lblDireccion"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                            <td class="col-sm-6"><label id="lblNotasDirec"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Pais:</label></td>
+                            <td class="col-sm-6"><label id="lblPais"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                            <td class="col-sm-6"><label id="lblDepartamento"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                            <td class="col-sm-6"><label id="lblProvincia"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                            <td class="col-sm-6"><label id="lblDistrito"></label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6"><label class="control-label">Código Ubigeo:</label></td>
+                            <td class="col-sm-6"><label id="lblCodUbigeo"></label></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="businessRulesHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                    <div id="divReglas">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div class="col-md-9">
+        <div id="tabChangePhoneNumber" role="tabpanel" percent="0%">
+            <div class="panel claro-panel-primary">
+                <div class="panel-heading">
+                    DESBLOQUEO DE SERVICIO IFI
+                </div>
+                <div class="panel-body">
+
+                    <div class="col-md-12">
+
+
+                        <form id="formUnLock">
+                            <div class="panel panel-default " id="pnlMotivo">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3"><label>Motivo<span class="text-right label-red-service"> (*):</span></label></div>
+
+                                        <div class="col-sm-3 error-input"> <select class="form-control select-list" name="nmddlMotive" id="ddlMotive"></select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default " id="pnlSolicitante">
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-2"><label>Solicitante  </label></div>
+                                        <div class="col-sm-10"><p class="text-right label-red-service">(*) Campos Obligatorios</p></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-sm-12">
+                                        <div class="col-sm-3"><span></span></div>
+                                        <div class="col-sm-9">
+                                            <div class="panel panel-default col-sm-12" style="padding: 1% !important; margin-bottom: 0px" id="cbotype">
+                                                <label id="lblTitular" class="radio-inline col-sm-3"><input type="radio" id="cboTitular" name="NmrdbSolicitante" checked="checked" value="1">Titular</label>
+                                                <label id="lblUsuario" class="radio-inline col-sm-3"><input type="radio" id="cboUsuario" name="NmrdbSolicitante" value="2">Carta Poder</label>
+                                                <label id="lblRRLLCartaPoder" class="radio-inline col-sm-4"><input type="radio" id="cboRRLLCartaPoder" name="NmrdbSolicitante" value="3">RR/LL</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Nombres <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtFirstName" name="nmFirstName" placeholder="Nombres Completos" /> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Apellidos <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtLastName" name="nmLastName" placeholder="Apellidos Completos" /></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Tipo de Documento <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><select class="form-control select-list" id="cbDocumentType" name="nmDocumentType"></select></div>
+                                        <div class="col-sm-2"><label>Nº de Documento <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtDocumentNumber" name="nmDocumentNumber" placeholder="Documento de Identidad" /></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label id="lblTitularRelation">Relacion con el Titular <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><select class="form-control select-list" id="cbTitularRelation" name="nmTitularRelation"></select></div>
+                                        <div class="col-sm-2"><label id="lblOtherRelation">Otra Relacion <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtOtherRelation" name="nmOtherRelation" /></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label id="lblPhone">Teléfono <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtPhone" name="nmPhone" placeholder="(51)999999999" /></div>
+                                        <div class="col-sm-2"><label id="lblParient">Motivo / Pariente<span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtParient" name="nmParient" placeholder="Ingrese Motivo" /></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="panel panel-default " id="pnlPreguntas">
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3 " style="padding-top: 40px;">
+                                            <button id="btnTest" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-pencil"></span> Preguntas Seguridad Call Center</button>
+                                    </div>
+                                        <div class="col-sm-3" style="padding-left: 50px;padding-top: 40px;"><label>Preguntas y Respuestas Afirmativas :  </label></div>
+                                        <div class="col-sm-6"><textarea class="form-control" rows="5" id="txtNotesTest" name="txtNotes"></textarea></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default ">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <div class="col-sm-3" style="width: 35px;"> <input type="checkbox" class="form-check-input" id="chkBloqueoLinea"></div>
+                                        <div class="col-sm-2" style="padding-left: 0px; padding-top: 3px;"><label>Desbloqueo de Linea </label></div>
+                                    </div>
+                                </div>
+                                <div id="idBloqueoLineaPanel">
+                                    <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                                        <span class="glyphicon glyphicon-list" style="color: rgb(255, 255, 255);">
+                                        </span>
+                                        <a style="color: rgb(255, 255, 255);">
+                                            Nro de Linea / Servicio : <span class="clline">Cargando...</span>
+                                        </a>
+                                    </div>
+
+                                    <div id="idBloqueoLinea">
+                                        <div class="panel-body" style="padding-bottom:15px">
+                                            <div class="col-sm-12" style="text-align:center">
+                                                <div class="table-responsive" style="overflow-x: auto">
+                                                    <table style="width:100%;" id="tblLineLock" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                                        <thead class="btn-danger">
+                                                            <tr>
+                                                                <th class="text-center">Tickler</th>
+                                                                <th class="text-center">Fecha</th>
+                                                                <th class="text-center">Usuario</th>
+                                                                <th class="text-center">Tipo</th>
+                                                                <th class="text-center">Descripción</th>
+                                                                @*<th class="text-center">Selec</th>*@
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbody">
+                                                            <tr>
+                                                                <td class="odd text-center" colspan="10">Sin resultados disponibles para la búsqueda.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div id="myModalLoad" style="display: none;">
+                                                        <span>
+                                                            <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <div class="col-sm-3" style="width: 35px;"> <input type="checkbox" class="form-check-input" id="chkBloqueoEquipo"></div>
+                                        <div class="col-sm-2" style="padding-left: 0px; padding-top: 3px;"><label>Desbloqueo de  Equipo  </label></div>
+                                    </div>
+                                </div>
+                                <div id="idBloqueoEquipoPanel">
+                                    <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                                        <span class="glyphicon glyphicon-list" style="color: rgb(255, 255, 255);">
+                                        </span>
+                                        <a style="color: rgb(255, 255, 255);">
+                                            Nro de Linea / Servicio : <span class="clline">Cargando...</span>
+                                        </a>
+                                    </div>
+
+                                    <div id="idBloqueoLinea">
+                                        <div class="panel-body" style="padding-bottom:15px">
+                                            <div class="col-sm-12" style="text-align:center">
+                                                <div class="table-responsive" style="overflow-x: auto">
+                                                    <table style="width:100%;" id="tblEquipmentLock" class="table   table-hover table-responsive claro-modal-tabla table-bordered">
+                                                        <thead class="btn-danger">
+                                                            <tr>
+                                                                <th class="text-center">Codigo de Bloqueo</th>
+                                                                <th class="text-center">Fecha de Bloqueo</th>
+                                                                <th class="text-center">IMEI</th>
+                                                                <th class="text-center">Marca - Modelo</th>
+                                                                <th class="text-center">Estado</th>
+                                                                <th class="text-center">Fecha Registro</th>
+                                                                <th class="text-center">Tipo Bloqueo</th>
+                                                                <th class="text-center">Seleccionar</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbody">
+                                                            <tr>
+                                                                <td class="odd text-center" colspan="10">Sin resultados disponibles para la búsqueda.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div id="myModalLoad" style="display: none;">
+                                                        <span>
+                                                            <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-3"><label>Código IMEI <span class="text-right label-red-service"> (*):</span></label></div>
+                                            <div class="col-sm-3  error-input"><input class="form-control input-sm" id="txtImei" name="nmImei" placeholder="IMEI" /></div>
+                                            <div class="col-sm-3"><button id="btnSearchIMEI" class="btn transaction-button" type="button">Buscar IMEI</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default ">
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Envio por Correo :</label></div>
+                                        <div class="col-sm-3">
+                                            <div class="input-group">
+
+                                                <span class="input-group-addon">
+                                                    <input id="chkEnvio" type="checkbox" aria-label="..." checked="checked">
+                                                    <label id="lblEnvio">¿Desea enviar por correo?</label>
+                                                </span>
+
+                                                <input id="txtCorreo" name="nmCorreo" type="text" class="form-control" aria-label="..." placeholder="Ejemplo@correo.com">
+
+                                            </div><!-- /input-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Notas :</label></div>
+                                        <div class="col-sm-9 error-input"><textarea class="form-control" rows="5" id="txtNotes" name="nmNotes" maxlength="3800"></textarea></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Teléfono de Referencia:</label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtReferencePhone" name="nmReferencePhone" placeholder="Telefono Referencia" /></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Punto de Atencion <span class="text-right label-red-service"> (*):</span></label></div>
+                                        <div class="col-sm-3 error-input"><select class="form-control input-sm" id="ddlCACDAC" name="nmCACDAC"></select></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3"><label>Jefe/Supervisor aprobador:</label></div>
+                                        <div class="col-sm-3 error-input"><input type="text" maxlength="@System.Configuration.ConfigurationManager.AppSettings["keyMaxCharactersBoss"].ToString()" class="form-control input-sm" id="txtBoss" name="nmBoss" placeholder="Jefe/Supervisor aprobador" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default ">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <button id="btnSave" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Desbloquear</button>
+                                        <button id="btnClean" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Limpiar</button>
+                                        <button id="btnConstancy" type="button" class="btn transaction-button" data-toggle="modal" data-target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                        <button id="btnClose" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span> <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....</span>
+    </div>
+    <div id="exampleModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Busqueda de IMEI</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="idBloqueoLineaPanel">
+                        <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                            <span class="glyphicon glyphicon-list" style="color: rgb(255, 255, 255);">
+                            </span>
+                            <a style="color: rgb(255, 255, 255);">
+                                Nro de Linea / Servicio : 849710025
+                            </a>
+                        </div>
+
+                        <div id="idBloqueoLinea">
+                            <div class="panel-body" style="padding-bottom:15px">
+                                <div class="col-sm-12" style="text-align:center">
+                                    <div class="table-responsive" style="overflow-x: auto">
+                                        <table id="tblScheduledTask" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                            <thead class="btn-danger">
+                                                <tr>
+                                                    <th class="text-center">Seleccionar</th>
+                                                    <th class="text-center">Fecha y Hora Ini</th>
+                                                    <th class="text-center">Fecha y Hora Fin</th>
+                                                    <th class="text-center">Linea</th>
+                                                    <th class="text-center">Numero IMEI</th>
+                                                    <th class="text-center">Marca-Modelo</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody">
+                                                <tr>
+                                                    <td class="odd text-center" colspan="10">Sin resultados disponibles para la búsqueda.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div id="myModalLoad" style="display: none;">
+                                            <span>
+                                                <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+
+                            <div>
+                                <button id="btnSelect" class="btn transaction-button" type="button">Seleccionar</button>
+                                <button type="button" class="btn transaction-button" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="@System.Configuration.ConfigurationManager.AppSettings["FlagBiometric"].ToString()" id='hdFlagBiometric'>
+	<input type="hidden" value="@System.Configuration.ConfigurationManager.AppSettings["keyMaxCharactersBoss"].ToString()" id='hdkeyMaxCharactersBoss'>
+	<input type="hidden" value="@System.Configuration.ConfigurationManager.AppSettings["keyMaxCharactersBossMsg"].ToString()" id='hdkeyMaxCharactersBossMsg'>
+	
+  
+
+</div>
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/UnlockService")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/Auth/AuthUser")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ReadRecordPDF/ReadRecord")

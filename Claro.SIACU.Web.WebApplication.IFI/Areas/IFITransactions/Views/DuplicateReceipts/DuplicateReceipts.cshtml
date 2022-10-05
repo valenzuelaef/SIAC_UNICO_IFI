@@ -1,0 +1,319 @@
+﻿@{
+    Layout = null;
+
+}
+<style>
+    #formDuplicateReceipts .error {
+        background: #ffffff !important;
+        padding: 0px !important;
+        position: relative;
+        margin-top: 5px;
+        color: #a94442;
+    }
+</style>
+<style>
+    .label-default {
+        background-color: #a7a8aa !important;
+    }
+</style>
+<div id="INTDuplicateReceipts" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-sm-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+
+
+                        <a data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+                    <div class="panel-body" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Número de Servicio:</label></td>
+                                    <td class="col-sm-6">
+                                        <label id="lblNroTelefono"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Customer ID:</label></td>
+                                    <td class="col-sm-6"><label id="lblCustomerID"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Contacto:</label></td>
+                                    <td class="col-sm-6"><label id="lblContacto"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                    <td class="col-sm-6"><label id="lblDNI_RUC"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                    <td class="col-sm-6"><label id="lblRepren_Legal"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Plan Actual:</label></td>
+                                    <td><label id="lblPlan"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Fecha Activación:</label></td>
+                                    <td class="col-sm-6"><label id="lblFechaActivacion"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Ciclo de Facturación:</label></td>
+                                    <td class="col-sm-6"><label id="lblCicloFact"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Límite Crédito:</label></td>
+                                    <td class="col-sm-6"><label id="lblLimiteCred"></label> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="addressDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                        <table class="table table-condensed">
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Dirección:</label></td>
+                                <td class="col-sm-6"><label id="lblDireccion"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                                <td class="col-sm-6"><label id="lblNotasDirec"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Pais:</label></td>
+                                <td class="col-sm-6"><label id="lblPais"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                                <td class="col-sm-6"><label id="lblDepartamento"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                                <td class="col-sm-6"><label id="lblProvincia"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                                <td class="col-sm-6"><label id="lblDistrito"></label></td>
+                            </tr>
+                            @*<tr>
+                                <td class="col-sm-6"><label class="control-label">Código Plano:</label></td>
+                                <td class="col-sm-6"><label id="lblCodPlano"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Código Ubigeo:</label></td>
+                                <td class="col-sm-6"><label id="lblCodUbigeo"></label></td>
+                            </tr>*@
+                        </table>
+                    </div>
+                    <div id="businessRulesHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                        <div id="divReglas">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div>
+
+                <div id="tabProducts">
+
+                    <div class="panel claro-panel-primary">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Duplicado de Recibos
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <form id="formDuplicateReceipts" name="formDuplicateReceipts">
+
+                                    <div class="panel panel-default ">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><h4><span class="label label-default">Domicilio de Facturación:</span></h4></div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Calle:<span class="text-right label-red-service">*</span></label></div>
+                                                <div class="col-md-9"><input id="txtCalleDuplicateR" class="form-control input-sm" disabled="true"/> </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Referencia: <span class="text-right label-red-service">*</span> </label></div>
+                                                <div class="col-md-9"><input id="txtReferenciaDuplicateR" class="form-control input-sm " disabled="true" /> </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Departamento: <span class="text-right label-red-service">*</span> </label></div>
+                                                <div class="col-md-2"><input id="txtDepartamentoDuplicateR" class="form-control input-sm " disabled="true" /> </div>
+                                                <div class="col-md-1"><label style="margin-top: 8px;">Provincia: </label></div>
+                                                <div class="col-md-2"><input id="txtProvinciaDuplicateR" class="form-control input-sm " disabled="true" /> </div>
+                                                <div class="col-md-1"><label style="margin-top: 8px;">Distrito: </label></div>
+                                                <div class="col-md-3"><input id="txtDistritoDuplicateR" class="form-control input-sm " disabled="true" /> </div>
+
+                                            </div>
+                                        </div>
+                                     
+
+
+                                    </div>
+
+
+                                    <div class="panel panel-default ">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><h4><span class="label label-default">Datos de la Transacción:</span></h4></div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Fechas de Emisión de Recibos Requeridos:<span class="text-right label-red-service">*</span></label></div>
+                                                <div class="col-md-2">
+                                                    <div class="panel panel-default ">
+                                                        <table id="dgFechas">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+                                                    </div>
+
+
+                                                </div>
+                                               
+
+                                                    <div class="col-md-2"><label style="margin-top: 8px;">Medio de Entrega:<span class="text-right label-red-service">*</span> </label></div>
+                                                    <div class="col-md-2"><select class="form-control select-list" id="cboMedio" name="nmcboMedio"></select></div>
+                                                    <div class="col-md-3"><input type="text" name="nmtxtMedio" class="form-control input-md" id="txtMedio" style="visibility:hidden" disabled /></div>
+
+                                             
+
+
+                                                </div>
+
+
+
+
+                                            </div>
+                                        
+                             
+                                        
+
+
+                                        </div>
+
+                                    <div class="panel panel-default ">
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Envío Constancia por E-mail: <span class="text-right label-red-service">*</span> </label></div>
+                                                <div class="col-md-1" style="padding-right: 0px;width: 35px;"><div class="checkbox"><label><input id="chkEmail" type="checkbox" value=""></label></div></div>
+                                                <div class="col-md-3"><input id="txtEmail" class="form-control input-sm " /> </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Punto de Atención: </label></div>
+                                                <div class="col-md-3"><select class="form-control input-sm" id="cboCACDAC"></select></div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel panel-default ">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3"><label style="margin-top: 8px;">Notas: </label></div>
+                                                <div class="col-md-9"><textarea id="txtNote" class="form-control" placeholder="Agregar Notas" rows="4" maxlength="3800"></textarea></div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <center>
+
+                                        <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                        <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                        <button id="btnConstancia" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                    </center>
+                                    <br />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong><span id="lblErrorMessage"></span></strong>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span> <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....</span>
+    </div>
+</div>
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<input id="hidCodOpcion" type="hidden" name="hidCodOpcion" />
+<input id="hidAccion" type="hidden" name="hidAccion" />
+
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/DuplicateReceipts")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ReadRecordPDF/ReadRecord")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/Auth/AuthUser")

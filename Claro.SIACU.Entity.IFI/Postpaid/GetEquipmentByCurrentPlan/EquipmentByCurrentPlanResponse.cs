@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Runtime.Serialization;
+
+namespace Claro.SIACU.Entity.IFI.Postpaid.GetEquipmentByCurrentPlan
+{
+    public class EquipmentByCurrentPlanResponse
+    {
+        [DataMember]
+        public List<EquipmentByCurrentPlan> lstEquipmentByCurrentPlan { get; set; }
+    }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDigitalSignature" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDigitalSignature" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="DigitalSignatureRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanalAtencion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPDV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContenidoArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombrePDV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DigitalSignatureRequest" nillable="true" type="tns:DigitalSignatureRequest" />
+  <xs:complexType name="DigitalSignatureResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseData" nillable="true" type="tns:ResponseData" />
+      <xs:element minOccurs="0" name="ResponseStatus" nillable="true" type="tns:ResponseStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitalSignatureResponse" nillable="true" type="tns:DigitalSignatureResponse" />
+  <xs:complexType name="ResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosFirmarDocumento" nillable="true" type="tns:DataSignDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseData" nillable="true" type="tns:ResponseData" />
+  <xs:complexType name="DataSignDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RutaArchivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSignDocument" nillable="true" type="tns:DataSignDocument" />
+  <xs:complexType name="ResponseStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UbicacionError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseStatus" nillable="true" type="tns:ResponseStatus" />
+</xs:schema>

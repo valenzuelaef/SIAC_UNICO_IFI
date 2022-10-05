@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+  <xs:complexType name="RetentionCancelServicesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CargoFijoActual" type="xs:double" />
+          <xs:element minOccurs="0" name="CargoFijoNuevoPlan" type="xs:double" />
+          <xs:element minOccurs="0" name="CodId" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMessage" type="xs:double" />
+          <xs:element minOccurs="0" name="CodNuevoPlan" type="xs:double" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiasxMes" type="xs:double" />
+          <xs:element minOccurs="0" name="FechaPenalidad" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroFacturas" type="xs:double" />
+          <xs:element minOccurs="0" name="NroTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParameterID" type="xs:int" />
+          <xs:element minOccurs="0" name="Phone" type="xs:int" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorApadece" type="xs:double" />
+          <xs:element minOccurs="0" name="vEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="vIdMotive" type="xs:int" />
+          <xs:element minOccurs="0" name="vIdTypeWork" type="xs:int" />
+          <xs:element minOccurs="0" name="vNivel" type="xs:int" />
+          <xs:element minOccurs="0" name="vTipoLista" type="xs:int" />
+          <xs:element minOccurs="0" name="vtransaction" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetentionCancelServicesRequest" nillable="true" type="tns:RetentionCancelServicesRequest" />
+  <xs:complexType name="RetentionCancelServicesResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="AccionTypes" nillable="true" type="q2:ArrayOfGenericItem" />
+      <xs:element minOccurs="0" name="AcuerdoIdSalida" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoActual" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoDiario" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoNuevoPlan" type="xs:double" />
+      <xs:element minOccurs="0" name="CodId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiasPendientes" type="xs:double" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroFacturas" type="xs:double" />
+      <xs:element minOccurs="0" name="PenalidaAPADECE" type="xs:double" />
+      <xs:element minOccurs="0" name="PenalidadPCS" type="xs:double" />
+      <xs:element minOccurs="0" name="Phone" type="xs:int" />
+      <xs:element minOccurs="0" name="PrecioLista" type="xs:double" />
+      <xs:element minOccurs="0" name="PrecioVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValorApadece" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetentionCancelServicesResponse" nillable="true" type="tns:RetentionCancelServicesResponse" />
+</xs:schema>

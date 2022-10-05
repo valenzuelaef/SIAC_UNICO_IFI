@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetListScheduledTransactions" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetServicesByInteraction" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetJobTypes" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.ETAFlowValidate" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderType" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderSubType" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetValidateCustomerID" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetService" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertDetailServiceInteraction" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertTransaction" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertInteractionBusiness" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetMotiveSOTByTypeJob" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetTransactionScheduled" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostExecuteSuspension" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetReconeService" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostUpdateProgTaskLte" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostSuspensionLte" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostReconexionLte" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetUpdateInter29" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarClaroPuntos" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarPaqDisponibles" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetComprarPaquetes" />
+  <xs:element name="GetDeleteScheduledTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" minOccurs="0" name="request" nillable="true" type="q1:DeleteScheduledTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeleteScheduledTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" minOccurs="0" name="GetDeleteScheduledTransactionResult" nillable="true" type="q2:DeleteScheduledTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListScheduledTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetListScheduledTransactions" minOccurs="0" name="request" nillable="true" type="q3:ListScheduledTransactionsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListScheduledTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetListScheduledTransactions" minOccurs="0" name="GetListScheduledTransactionsResult" nillable="true" type="q4:ListScheduledTransactionsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="objRequest" nillable="true" type="q5:GetCustomerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="GetCustomerResult" nillable="true" type="q6:CustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetServicesByInteraction" minOccurs="0" name="objInteractionServiceRequest" nillable="true" type="q7:InteractionServiceRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByInteractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetServicesByInteraction" minOccurs="0" name="GetServicesByInteractionResult" nillable="true" type="q8:InteractionServiceResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetJobTypes" minOccurs="0" name="objJobTypesRequest" nillable="true" type="q9:JobTypesRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetJobTypes" minOccurs="0" name="GetJobTypesResult" nillable="true" type="q10:JobTypesResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ETAFlowValidate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.ETAFlowValidate" minOccurs="0" name="objPlansRequest" nillable="true" type="q11:ETAFlowRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ETAFlowValidateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.ETAFlowValidate" minOccurs="0" name="ETAFlowValidateResult" nillable="true" type="q12:ETAFlowResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderType" minOccurs="0" name="objOrderTypesRequest" nillable="true" type="q13:OrderTypesRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderType" minOccurs="0" name="GetOrderTypeResult" nillable="true" type="q14:OrderTypesResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderSubType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderSubType" minOccurs="0" name="objSubTypesRequest" nillable="true" type="q15:OrderSubTypesRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderSubTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderSubType" minOccurs="0" name="GetOrderSubTypeResult" nillable="true" type="q16:OrderSubTypesResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListarAccionesRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q17:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListarAccionesRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetListarAccionesRCResult" nillable="true" type="q18:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotCancelacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q19:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotCancelacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetMotCancelacionResult" nillable="true" type="q20:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubMotiveCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q21:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubMotiveCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetSubMotiveCancelResult" nillable="true" type="q22:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeWork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q23:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeWorkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetTypeWorkResult" nillable="true" type="q24:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubTypeWork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q25:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubTypeWorkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetSubTypeWorkResult" nillable="true" type="q26:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveSOT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q27:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveSOTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetMotiveSOTResult" nillable="true" type="q28:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddDayWork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" minOccurs="0" name="objRequest" nillable="true" type="q29:AddDayWorkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddDayWorkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" minOccurs="0" name="GetAddDayWorkResult" nillable="true" type="q30:AddDayWorkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainParameterTerminalTPI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q31:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainParameterTerminalTPIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetObtainParameterTerminalTPIResult" nillable="true" type="q32:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoloTFIPostpago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q33:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoloTFIPostpagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetSoloTFIPostpagoResult" nillable="true" type="q34:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainPenalidadExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q35:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainPenalidadExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetObtainPenalidadExtResult" nillable="true" type="q36:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDatosBSCSExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q37:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDatosBSCSExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="ObtenerDatosBSCSExtResult" nillable="true" type="q38:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetValidateCustomerID" minOccurs="0" name="objRequest" nillable="true" type="q39:ValidateCustomerIdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetValidateCustomerID" minOccurs="0" name="GetValidateCustomerIdResult" nillable="true" type="q40:ValidateCustomerIdResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="objRequest" nillable="true" type="q41:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="GetRegisterCustomerIdResult" nillable="true" type="q42:CustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseInsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" minOccurs="0" name="objRequest" nillable="true" type="q43:CaseInsertRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseInsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" minOccurs="0" name="GetCaseInsertResult" nillable="true" type="q44:CaseInsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApadeceCancelRet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="objRequest" nillable="true" type="q45:RetentionCancelServicesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApadeceCancelRetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" minOccurs="0" name="GetApadeceCancelRetResult" nillable="true" type="q46:RetentionCancelServicesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDesactivatedContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="objRequestCliente" nillable="true" type="q47:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDesactivatedContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDesactivatedContractResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTelephoneByContractCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetService" minOccurs="0" name="objRequest" nillable="true" type="q48:ServiceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTelephoneByContractCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetService" minOccurs="0" name="GetTelephoneByContractCodeResult" nillable="true" type="q49:ServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertDetailServiceInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertDetailServiceInteraction" minOccurs="0" name="objInsertDetailServiceInteractionRequest" nillable="true" type="q50:InsertDetailServiceInteractionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertDetailServiceInteractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertDetailServiceInteraction" minOccurs="0" name="GetInsertDetailServiceInteractionResult" nillable="true" type="q51:InsertDetailServiceInteractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertTransaction" minOccurs="0" name="objInsertTransactionRequest" nillable="true" type="q52:InsertTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertTransaction" minOccurs="0" name="GetInsertTransactionResult" nillable="true" type="q53:InsertTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractionBusiness">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertInteractionBusiness" minOccurs="0" name="objRequest" nillable="true" type="q54:InsertInteractionBusinessRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractionBusinessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertInteractionBusiness" minOccurs="0" name="GetInsertInteractionBusinessResult" nillable="true" type="q55:InsertInteractionBusinessResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="oGetCustomerRequest" nillable="true" type="q56:GetCustomerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="GetValidateCustomerResult" nillable="true" type="q57:CustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreateCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="oRequest" nillable="true" type="q58:Interaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreateCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="GetCreateCaseResult" nillable="true" type="q59:Interaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="oItem" nillable="true" type="q60:Interaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="GetInsertCaseResult" nillable="true" type="q61:Interaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTemplateCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="oItem" nillable="true" type="q62:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTemplateCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="GetInsertTemplateCaseResult" nillable="true" type="q63:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTemplateCaseContingent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="oItem" nillable="true" type="q64:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTemplateCaseContingentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="GetInsertTemplateCaseContingentResult" nillable="true" type="q65:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaPlantillaCaso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="oItem" nillable="true" type="q66:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaPlantillaCasoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="ActualizaPlantillaCasoResult" nillable="true" type="q67:CaseTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultationServiceByContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" minOccurs="0" name="oConsultationServiceByContractRequest" nillable="true" type="q68:ConsultationServiceByContractRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultationServiceByContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" minOccurs="0" name="GetConsultationServiceByContractResult" nillable="true" type="q69:ConsultationServiceByContractResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveSOTByTypeJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetMotiveSOTByTypeJob" minOccurs="0" name="objRequest" nillable="true" type="q70:MotiveSOTByTypeJobRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveSOTByTypeJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetMotiveSOTByTypeJob" minOccurs="0" name="GetMotiveSOTByTypeJobResult" nillable="true" type="q71:MotiveSOTByTypeJobResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionScheduled">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetTransactionScheduled" minOccurs="0" name="objRequest" nillable="true" type="q72:TransactionScheduledRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionScheduledResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetTransactionScheduled" minOccurs="0" name="GetTransactionScheduledResult" nillable="true" type="q73:TransactionScheduledResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDesactivatedContract_LTE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="objRequest" nillable="true" type="q74:Customer" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDesactivatedContract_LTEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDesactivatedContract_LTEResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSuspensionDeServicioCodRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostExecuteSuspension" minOccurs="0" name="objRequest" nillable="true" type="q75:ExecuteSuspensionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSuspensionDeServicioCodResResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostExecuteSuspension" minOccurs="0" name="EjecutaSuspensionDeServicioCodResResult" nillable="true" type="q76:ExecuteSuspensionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReconectionService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetReconeService" minOccurs="0" name="objRequest" nillable="true" type="q77:ReconeServiceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReconectionServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetReconeService" minOccurs="0" name="GetReconectionServiceResult" nillable="true" type="q78:ReconeServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerLineNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" minOccurs="0" name="objRequest" nillable="true" type="q79:ConsultationServiceByContractRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerLineNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" minOccurs="0" name="GetCustomerLineNumberResult" nillable="true" type="q80:ConsultationServiceByContractResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteractIDforCaseID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" minOccurs="0" name="objRequest" nillable="true" type="q81:CaseInsertRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteractIDforCaseIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" minOccurs="0" name="GetInteractIDforCaseIDResult" nillable="true" type="q82:CaseInsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProgTaskLte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostUpdateProgTaskLte" minOccurs="0" name="objRequest" nillable="true" type="q83:UpdateProgTaskLteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProgTaskLteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostUpdateProgTaskLte" minOccurs="0" name="UpdateProgTaskLteResult" nillable="true" type="q84:UpdateProgTaskLteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSuspensionDeServicioLte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostSuspensionLte" minOccurs="0" name="objRequest" nillable="true" type="q85:PostSuspensionLteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSuspensionDeServicioLteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostSuspensionLte" minOccurs="0" name="EjecutaSuspensionDeServicioLteResult" nillable="true" type="q86:PostSuspensionLteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaReconexionDeServicioLte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostReconexionLte" minOccurs="0" name="objRequest" nillable="true" type="q87:ReconexionLteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaReconexionDeServicioLteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostReconexionLte" minOccurs="0" name="EjecutaReconexionDeServicioLteResult" nillable="true" type="q88:ReconexionLteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateInter29">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetUpdateInter29" minOccurs="0" name="objRequest" nillable="true" type="q89:UpdateInter29Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateInter29Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetUpdateInter29" minOccurs="0" name="GetUpdateInter29Result" nillable="true" type="q90:UpdateInter29Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTelefonosClienteLTE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q91:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTelefonosClienteLTEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="ObtenerTelefonosClienteLTEResult" nillable="true" type="q92:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFSuscriber_Quota">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q93:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFSuscriber_QuotaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="ConsultarPCRFSuscriber_QuotaResult" nillable="true" type="q94:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFSuscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q95:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFSuscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="ConsultarPCRFSuscriberResult" nillable="true" type="q96:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerClf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="objRequest" nillable="true" type="q97:GetCustomerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerClfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" minOccurs="0" name="GetCustomerClfResult" nillable="true" type="q98:CustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFPaquetesAdic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" minOccurs="0" name="objRequest" nillable="true" type="q99:PCRFPaquetesAdicRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFPaquetesAdicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" minOccurs="0" name="ConsultarPCRFPaquetesAdicResult" nillable="true" type="q100:PCRFPaquetesAdicBodyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClaroPuntos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarClaroPuntos" minOccurs="0" name="objRequest" nillable="true" type="q101:ConsultarClaroPuntosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClaroPuntosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarClaroPuntos" minOccurs="0" name="ConsultarClaroPuntosResult" nillable="true" type="q102:ConsultarClaroPuntosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPaqDisponibles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarPaqDisponibles" minOccurs="0" name="objRequest" nillable="true" type="q103:ConsultarPaqDisponibles_x0020_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPaqDisponiblesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarPaqDisponibles" minOccurs="0" name="ConsultarPaqDisponiblesResult" nillable="true" type="q104:ConsultarPaqDisponibles_x0020_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFDegradacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q105:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFDegradacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" minOccurs="0" name="ConsultarPCRFDegradacionResult" nillable="true" type="q106:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosporNroDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEstado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosporNroDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" minOccurs="0" name="GetDatosporNroDocumentosResult" nillable="true" type="q107:ArrayOfClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprarPaquetesRest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetComprarPaquetes" minOccurs="0" name="objRequest" nillable="true" type="q108:ComprarPaquetesMessageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprarPaquetesRestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetComprarPaquetes" minOccurs="0" name="ComprarPaquetesRestResult" nillable="true" type="q109:ComprarPaquetes_x0020_BodyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

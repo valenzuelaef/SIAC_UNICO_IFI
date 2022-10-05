@@ -1,0 +1,198 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<div id="INTPCRFConsultation" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                    <span class="glyphicon glyphicon-tasks" style="color: rgb(255, 255, 255);">
+                    </span>
+                    <a style="color: rgb(255, 255, 255);">
+                        Información General
+                    </a>
+                </div>
+
+                <div id="divGeneralInfo">
+                    <div class="panel-body" style="padding-bottom:4px">
+                        <div class="col-md-12">
+                           <table class="table table-condensed">
+                               <tbody>
+                                   <tr>
+                                       <td class="col-md-4"><label class="control-label">IMSI</label></td>
+                                       <td class="col-md-3"><label id="lblIMSI" class="text-message-info"></label></td>
+                                       <td class="col-md-2"><label id="lblIMSI_Validacion" class="text-message-info"></label></td>
+                                       <td class="col-md-3"></td>
+                                   </tr>
+                                   <tr>
+                                       <td class="col-sm-4"><label class="control-label">Línea asociada</label></td>
+                                       <td class="col-sm-3"><label id="lblLineaAsociada" class="text-message-info"></label></td>
+                                       <td class="col-sm-2"><label id="lblLineaAsociada_Validacion" class="text-message-info"></label></td>
+                                       <td class="col-md-3"></td>
+                                   </tr>                 
+                                   <tr>                  
+                                       <td class="col-sm-4"><label class="control-label">Perfil PCRF</label></td>
+                                       <td class="col-sm-3"><label id="lblPerfilPCRF" class="text-message-info"></label></td>
+                                       <td class="col-sm-2"><label id="lblPerfilPCRF_Validacion" class="text-message-info"></label></td>
+                                       <td class="col-md-3"></td>
+                                   </tr>                 
+                                   <tr>                  
+                                       <td class="col-sm-4"><label class="control-label">Ciclo de Facturación PCRF</label></td>
+                                       <td class="col-sm-3"><label id="lblCicloFacturacionPCRF" class="text-message-info"></label>
+                                       <td class="col-sm-2"><label id="lblCicloFacturacionPCRF_Validacion" class="text-message-info"></label></td>
+                                       <td class="col-md-3"></td>
+                                   </tr>                 
+                                   <tr>                  
+                                       <td class="col-sm-4"><label class="control-label">Tipo de Servicio</label></td>
+                                       <td class="col-sm-3"><label id="lblTipoServicio" class="text-message-info"></label></td>
+                                       <td class="col-sm-2"><label id="lblTipoServicio_Validacion" class="text-message-info"></label></td>
+                                       <td class="col-md-3"></td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                    <span class="glyphicon glyphicon-th-large" style="color: rgb(255, 255, 255);">
+                    </span>
+                    <a style="color: rgb(255, 255, 255);">
+                        Servicios Básicos
+                    </a>
+                </div>
+
+                <div id="divBasicServices">
+                    <div class="panel-body" style="padding-bottom:4px">
+                        <div class="col-md-12">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">SPC (Subscriber Profile Configuration)</label></td>
+                                        <td class="col-sm-3"><label id="lblSPC_Validacion" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">SI (Subscriber Information)</label></td>
+                                        <td class="col-sm-3"><label id="lblSI_Validacion" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                    <span class="glyphicon glyphicon-cloud-download" style="color: rgb(255, 255, 255);">
+                    </span>
+                    <a style="color: rgb(255, 255, 255);">
+                        Tráfico de Datos
+                    </a>
+                </div>
+
+                <div id="divDataTraffic">
+                    <div class="panel-body" style="padding-bottom:4px">
+                        <div class="col-md-12">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">Velocidad degrada</label></td>
+                                        <td class="col-sm-3"><label id="lblVelocidadDegradada" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                    <tr id="pnlDatosConsumidos">
+                                        <td class="col-sm-5"><label class="control-label">Datos consumidos</label></td>
+                                        <td class="col-sm-3"><label id="lblDatosConsumidos" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* INI - RF-04 - Evalenzs*@
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                    <span class="glyphicon glyphicon-barcode" style="color: rgb(255, 255, 255);">
+                    </span>
+                    <a style="color: rgb(255, 255, 255);">
+                        Paquetes Adicionales
+                    </a>
+                </div>
+
+                <div id="divPaquetesAdicionales">
+                    <div class="panel-body" style="padding-bottom:4px">
+                        <div class="col-md-12">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">Último paquete comprado</label></td>
+                                        <td class="col-sm-3"><label id="lblUltimoPaqCompradoAdic" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">Motivo de degradación</label></td>
+                                        <td class="col-sm-3"><label id="lblMotDegradacionAdic" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">Velocidad degradada</label></td>
+                                        <td class="col-sm-3"><label id="lblVelDegradadaAdic" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-5"><label class="control-label">Datos consumidos</label></td>
+                                        <td class="col-sm-3"><label id="lblDatosConsumidosAdic" class="text-message-info"></label></td>
+                                        <td class="col-md-4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* FIN - RF-04 - Evalenzs*@
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold; background-color: rgb(167, 168, 170);">
+                    <span class="glyphicon glyphicon-bookmark" style="color: rgb(255, 255, 255);">
+                    </span>
+                    <a style="color: rgb(255, 255, 255);">
+                        Observaciones
+                    </a>
+                </div>
+
+                <div id="divTasks">
+                    <div class="panel-body" style="padding-bottom:7px">
+                        <div class="col-md-12 text-center">
+                            <label class="text-message-info" id="lblObservacion"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 ">
+            <center>
+                <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cerrar</button>
+            </center>
+            <br />
+         </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/PCRFConsultation")

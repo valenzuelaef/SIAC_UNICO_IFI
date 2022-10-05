@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonIFIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetBusinessInteraction2" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd3" namespace="Claro" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd4" namespace="AuditService" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertEvidence" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetMotiveSot" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSchedule" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSaveAudit" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetGenerateConstancy" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertLogTrx" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetParameterData" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetBusinessRules" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetCacDacType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetTypification" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertInt" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetClient" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertTemplateInteraction" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsTemplateInteraction" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertInteract" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertGeneral" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertTemplateGeneral" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSaveAuditM" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GeneratePDF" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInsertInteractHFC" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSendEmail" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd28" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetFileDefaultImpersonation" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDatTempInteraction" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetNumberGWP" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetNumberEAI" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetEmployeByUser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.ReadOptionsByUser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.CheckingUser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetEvaluateAmount" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetWorkType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetValidateCommunication" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetUser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetEmployerDate" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetParameterTerminalTPI" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetStateType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetTransactionType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetUpdateInter30" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetEstCivType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetViasType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetManzanasType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetInterioresType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd49" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetUrbsType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetZonesType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetUbigeosType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetNacType" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetValidateMail" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetNumberSMS" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetLastInvoiceData" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.IsOkGetKey" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetUploadDocumentOnBase" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSequenceCode" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetQueuesCase" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetCaseLa" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetSendEmailWithBase64" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd62" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDigitalSignature" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd63" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetConsultIGV" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd64" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetOffice" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd65" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetVerifyUser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd66" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetPagOptionXuser" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd67" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetPaquetesAdquiridosHistorico" />
+      <xsd:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd68" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonIFIService_GetInsertBusinnesInteraction2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertBusinnesInteraction2" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertBusinnesInteraction2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertBusinnesInteraction2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertEvidence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEvidence" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertEvidence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEvidenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetMotiveSot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSot" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetMotiveSot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ValidateSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ValidateSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SaveAudit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAudit" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SaveAudit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetGenerateContancyPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyPDF" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetGenerateContancyPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertLogTrx_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogTrx" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertLogTrx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetParameterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterData" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetParameterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetBusinessRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRules" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetBusinessRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetCacDacType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacDacType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetCacDacType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacDacTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetTypification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypification" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetTypification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetObClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObClient" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetObClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertInteract_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInteract" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_InsertInteract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInteractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetinsertInteractionGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionGeneral" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetinsertInteractionGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetinsertInteractionTemplateGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionTemplateGeneral" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetinsertInteractionTemplateGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionTemplateGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SaveAuditM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditM" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SaveAuditM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GeneratePDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePDF" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GeneratePDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteractHFC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractHFC" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteractHFC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractHFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteract" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInsertInteract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmail" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailAlt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAlt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailAlt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAltResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetfileDefaultImpersonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileDefaultImpersonation" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetfileDefaultImpersonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileDefaultImpersonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInfoInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInfoInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberGWP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberGWP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberGWP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberGWPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberEAI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberEAI" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberEAI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEmployeByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeByUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEmployeByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ReadOptionsByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOptionsByUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ReadOptionsByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOptionsByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_CheckingUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckingUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_CheckingUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEvaluateAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEvaluateAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEvaluateAmount_DCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount_DCM" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEvaluateAmount_DCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount_DCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetWorkType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetWorkType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ValidateRedirectCommunication_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateRedirectCommunication" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_ValidateRedirectCommunication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateRedirectCommunicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEmployerDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployerDate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEmployerDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetParameterTerminalTPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterTerminalTPI" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetParameterTerminalTPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterTerminalTPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailFixed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailFixed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailFixed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailFixedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailAltFixed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAltFixed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSendEmailAltFixed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAltFixedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetStateType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetStateType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetTransactionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetTransactionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUpdatexInter30_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatexInter30" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUpdatexInter30_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatexInter30Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEstCivType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstCivType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetEstCivType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstCivTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetViasType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetViasType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetViasType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetViasTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetManzanasType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetManzanasType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetManzanasType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetManzanasTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInterioresType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterioresType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetInterioresType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterioresTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUrbsType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUrbsType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUrbsType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUrbsTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetZonesType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZonesType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetZonesType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZonesTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUbigeosType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUbigeosType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUbigeosType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUbigeosTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNacType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNacType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNacType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNacTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetValidateMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateMail" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetValidateMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberSMS" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetNumberSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetLastInvoiceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastInvoiceData" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetLastInvoiceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastInvoiceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_IsOkGetKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOkGetKey" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_IsOkGetKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOkGetKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUploadDocumentOnBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocumentOnBase" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetUploadDocumentOnBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocumentOnBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetConstancyPDFWithOnbase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConstancyPDFWithOnbase" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetConstancyPDFWithOnbase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConstancyPDFWithOnbaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSequenceCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSequenceCode" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetSequenceCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSequenceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetQueuesCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuesCase" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetQueuesCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuesCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetCaseLa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseLa" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetCaseLa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseLaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SendEmailWithBase64_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailWithBase64" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_SendEmailWithBase64_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailWithBase64Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_FirmarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:FirmarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_FirmarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FirmarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetConsultIGV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultIGV" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetConsultIGV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultIGVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffice" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetVerifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetVerifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetPagOptionXuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetPagOptionXuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetPaquetesAdquiridosHistorico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaquetesAdquiridosHistorico" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_GetPaquetesAdquiridosHistorico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaquetesAdquiridosHistoricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_obtenerTipoTecnologia_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTipoTecnologia" />
+  </wsdl:message>
+  <wsdl:message name="ICommonIFIService_obtenerTipoTecnologia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTipoTecnologiaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonIFIService">
+    <wsdl:operation name="GetInsertBusinnesInteraction2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertBusinnesInteraction2" message="tns:ICommonIFIService_GetInsertBusinnesInteraction2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertBusinnesInteraction2Response" message="tns:ICommonIFIService_GetInsertBusinnesInteraction2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEvidence">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertEvidence" message="tns:ICommonIFIService_GetInsertEvidence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertEvidenceResponse" message="tns:ICommonIFIService_GetInsertEvidence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetMotiveSot" message="tns:ICommonIFIService_GetMotiveSot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetMotiveSotResponse" message="tns:ICommonIFIService_GetMotiveSot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/ValidateSchedule" message="tns:ICommonIFIService_ValidateSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/ValidateScheduleResponse" message="tns:ICommonIFIService_ValidateSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAudit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/SaveAudit" message="tns:ICommonIFIService_SaveAudit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/SaveAuditResponse" message="tns:ICommonIFIService_SaveAudit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetGenerateContancyPDF" message="tns:ICommonIFIService_GetGenerateContancyPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetGenerateContancyPDFResponse" message="tns:ICommonIFIService_GetGenerateContancyPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogTrx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/InsertLogTrx" message="tns:ICommonIFIService_InsertLogTrx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/InsertLogTrxResponse" message="tns:ICommonIFIService_InsertLogTrx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetParameterData" message="tns:ICommonIFIService_GetParameterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetParameterDataResponse" message="tns:ICommonIFIService_GetParameterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetBusinessRules" message="tns:ICommonIFIService_GetBusinessRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetBusinessRulesResponse" message="tns:ICommonIFIService_GetBusinessRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCacDacType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetCacDacType" message="tns:ICommonIFIService_GetCacDacType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetCacDacTypeResponse" message="tns:ICommonIFIService_GetCacDacType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypification">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetTypification" message="tns:ICommonIFIService_GetTypification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetTypificationResponse" message="tns:ICommonIFIService_GetTypification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/InsertInt" message="tns:ICommonIFIService_InsertInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/InsertIntResponse" message="tns:ICommonIFIService_InsertInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetObClient" message="tns:ICommonIFIService_GetObClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetObClientResponse" message="tns:ICommonIFIService_GetObClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteractionTemplate" message="tns:ICommonIFIService_GetInsertInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteractionTemplateResponse" message="tns:ICommonIFIService_GetInsertInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsInteractionTemplate" message="tns:ICommonIFIService_GetInsInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsInteractionTemplateResponse" message="tns:ICommonIFIService_GetInsInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInteract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/InsertInteract" message="tns:ICommonIFIService_InsertInteract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/InsertInteractResponse" message="tns:ICommonIFIService_InsertInteract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetinsertInteractionGeneral" message="tns:ICommonIFIService_GetinsertInteractionGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetinsertInteractionGeneralResponse" message="tns:ICommonIFIService_GetinsertInteractionGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionTemplateGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetinsertInteractionTemplateGeneral" message="tns:ICommonIFIService_GetinsertInteractionTemplateGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetinsertInteractionTemplateGeneralResponse" message="tns:ICommonIFIService_GetinsertInteractionTemplateGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuditM">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/SaveAuditM" message="tns:ICommonIFIService_SaveAuditM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/SaveAuditMResponse" message="tns:ICommonIFIService_SaveAuditM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GeneratePDF" message="tns:ICommonIFIService_GeneratePDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GeneratePDFResponse" message="tns:ICommonIFIService_GeneratePDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractHFC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteractHFC" message="tns:ICommonIFIService_GetInsertInteractHFC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteractHFCResponse" message="tns:ICommonIFIService_GetInsertInteractHFC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteract" message="tns:ICommonIFIService_GetInsertInteract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInsertInteractResponse" message="tns:ICommonIFIService_GetInsertInteract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmail" message="tns:ICommonIFIService_GetSendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailResponse" message="tns:ICommonIFIService_GetSendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAlt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailAlt" message="tns:ICommonIFIService_GetSendEmailAlt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailAltResponse" message="tns:ICommonIFIService_GetSendEmailAlt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetfileDefaultImpersonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetfileDefaultImpersonation" message="tns:ICommonIFIService_GetfileDefaultImpersonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetfileDefaultImpersonationResponse" message="tns:ICommonIFIService_GetfileDefaultImpersonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInfoInteractionTemplate" message="tns:ICommonIFIService_GetInfoInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInfoInteractionTemplateResponse" message="tns:ICommonIFIService_GetInfoInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberGWP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberGWP" message="tns:ICommonIFIService_GetNumberGWP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberGWPResponse" message="tns:ICommonIFIService_GetNumberGWP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberEAI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberEAI" message="tns:ICommonIFIService_GetNumberEAI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberEAIResponse" message="tns:ICommonIFIService_GetNumberEAI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetEmployeByUser" message="tns:ICommonIFIService_GetEmployeByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetEmployeByUserResponse" message="tns:ICommonIFIService_GetEmployeByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOptionsByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/ReadOptionsByUser" message="tns:ICommonIFIService_ReadOptionsByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/ReadOptionsByUserResponse" message="tns:ICommonIFIService_ReadOptionsByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckingUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/CheckingUser" message="tns:ICommonIFIService_CheckingUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/CheckingUserResponse" message="tns:ICommonIFIService_CheckingUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetEvaluateAmount" message="tns:ICommonIFIService_GetEvaluateAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetEvaluateAmountResponse" message="tns:ICommonIFIService_GetEvaluateAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount_DCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetEvaluateAmount_DCM" message="tns:ICommonIFIService_GetEvaluateAmount_DCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetEvaluateAmount_DCMResponse" message="tns:ICommonIFIService_GetEvaluateAmount_DCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetWorkType" message="tns:ICommonIFIService_GetWorkType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetWorkTypeResponse" message="tns:ICommonIFIService_GetWorkType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRedirectCommunication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/ValidateRedirectCommunication" message="tns:ICommonIFIService_ValidateRedirectCommunication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/ValidateRedirectCommunicationResponse" message="tns:ICommonIFIService_ValidateRedirectCommunication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetUser" message="tns:ICommonIFIService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetUserResponse" message="tns:ICommonIFIService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployerDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetEmployerDate" message="tns:ICommonIFIService_GetEmployerDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetEmployerDateResponse" message="tns:ICommonIFIService_GetEmployerDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterTerminalTPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetParameterTerminalTPI" message="tns:ICommonIFIService_GetParameterTerminalTPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetParameterTerminalTPIResponse" message="tns:ICommonIFIService_GetParameterTerminalTPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailFixed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailFixed" message="tns:ICommonIFIService_GetSendEmailFixed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailFixedResponse" message="tns:ICommonIFIService_GetSendEmailFixed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAltFixed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailAltFixed" message="tns:ICommonIFIService_GetSendEmailAltFixed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetSendEmailAltFixedResponse" message="tns:ICommonIFIService_GetSendEmailAltFixed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetStateType" message="tns:ICommonIFIService_GetStateType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetStateTypeResponse" message="tns:ICommonIFIService_GetStateType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetTransactionType" message="tns:ICommonIFIService_GetTransactionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetTransactionTypeResponse" message="tns:ICommonIFIService_GetTransactionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatexInter30">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetUpdatexInter30" message="tns:ICommonIFIService_GetUpdatexInter30_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetUpdatexInter30Response" message="tns:ICommonIFIService_GetUpdatexInter30_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstCivType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetEstCivType" message="tns:ICommonIFIService_GetEstCivType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetEstCivTypeResponse" message="tns:ICommonIFIService_GetEstCivType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViasType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetViasType" message="tns:ICommonIFIService_GetViasType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetViasTypeResponse" message="tns:ICommonIFIService_GetViasType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManzanasType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetManzanasType" message="tns:ICommonIFIService_GetManzanasType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetManzanasTypeResponse" message="tns:ICommonIFIService_GetManzanasType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterioresType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetInterioresType" message="tns:ICommonIFIService_GetInterioresType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetInterioresTypeResponse" message="tns:ICommonIFIService_GetInterioresType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUrbsType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetUrbsType" message="tns:ICommonIFIService_GetUrbsType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetUrbsTypeResponse" message="tns:ICommonIFIService_GetUrbsType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZonesType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetZonesType" message="tns:ICommonIFIService_GetZonesType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetZonesTypeResponse" message="tns:ICommonIFIService_GetZonesType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUbigeosType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetUbigeosType" message="tns:ICommonIFIService_GetUbigeosType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetUbigeosTypeResponse" message="tns:ICommonIFIService_GetUbigeosType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNacType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetNacType" message="tns:ICommonIFIService_GetNacType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetNacTypeResponse" message="tns:ICommonIFIService_GetNacType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetValidateMail" message="tns:ICommonIFIService_GetValidateMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetValidateMailResponse" message="tns:ICommonIFIService_GetValidateMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberSMS" message="tns:ICommonIFIService_GetNumberSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetNumberSMSResponse" message="tns:ICommonIFIService_GetNumberSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastInvoiceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetLastInvoiceData" message="tns:ICommonIFIService_GetLastInvoiceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetLastInvoiceDataResponse" message="tns:ICommonIFIService_GetLastInvoiceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOkGetKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/IsOkGetKey" message="tns:ICommonIFIService_IsOkGetKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/IsOkGetKeyResponse" message="tns:ICommonIFIService_IsOkGetKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocumentOnBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetUploadDocumentOnBase" message="tns:ICommonIFIService_GetUploadDocumentOnBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetUploadDocumentOnBaseResponse" message="tns:ICommonIFIService_GetUploadDocumentOnBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstancyPDFWithOnbase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetConstancyPDFWithOnbase" message="tns:ICommonIFIService_GetConstancyPDFWithOnbase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetConstancyPDFWithOnbaseResponse" message="tns:ICommonIFIService_GetConstancyPDFWithOnbase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSequenceCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetSequenceCode" message="tns:ICommonIFIService_GetSequenceCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetSequenceCodeResponse" message="tns:ICommonIFIService_GetSequenceCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuesCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetQueuesCase" message="tns:ICommonIFIService_GetQueuesCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetQueuesCaseResponse" message="tns:ICommonIFIService_GetQueuesCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseLa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetCaseLa" message="tns:ICommonIFIService_GetCaseLa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetCaseLaResponse" message="tns:ICommonIFIService_GetCaseLa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailWithBase64">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/SendEmailWithBase64" message="tns:ICommonIFIService_SendEmailWithBase64_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/SendEmailWithBase64Response" message="tns:ICommonIFIService_SendEmailWithBase64_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FirmarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/FirmarDocumento" message="tns:ICommonIFIService_FirmarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/FirmarDocumentoResponse" message="tns:ICommonIFIService_FirmarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultIGV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetConsultIGV" message="tns:ICommonIFIService_GetConsultIGV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetConsultIGVResponse" message="tns:ICommonIFIService_GetConsultIGV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetOffice" message="tns:ICommonIFIService_GetOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetOfficeResponse" message="tns:ICommonIFIService_GetOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetVerifyUser" message="tns:ICommonIFIService_GetVerifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetVerifyUserResponse" message="tns:ICommonIFIService_GetVerifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetPagOptionXuser" message="tns:ICommonIFIService_GetPagOptionXuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetPagOptionXuserResponse" message="tns:ICommonIFIService_GetPagOptionXuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaquetesAdquiridosHistorico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/GetPaquetesAdquiridosHistorico" message="tns:ICommonIFIService_GetPaquetesAdquiridosHistorico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/GetPaquetesAdquiridosHistoricoResponse" message="tns:ICommonIFIService_GetPaquetesAdquiridosHistorico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTipoTecnologia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonIFIService/obtenerTipoTecnologia" message="tns:ICommonIFIService_obtenerTipoTecnologia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonIFIService/obtenerTipoTecnologiaResponse" message="tns:ICommonIFIService_obtenerTipoTecnologia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonIFIService" type="tns:ICommonIFIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInsertBusinnesInteraction2">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsertBusinnesInteraction2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEvidence">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsertEvidence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSot">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetMotiveSot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSchedule">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/ValidateSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAudit">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/SaveAudit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyPDF">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetGenerateContancyPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogTrx">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/InsertLogTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterData">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetParameterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRules">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetBusinessRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCacDacType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetCacDacType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypification">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetTypification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInt">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/InsertInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObClient">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetObClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsertInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInteract">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/InsertInteract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionGeneral">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetinsertInteractionGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionTemplateGeneral">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetinsertInteractionTemplateGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuditM">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/SaveAuditM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePDF">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GeneratePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractHFC">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsertInteractHFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteract">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInsertInteract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmail">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetSendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAlt">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetSendEmailAlt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetfileDefaultImpersonation">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetfileDefaultImpersonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInfoInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberGWP">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetNumberGWP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberEAI">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetNumberEAI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeByUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetEmployeByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOptionsByUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/ReadOptionsByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckingUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/CheckingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetEvaluateAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount_DCM">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetEvaluateAmount_DCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetWorkType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRedirectCommunication">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/ValidateRedirectCommunication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployerDate">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetEmployerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterTerminalTPI">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetParameterTerminalTPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailFixed">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetSendEmailFixed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAltFixed">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetSendEmailAltFixed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetStateType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetTransactionType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatexInter30">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetUpdatexInter30" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstCivType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetEstCivType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViasType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetViasType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManzanasType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetManzanasType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterioresType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetInterioresType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrbsType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetUrbsType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZonesType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetZonesType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUbigeosType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetUbigeosType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNacType">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetNacType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateMail">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetValidateMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberSMS">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetNumberSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastInvoiceData">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetLastInvoiceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOkGetKey">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/IsOkGetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocumentOnBase">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetUploadDocumentOnBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstancyPDFWithOnbase">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetConstancyPDFWithOnbase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSequenceCode">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetSequenceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuesCase">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetQueuesCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseLa">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetCaseLa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailWithBase64">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/SendEmailWithBase64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmarDocumento">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/FirmarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultIGV">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetConsultIGV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetVerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuser">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetPagOptionXuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaquetesAdquiridosHistorico">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/GetPaquetesAdquiridosHistorico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTipoTecnologia">
+      <soap:operation soapAction="http://tempuri.org/ICommonIFIService/obtenerTipoTecnologia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonIFIService">
+    <wsdl:port name="BasicHttpBinding_ICommonIFIService" binding="tns:BasicHttpBinding_ICommonIFIService">
+      <soap:address location="http://localhost:53727/CommonIFIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

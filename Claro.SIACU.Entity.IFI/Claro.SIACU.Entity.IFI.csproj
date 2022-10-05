@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9517F61-3891-4917-BAA6-634CED2D28B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Claro.SIACU.Entity.IFI</RootNamespace>
+    <AssemblyName>Claro.SIACU.Entity.IFI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Account.cs" />
+    <Compile Include="Common\BillingCycle.cs" />
+    <Compile Include="Common\BusinessRules.cs" />
+    <Compile Include="Common\CheckingUser\CheckingUserRequest.cs" />
+    <Compile Include="Common\CheckingUser\CheckingUserResponse.cs" />
+    <Compile Include="Common\Client.cs" />
+    <Compile Include="Common\ConsultSecurity.cs" />
+    <Compile Include="Common\ContractByPhoneNumber.cs" />
+    <Compile Include="Common\Customer.cs" />
+    <Compile Include="Common\DataAccount.cs" />
+    <Compile Include="Common\DetailReceipt.cs" />
+    <Compile Include="Common\Employee.cs" />
+    <Compile Include="Common\ETAFlow.cs" />
+    <Compile Include="Common\ETAFlowValidate\ETAFlowRequest.cs" />
+    <Compile Include="Common\ETAFlowValidate\ETAFlowResponse.cs" />
+    <Compile Include="Common\Evidence.cs" />
+    <Compile Include="Common\GeneratePDF\GeneratePDFDataRequest.cs" />
+    <Compile Include="Common\GeneratePDF\GeneratePDFDataResponse.cs" />
+    <Compile Include="Common\GetBusinessInteraction2\BusinessInteraction2Request.cs" />
+    <Compile Include="Common\GetBusinessInteraction2\BusinessInteraction2Response.cs" />
+    <Compile Include="Common\GetBusinessRules\BusinessRulesRequest.cs" />
+    <Compile Include="Common\GetBusinessRules\BusinessRulesResponse.cs" />
+    <Compile Include="Common\GetCacDacType\BusinessRulesRequest.cs" />
+    <Compile Include="Common\GetCacDacType\BusinessRulesResponse.cs" />
+    <Compile Include="Common\GetCaseLa\GetCaseLaRequest.cs" />
+    <Compile Include="Common\GetCaseLa\GetCaseLaResponse.cs" />
+    <Compile Include="Common\GetClient\ClientRequest.cs" />
+    <Compile Include="Common\GetClient\ClientResponse.cs" />
+    <Compile Include="Common\GetPaquetesAdquiridosHistorico\PaquetesAdqueridos.cs" />
+    <Compile Include="Common\GetPaquetesAdquiridosHistorico\PaquetesAdquiridosHistoricoRequest.cs" />
+    <Compile Include="Common\GetPaquetesAdquiridosHistorico\PaquetesAdquiridosHistoricoResponse.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesBodyRequest.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesBodyResponse.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesHeaderRequest.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesHeaderResponse.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesListaOpcionalType.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesMessageRequest.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesMessageResponse.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesRequest.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\ComprarPaquetesResponse.cs" />
+    <Compile Include="Fixed\GetComprarPaquetes\RestComprarPaquetesRequest.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosBodyRequest.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosBodyResponse.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosHeaderRequest.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosHeaderResponse.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosMessageRequest.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosMessageResponse.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosRequest.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\ConsultarClaroPuntosResponse.cs" />
+    <Compile Include="Fixed\GetConsultarClaroPuntos\RestConsultarClaroPuntosRequest.cs" />
+    <Compile Include="Common\GetConsultIGV\ConsultIGVRequest.cs" />
+    <Compile Include="Common\GetConsultIGV\ConsultIGVResponse.cs" />
+    <Compile Include="Common\GetCustomer\CustomerRequest.cs" />
+    <Compile Include="Common\GetCustomer\CustomerResponse.cs" />
+    <Compile Include="Common\GetDataPower\HeaderRequest.cs" />
+    <Compile Include="Common\GetDataPower\HeaderResponse.cs" />
+    <Compile Include="Common\GetDataPower\HeadersRequest.cs" />
+    <Compile Include="Common\GetDataPower\HeadersResponse.cs" />
+    <Compile Include="Common\GetDataPower\ResponseStatus.cs" />
+    <Compile Include="Common\GetDataPower\Status.cs" />
+    <Compile Include="Common\GetDatTempInteraction\DatTempInteractionRequest.cs" />
+    <Compile Include="Common\GetDatTempInteraction\DatTempInteractionResponse.cs" />
+    <Compile Include="Common\GetdgFechasType\BusinessDgFechasRequest.cs" />
+    <Compile Include="Common\GetdgFechasType\BusinessDgFechasResponse.cs" />
+    <Compile Include="Common\GetDigitalSignature\DataSignDocument.cs" />
+    <Compile Include="Common\GetDigitalSignature\DigitalSignatureRequest.cs" />
+    <Compile Include="Common\GetDigitalSignature\DigitalSignatureResponse.cs" />
+    <Compile Include="Common\GetDigitalSignature\ResponseData.cs" />
+    <Compile Include="Common\GetDigitalSignature\ResponseStatus.cs" />
+    <Compile Include="Common\GetEmployeByUser\EmployeeRequest.cs" />
+    <Compile Include="Common\GetEmployeByUser\EmployeeResponse.cs" />
+    <Compile Include="Common\GetEmployerDate\GetEmployerDateRequest.cs" />
+    <Compile Include="Common\GetEmployerDate\GetEmployerDateResponse.cs" />
+    <Compile Include="Common\GetEstCivType\BusinessEstCivRequest.cs" />
+    <Compile Include="Common\GetEstCivType\BusinessEstCivResponse.cs" />
+    <Compile Include="Common\GetEvaluateAmount\EvaluateAmountRequest.cs" />
+    <Compile Include="Common\GetEvaluateAmount\EvaluateAmountResponse.cs" />
+    <Compile Include="Common\GetFileDefaultImpersonation\GetFileDefaultImpersonationRequest.cs" />
+    <Compile Include="Common\GetFileDefaultImpersonation\GetFileDefaultImpersonationResponse.cs" />
+    <Compile Include="Common\GetGenerateConstancy\GenerateConstancyRequest.cs" />
+    <Compile Include="Common\GetGenerateConstancy\GenerateConstancyResponse.cs" />
+    <Compile Include="Common\GetInsertEvidence\InsertEvidenceRequest.cs" />
+    <Compile Include="Common\GetInsertEvidence\InsertEvidenceResponse.cs" />
+    <Compile Include="Common\GetInsertGeneral\InsertGeneralRequest.cs" />
+    <Compile Include="Common\GetInsertGeneral\InsertGeneralResponse.cs" />
+    <Compile Include="Common\GetInsertInteractHFC\InsertInteractHFCRequest.cs" />
+    <Compile Include="Common\GetInsertInteractHFC\InsertInteractHFCResponse.cs" />
+    <Compile Include="Common\GetInsertInteract\InsertInteractRequest.cs" />
+    <Compile Include="Common\GetInsertInteract\InsertInteractResponse.cs" />
+    <Compile Include="Common\GetInsertInt\InsertIntRequest.cs" />
+    <Compile Include="Common\GetInsertInt\InsertIntResponse.cs" />
+    <Compile Include="Common\GetInsertLogTrx\InsertLogTrxRequest.cs" />
+    <Compile Include="Common\GetInsertLogTrx\InsertLogTrxResponse.cs" />
+    <Compile Include="Common\GetInsertTemplateGeneral\InsertTemplateGeneralRequest.cs" />
+    <Compile Include="Common\GetInsertTemplateGeneral\InsertTemplateGeneralResponse.cs" />
+    <Compile Include="Common\GetInsertTemplateInteraction\InsertTemplateInteractionRequest.cs" />
+    <Compile Include="Common\GetInsertTemplateInteraction\InsertTemplateInteractionResponse.cs" />
+    <Compile Include="Common\GetInsTemplateInteraction\InsTemplateInteractionResponse.cs" />
+    <Compile Include="Common\GetInsTemplateInteraction\IsnTemplateInteractionRequest.cs" />
+    <Compile Include="Common\GetInterioresType\InterioresTypeRequest.cs" />
+    <Compile Include="Common\GetInterioresType\InterioresTypeResponse.cs" />
+    <Compile Include="Common\GetLastInvoiceData\LastInvoiceDataRequest.cs" />
+    <Compile Include="Common\GetLastInvoiceData\LastInvoiceDataResponse.cs" />
+    <Compile Include="Common\GetListItem\ListItemRequest.cs" />
+    <Compile Include="Common\GetListItem\ListItemResponse.cs" />
+    <Compile Include="Common\GetManzanasType\ManzanasTypeRequest.cs" />
+    <Compile Include="Common\GetManzanasType\ManzanasTypeResponse.cs" />
+    <Compile Include="Common\GetMotiveSot\MotiveSotRequest.cs" />
+    <Compile Include="Common\GetMotiveSot\MotiveSotResponse.cs" />
+    <Compile Include="Common\GetNacType\BusinessNacRequest.cs" />
+    <Compile Include="Common\GetNacType\BusinessNacResponse.cs" />
+    <Compile Include="Common\GetNumberEAI\NumberEAIRequest.cs" />
+    <Compile Include="Common\GetNumberEAI\NumberEAIResponse.cs" />
+    <Compile Include="Common\GetNumberGWP\NumberGWPRequest.cs" />
+    <Compile Include="Common\GetNumberGWP\NumberGWPResponse.cs" />
+    <Compile Include="Common\GetNumberSMS\NumberSMSRequest.cs" />
+    <Compile Include="Common\GetNumberSMS\NumberSMSResponse.cs" />
+    <Compile Include="Common\GetOffice\OfficeRequest.cs" />
+    <Compile Include="Common\GetOffice\OfficeResponse.cs" />
+    <Compile Include="Common\GetPagOptionXuser\PagOptionXuserNVRequest.cs" />
+    <Compile Include="Common\GetPagOptionXuser\PagOptionXuserNVResponse.cs" />
+    <Compile Include="Common\GetParameterData\ParameterDataRequest.cs" />
+    <Compile Include="Common\GetParameterData\ParameterDataResponse.cs" />
+    <Compile Include="Common\GetParameterTerminalTPI\ParameterTerminalTPIRequest.cs" />
+    <Compile Include="Common\GetParameterTerminalTPI\ParameterTerminalTPIResponse.cs" />
+    <Compile Include="Common\GetSendEmailWithBase64\AttachedFile.cs" />
+    <Compile Include="Common\GetSendEmailWithBase64\ParameterComplexType.cs" />
+    <Compile Include="Common\GetSendEmailWithBase64\SendEmailWithBase64Request.cs" />
+    <Compile Include="Common\GetSendEmailWithBase64\SendEmailWithBase64Response.cs" />
+    <Compile Include="Common\IGVTax.cs" />
+    <Compile Include="Common\Office.cs" />
+    <Compile Include="Common\QueuesCase.cs" />
+    <Compile Include="Common\GetQueuesCase\GetQueuesCaseRequest.cs" />
+    <Compile Include="Common\GetQueuesCase\GetQueuesCaseResponse.cs" />
+    <Compile Include="Common\GetSaveAuditM\SaveAuditMRequest.cs" />
+    <Compile Include="Common\GetSaveAuditM\SaveAuditMResponse.cs" />
+    <Compile Include="Common\GetSaveAudit\SaveAuditRequest.cs" />
+    <Compile Include="Common\GetSaveAudit\SaveAuditResponse.cs" />
+    <Compile Include="Common\GetSchedule\ScheduleRequest.cs" />
+    <Compile Include="Common\GetSchedule\SCheduleResponse.cs" />
+    <Compile Include="Common\GetSendEmail\SendEmailRequest.cs" />
+    <Compile Include="Common\GetSendEmail\SendEmailResponse.cs" />
+    <Compile Include="Common\GetSequenceCode\SequenceCodeRequest.cs" />
+    <Compile Include="Common\GetSequenceCode\SequenceCodeResponse.cs" />
+    <Compile Include="Common\GetStateType\StateTypeRequest.cs" />
+    <Compile Include="Common\GetStateType\StateTypeResponse.cs" />
+    <Compile Include="Common\GetTransactionType\TransactionTypeRequest.cs" />
+    <Compile Include="Common\GetTransactionType\TransactionTypeResponse.cs" />
+    <Compile Include="Common\GetTypification\TypificationRequest.cs" />
+    <Compile Include="Common\GetTypification\TypificationResponse.cs" />
+    <Compile Include="Common\GetUbigeosType\UbigeosTypeRequest.cs" />
+    <Compile Include="Common\GetUbigeosType\UbigeosTypeResponse.cs" />
+    <Compile Include="Common\GetUpdateInter30\UpdatexInter30Request.cs" />
+    <Compile Include="Common\GetUpdateInter30\UpdatexInter30Response.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\E_DocumentRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\E_DocumentResponse.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\E_KeywordRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\ListOptionalRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\ObjetOptionalRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\ParametersRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\UploadDocumentOnBaseRequest.cs" />
+    <Compile Include="Common\GetUploadDocumentOnBase\UploadDocumentOnBaseResponse.cs" />
+    <Compile Include="Common\GetUrbsType\UrbsTypeRequest.cs" />
+    <Compile Include="Common\GetUrbsType\UrbsTypeResponse.cs" />
+    <Compile Include="Common\GetUser\UserRequest.cs" />
+    <Compile Include="Common\GetUser\UserResponse.cs" />
+    <Compile Include="Common\GetValidateCommunication\ValidateCommunicationRequest.cs" />
+    <Compile Include="Common\GetValidateCommunication\ValidateCommunicationResponse.cs" />
+    <Compile Include="Common\GetValidateMail\ValidateMailRequest.cs" />
+    <Compile Include="Common\GetValidateMail\ValidateMailResponse.cs" />
+    <Compile Include="Common\GetVerifyUser\VerifyUserRequest.cs" />
+    <Compile Include="Common\GetVerifyUser\VerifyUserResponse.cs" />
+    <Compile Include="Common\GetViasType\ViasTypeRequest.cs" />
+    <Compile Include="Common\GetViasType\ViasTypeResponse.cs" />
+    <Compile Include="Common\GetWorkType\WorkTypeRequest.cs" />
+    <Compile Include="Common\GetWorkType\WorkTypeResponse.cs" />
+    <Compile Include="Common\GetZonesType\ZonesTypeRequest.cs" />
+    <Compile Include="Common\GetZonesType\ZonesTypeResponse.cs" />
+    <Compile Include="Common\GlobalDocument.cs" />
+    <Compile Include="Common\InsertTemplateInteraction.cs" />
+    <Compile Include="Common\InteractionTemplate.cs" />
+    <Compile Include="Common\IsOkGetKey\IsOkGetKeyRequest.cs" />
+    <Compile Include="Common\IsOkGetKey\IsOkGetKeyResponse.cs" />
+    <Compile Include="Common\Iteraction.cs" />
+    <Compile Include="Common\Line.cs" />
+    <Compile Include="Common\ListItem.cs" />
+    <Compile Include="Common\PaginaOption.cs" />
+    <Compile Include="Common\ParameterData.cs" />
+    <Compile Include="Common\ParametersGeneratePDF.cs" />
+    <Compile Include="Common\ParameterTerminalTPI.cs" />
+    <Compile Include="Common\ReadOptionsByUser\ReadOptionsByUserRequest.cs" />
+    <Compile Include="Common\ReadOptionsByUser\ReadOptionsByUserResponse.cs" />
+    <Compile Include="Common\Receipt.cs" />
+    <Compile Include="Common\SecurityConsultation.cs" />
+    <Compile Include="Common\ServiceArmaPlan.cs" />
+    <Compile Include="Common\Trazability.cs" />
+    <Compile Include="Common\Typification.cs" />
+    <Compile Include="Common\User.cs" />
+    <Compile Include="Fixed\BEDeco.cs" />
+    <Compile Include="Fixed\CaseTemplate.cs" />
+    <Compile Include="Fixed\Customer.cs" />
+    <Compile Include="Fixed\DataAccount.cs" />
+    <Compile Include="Fixed\ETAFlow.cs" />
+    <Compile Include="Fixed\ETAFlowValidate\ETAFlowRequest.cs" />
+    <Compile Include="Fixed\ETAFlowValidate\ETAFlowResponse.cs" />
+    <Compile Include="Fixed\GenericItem.cs" />
+    <Compile Include="Fixed\GetAddDayWork\AddDayWorkRequest.cs" />
+    <Compile Include="Fixed\GetAddDayWork\AddDayWorkResponse.cs" />
+    <Compile Include="Fixed\GetCaseInsert\CaseInsertRequest.cs" />
+    <Compile Include="Fixed\GetCaseInsert\CaseInsertResponse.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesBodyRequest.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesBodyResponse.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesHeaderRequest.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesHeaderResponse.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesMessageRequest.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesMessageResponse.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesRequest.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\ConsultarPaqDisponiblesResponse.cs" />
+    <Compile Include="Fixed\GetConsultarPaqDisponibles\RestConsultarPaqDisponiblesRequest.cs" />
+    <Compile Include="Fixed\GetConsultationServiceByContract\ConsultationServiceByContractRequest.cs" />
+    <Compile Include="Fixed\GetConsultationServiceByContract\ConsultationServiceByContractResponse.cs" />
+    <Compile Include="Fixed\GetCustomer\CustomerRequest.cs" />
+    <Compile Include="Fixed\GetCustomer\CustomerResponse.cs" />
+    <Compile Include="Fixed\GetDeleteScheduledTransaction\DeleteScheduledTransactionRequest.cs" />
+    <Compile Include="Fixed\GetDeleteScheduledTransaction\DeleteScheduledTransactionResponse.cs" />
+    <Compile Include="Fixed\GetInsertDetailServiceInteraction\InsertDetailServiceInteractionRequest.cs" />
+    <Compile Include="Fixed\GetInsertDetailServiceInteraction\InsertDetailServiceInteractionResponse.cs" />
+    <Compile Include="Fixed\GetInsertInteractionBusiness\InsertInteractionBusinessRequest.cs" />
+    <Compile Include="Fixed\GetInsertInteractionBusiness\InsertInteractionBusinessResponse.cs" />
+    <Compile Include="Fixed\GetInsertTransaction\InsertTransactionRequest.cs" />
+    <Compile Include="Fixed\GetInsertTransaction\InsertTransactionResponse.cs" />
+    <Compile Include="Fixed\GetJobTypes\JobTypesRequest.cs" />
+    <Compile Include="Fixed\GetJobTypes\JobTypesResponse.cs" />
+    <Compile Include="Fixed\GetListScheduledTransactions\ListScheduledTransactionsRequest.cs" />
+    <Compile Include="Fixed\GetListScheduledTransactions\ListScheduledTransactionsResponse.cs" />
+    <Compile Include="Fixed\GetMotiveSOTByTypeJob\MotiveSOTByTypeJobRequest.cs" />
+    <Compile Include="Fixed\GetMotiveSOTByTypeJob\MotiveSOTByTypeJobResponse.cs" />
+    <Compile Include="Fixed\GetOrderSubType\OrderSubTypesRequest.cs" />
+    <Compile Include="Fixed\GetOrderSubType\OrderSubTypesResponse.cs" />
+    <Compile Include="Fixed\GetOrderType\OrderTypesRequest.cs" />
+    <Compile Include="Fixed\GetOrderType\OrderTypesResponse.cs" />
+    <Compile Include="Fixed\GetPCRFConsultation\PCRFConnectorRequest.cs" />
+    <Compile Include="Fixed\GetPCRFConsultation\PCRFConnectorResponse.cs" />
+    <Compile Include="Fixed\GetReconeService\ReconeServiceRequest.cs" />
+    <Compile Include="Fixed\GetReconeService\ReconeServiceResponse.cs" />
+    <Compile Include="Fixed\GetRetentionCancelServices\RetentionCancelServicesRequest.cs" />
+    <Compile Include="Fixed\GetRetentionCancelServices\RetentionCancelServicesResponse.cs" />
+    <Compile Include="Fixed\GetServicesByInteraction\InteractionServiceRequest.cs" />
+    <Compile Include="Fixed\GetServicesByInteraction\InteractionServiceResponse.cs" />
+    <Compile Include="Fixed\GetService\ServiceRequest.cs" />
+    <Compile Include="Fixed\GetService\ServiceResponse.cs" />
+    <Compile Include="Fixed\GetTransactionScheduled\TransactionScheduledRequest.cs" />
+    <Compile Include="Fixed\GetTransactionScheduled\TransactionScheduledResponse.cs" />
+    <Compile Include="Fixed\GetUpdateInter29\UpdateInter29Request.cs" />
+    <Compile Include="Fixed\GetUpdateInter29\UpdateInter29Response.cs" />
+    <Compile Include="Fixed\GetValidateCustomerID\ValidateCustomerIdRequest.cs" />
+    <Compile Include="Fixed\GetValidateCustomerID\ValidateCustomerIdResponse.cs" />
+    <Compile Include="Fixed\Interaction.cs" />
+    <Compile Include="Fixed\JobType.cs" />
+    <Compile Include="Fixed\OrderSubType.cs" />
+    <Compile Include="Fixed\OrderType.cs" />
+    <Compile Include="Fixed\PostExecuteSuspension\ExecuteSuspensionRequest.cs" />
+    <Compile Include="Fixed\PostExecuteSuspension\ExecuteSuspensionResponse.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicBodyRequest.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicBodyResponse.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicHeaderRequest.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicHeaderResponse.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicMessageRequest.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicMessageResponse.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicRequest.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\PCRFPaquetesAdicResponse.cs" />
+    <Compile Include="Fixed\PostPCRFPaquetesAdic\RestPCRFPaquetesAdicRequest.cs" />
+    <Compile Include="Fixed\PostReconexionLte\ReconexionLteRequest.cs" />
+    <Compile Include="Fixed\PostReconexionLte\ReconexionLteResponse.cs" />
+    <Compile Include="Fixed\PostSuspensionLte\PostSuspensionLteRequest.cs" />
+    <Compile Include="Fixed\PostSuspensionLte\PostSuspensionLteResponse.cs" />
+    <Compile Include="Fixed\PostUpdateProgTaskLte\UpdateProgTaskLteRequest.cs" />
+    <Compile Include="Fixed\PostUpdateProgTaskLte\UpdateProgTaskLteResponse.cs" />
+    <Compile Include="Fixed\Reconection.cs" />
+    <Compile Include="Fixed\ReconexionLte.cs" />
+    <Compile Include="Fixed\ScheduledTransaction.cs" />
+    <Compile Include="Fixed\Service.cs" />
+    <Compile Include="Fixed\ServiceByInteraction.cs" />
+    <Compile Include="Fixed\Suscriber.cs" />
+    <Compile Include="Fixed\SuscriberQuota.cs" />
+    <Compile Include="Fixed\Suspension.cs" />
+    <Compile Include="Fixed\SuspensionLte.cs" />
+    <Compile Include="Fixed\TransactionScheduled.cs" />
+    <Compile Include="Fixed\Transfer.cs" />
+    <Compile Include="Postpaid\AmountIncomingCall.cs" />
+    <Compile Include="Postpaid\Annotation.cs" />
+    <Compile Include="Postpaid\Answer.cs" />
+    <Compile Include="Postpaid\CurrentLock\CurrentLockRequest.cs" />
+    <Compile Include="Postpaid\CurrentLock\CurrentLockResponse.cs" />
+    <Compile Include="Postpaid\DeleteLockEquipment\DeleteLockEquipmentRequest.cs" />
+    <Compile Include="Postpaid\DeleteLockEquipment\DeleteLockEquipmentResponse.cs" />
+    <Compile Include="Postpaid\DeleteLockLine\DeleteLockLineRequest.cs" />
+    <Compile Include="Postpaid\DeleteLockLine\DeleteLockLineResponse.cs" />
+    <Compile Include="Postpaid\GetActivateServiceMail\GetActivateServiceMailRequest.cs" />
+    <Compile Include="Postpaid\GetActivateServiceMail\GetActivateServiceMailResponse.cs" />
+    <Compile Include="Postpaid\GetAmountIncomingCall\AmountIncomingCallRequest.cs" />
+    <Compile Include="Postpaid\GetAmountIncomingCall\AmountIncomingCallResponse.cs" />
+    <Compile Include="Postpaid\GetBillingCycle\BillingCycleRequest.cs" />
+    <Compile Include="Postpaid\GetBillingCycle\BillingCycleResponse.cs" />
+    <Compile Include="Postpaid\GetClientDataAdd\ClientDataAddRequest.cs" />
+    <Compile Include="Postpaid\GetClientDataAdd\ClientDataAddResponse.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\BodyRequestValidarCobertura.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarBodyRequestSolicitud.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarBodyRequestDireccion.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarBodyRequestCliente.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\ListaTecnologiasDisponibles.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\ValidarCoberturaItemRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarCoberturaResponse.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\responseStatus.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\responseData.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarBodyRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarBodyResponse.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarCoberturaMessageRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarCoberturaMessageResponse.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarCoberturaRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarHeaderRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarHeaderResponse.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarMessageRequest.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\ObtenerTipoTecnologia.cs" />
+    <Compile Include="Postpaid\GetCoberturaIfi\validarMessageResponse.cs" />
+    <Compile Include="Postpaid\GetDataCustomer\DataCustomerRequest.cs" />
+    <Compile Include="Postpaid\GetDataCustomer\DataCustomerResponse.cs" />
+    <Compile Include="Postpaid\GetDataPower\FaultResponse.cs" />
+    <Compile Include="Postpaid\GetDataPower\HeaderRequest.cs" />
+    <Compile Include="Postpaid\GetDataPower\HeaderResponse.cs" />
+    <Compile Include="Postpaid\GetDataPower\HeaderStatusResponse.cs" />
+    <Compile Include="Postpaid\GetImeis\ImeisRequest.cs" />
+    <Compile Include="Postpaid\GetImeis\ImeisResponse.cs" />
+    <Compile Include="Postpaid\GetLockUnlockEquipment\LockUnlockEquipmentRequest.cs" />
+    <Compile Include="Postpaid\GetLockUnlockEquipment\LockUnlockEquipmentResponse.cs" />
+    <Compile Include="Postpaid\GetPlans\PlansRequest.cs" />
+    <Compile Include="Postpaid\GetPlans\PlansResponse.cs" />
+    <Compile Include="Postpaid\GetEquipmentByCurrentPlan\EquipmentByCurrentPlanRequest.cs" />
+    <Compile Include="Postpaid\GetEquipmentByCurrentPlan\EquipmentByCurrentPlanResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorClientDataAdd\SaveChangeMinorClientDataAddRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorClientDataAdd\SaveChangeMinorClientDataAddResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorFijoClarify\SaveChangeMinorFijoClarifyRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorFijoClarify\SaveChangeMinorFijoClarifyResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeServiceAddress\notificacionDireccion.cs" />
+    <Compile Include="Postpaid\GetSaveChangeServiceAddress\registrarDireccionRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangeServiceAddress\registrarDireccionResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeServiceAddress\responseStatus.cs" />
+    <Compile Include="Postpaid\GetServicesByCurrentPlan\ServicesByCurrentPlanRequest.cs" />
+    <Compile Include="Postpaid\GetServicesByCurrentPlan\ServicesByCurrentPlanResponse.cs" />
+    <Compile Include="Postpaid\GetServicesByPlan\PlanServiceRequest.cs" />
+    <Compile Include="Postpaid\GetServicesByPlan\PlanServiceResponse.cs" />
+    <Compile Include="Postpaid\GetStatedebt\GetStatedebtRequest.cs" />
+    <Compile Include="Postpaid\GetStatedebt\GetStatedebtResponse.cs" />
+    <Compile Include="Postpaid\GetDataLine\DataLineRequest.cs" />
+    <Compile Include="Postpaid\GetDataLine\DataLineResponse.cs" />
+    <Compile Include="Postpaid\GetDuplicateReceipts\SaveDuplicateReceiptsResponse.cs" />
+    <Compile Include="Postpaid\GetDuplicateReceipts\SaveDuplicateReceiptsRequest.cs" />
+    <Compile Include="Postpaid\GetLinesTelephone\GetLinesTelephoneRequest.cs" />
+    <Compile Include="Postpaid\GetLinesTelephone\GetLinesTelephoneResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorClarify\SaveChangeMinorClarifyRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinorClarify\SaveChangeMinorClarifyResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinor\SaveChangeMinorRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangeMinor\SaveChangeMinorResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangePostalAddressClarify\SaveChangePostalAddressClarifyRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangePostalAddressClarify\SaveChangePostalAddressClarifyResponse.cs" />
+    <Compile Include="Postpaid\GetSaveChangePostalAddress\SaveChangePostalAddressRequest.cs" />
+    <Compile Include="Postpaid\GetSaveChangePostalAddress\SaveChangePostalAddressResponse.cs" />
+    <Compile Include="Postpaid\GetTestSecurity\TestSecurityRequest.cs" />
+    <Compile Include="Postpaid\GetTestSecurity\TestSecurityResponse.cs" />
+    <Compile Include="Postpaid\GetTypeTransactionBRMS\TypeTransactionBRMSRequest.cs" />
+    <Compile Include="Postpaid\GetTypeTransactionBRMS\TypeTransactionBRMSResponse.cs" />
+    <Compile Include="Postpaid\InsertLockEquipmentPer\InsertLockEquipmentPerRequest.cs" />
+    <Compile Include="Postpaid\InsertLockEquipmentPer\InsertLockEquipmentPerResponse.cs" />
+    <Compile Include="Postpaid\InsertLockLinePer\InsertLockLinePerRequest.cs" />
+    <Compile Include="Postpaid\InsertLockLinePer\InsertLockLinePerResponse.cs" />
+    <Compile Include="Postpaid\InsertTerminalLockUnlockEquipment\InsertTerminalLockUnlockEquipmentRequest.cs" />
+    <Compile Include="Postpaid\InsertTerminalLockUnlockEquipment\InsertTerminalLockUnlockEquipmentResponse.cs" />
+    <Compile Include="Postpaid\Interaction.cs" />
+    <Compile Include="Postpaid\Lock.cs" />
+    <Compile Include="Postpaid\EquipmentByCurrentPlan.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationBodyRequest.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationBodyResponse.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationHeaderRequest.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationHeaderResponse.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationMessageRequest.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationMessageResponse.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationResponse.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\PlanMigrationRequest.cs" />
+    <Compile Include="Postpaid\PostPlanMigration\RestPlanMigrationRequest.cs" />
+    <Compile Include="Postpaid\ProductPlan.cs" />
+    <Compile Include="Postpaid\RetentionCancel.cs" />
+    <Compile Include="Postpaid\ServiceByCurrentPlan.cs" />
+    <Compile Include="Postpaid\ServiceByPlan.cs" />
+    <Compile Include="Postpaid\ServiceLock\ServiceLockRequest.cs" />
+    <Compile Include="Postpaid\ServiceLock\ServiceLockResponse.cs" />
+    <Compile Include="Postpaid\TemplateInteraction.cs" />
+    <Compile Include="Postpaid\Terminal.cs" />
+    <Compile Include="Postpaid\TestSecurity.cs" />
+    <Compile Include="Postpaid\UnlockService\UnlockServiceRequest.cs" />
+    <Compile Include="Postpaid\UnlockService\UnlockServiceResponse.cs" />
+    <Compile Include="Postpaid\UpdateUnlockEquipmentCode\UpdateUnlockEquipmentCodeRequest.cs" />
+    <Compile Include="Postpaid\UpdateUnlockEquipmentCode\UpdateUnlockEquipmentCodeResponse.cs" />
+    <Compile Include="Postpaid\UpdateUnlockEquipment\UpdateUnlockEquipmentRequest.cs" />
+    <Compile Include="Postpaid\UpdateUnlockEquipment\UpdateUnlockEquipmentResponse.cs" />
+    <Compile Include="Postpaid\UpdateUnlockLineCode\UpdateUnlockLineCodeRequest.cs" />
+    <Compile Include="Postpaid\UpdateUnlockLineCode\UpdateUnlockLineCodeResponse.cs" />
+    <Compile Include="Postpaid\UpdateUnlockLineRollback\UpdateUnlockLineRollbackRequest.cs" />
+    <Compile Include="Postpaid\UpdateUnlockLineRollback\UpdateUnlockLineRollbackResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wireless\GenerateOCC\OCCRequest.cs" />
+    <Compile Include="Wireless\GenerateOCC\OCCResponse.cs" />
+    <Compile Include="Wireless\GetApadece\ApadeceRequest.cs" />
+    <Compile Include="Wireless\GetApadece\ApadeceResponse.cs" />
+    <Compile Include="Wireless\GetTransactionScheduled\TransactionScheduledRequest.cs" />
+    <Compile Include="Wireless\GetTransactionScheduled\TransactionScheduledResponse.cs" />
+    <Compile Include="Wireless\TransactionScheduled.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Claro.Data\Claro.Data.csproj">
+      <Project>{7dc4fcdb-62d7-4151-957a-984fa98fca74}</Project>
+      <Name>Claro.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Entity\Claro.Entity.csproj">
+      <Project>{5b432611-cd37-4a2b-bcba-7509064e68ba}</Project>
+      <Name>Claro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro\Claro.csproj">
+      <Project>{3126dd91-815a-4367-bb9e-8b241c73f4d0}</Project>
+      <Name>Claro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,144 @@
+﻿<html>
+<head>
+    <title>Iframe</title>
+    <script type="text/javascript">
+        function IframeBiometria(element, options, callback) {
+            var form = document.createElement('form');
+            form.target = 'iframe-biometria';
+
+            // Ambiente Desarrollo *************************************************
+            //form.action = 'http://ev-intranet-wcf/ibiometria';
+            //**********************************************************************
+
+            // Ambiente QA *********************************************************
+            //form.action = 'http://172.19.91.23/ibiometria';
+           // form.action = 'http://LIMAPPQAV14/ibiometria';
+            form.action = '@System.Configuration.ConfigurationManager.AppSettings["UrlBiometrics"].ToString()';
+
+            //**********************************************************************
+
+            // Ambiente Produccion *************************************************
+            //form.action = 'http://LIMVABIOV01/ibiometria';
+            //form.action = 'http://LIMVABIOV02/ibiometria';
+            //**********************************************************************
+
+            form.method = 'POST';
+
+            var iframe = document.createElement('iframe');
+
+            iframe.name = 'iframe-biometria';
+            iframe.src = '';
+            iframe.width = '100%';
+            iframe.height = '870px';
+            iframe.frameBorder = '0';
+            iframe.allowtransparency = 'true';
+
+            element.appendChild(iframe);
+            element.appendChild(form);
+
+            var input = document.createElement('input');
+
+            input.name = 'options';
+            input.type = 'hidden';
+            input.value = JSON.stringify(options);
+            form.appendChild(input);
+
+            form.submit();
+
+            var loading = false;
+
+            function messageHandler(event) {
+                var data = event.data;
+
+                if (loading == false) {
+                    //element.removeChild(form);
+                    //iframe.height = data.height + 'px';
+                    loading = true;
+                } else {
+                    callback.call(this, data);
+                }
+            }
+
+            window.removeEventListener("message", messageHandler);
+            window.addEventListener("message", messageHandler);
+        }
+
+        window.onload = function () {
+            var element = document.getElementById('div-iframe-biometria');
+            var options = {
+                id_business_transaccion: Math.floor((Math.random() * 100000000000000)),
+                ip: location.host,
+                sistema: 'SIACUNICO',
+                tipo_documento: '1',
+                numero_documento: window.opener.$("#txtDocumentNumber").val(),
+                codigo_pvd: 'P239',
+                codigo_canal: '01',
+                tipo_operacio: 'DESBLOQUEO DE LINEA Y EQUIPO',
+                tipo_cliente: window.opener.Session.DATACUSTOMER.TipoCliente,
+                id_transaccion: Math.floor((Math.random() * 100000000000000)),
+                tipo_transaccion: 'DESBLOQUEO',
+                codigo_asesor: window.opener.Session.USERACCESS.Login,
+                codigo_supervisor: window.opener.$("#txtBoss").val(),
+                lineas: [
+					{
+					    codigo_modalidad: 'POSTPAGO-IFI',
+					    linea: window.opener.Session.DATACUSTOMER.Telephone
+					}
+                ],
+                listado_configuracion: [
+					{
+					    flag_discapacidad: true,
+					    orden: 1,
+					    codigo_validacion: '01', // BIO
+					    bio_tipo_validacion: '1',
+					    flag_max_intentos: 3,
+					    flag_autorizacion: true
+					},
+					{
+					    orden: 2,
+					    codigo_validacion: '02', //NO BIO - RENIEC
+					    flag_max_intentos: 1
+					},
+					{
+					    orden: 3,
+					    codigo_validacion: '05', // NO BIO - TCRM
+					    flag_max_intentos: 2
+					}
+                ]
+            }
+
+            var callback = function (response) {
+               
+
+                window.close();
+
+                $(window).unload(function () {
+
+                    window.opener.Session.isclosed = true;
+                    if (typeof response != "undefined") {
+                        window.opener.Session.responseBiometric = JSON.stringify(response);
+                    }
+
+
+
+                });
+
+            }
+            $(window).unload(function () {
+
+                window.opener.Session.isclosed = true;
+                window.opener.Session.responseBiometric = '{}';
+            });
+            IframeBiometria(element, options, callback);
+        };
+
+
+    </script>
+</head>
+<body>
+    <div id="div-iframe-biometria"></div>
+
+
+</body>
+</html>
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")

@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Iteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AGENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APELLIDO_AGENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLASE_CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTRACT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ES_TFI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_CREACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FLAG_CASO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HECHO_EN_UNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CASO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INCONVENIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSERTADO_POR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="METODO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_AGENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBJID_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBJID_SITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PLANO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESULTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVICIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="START_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBCLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBCLASE_CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TELEFONO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPIFICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_INTER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USUARIO_PROCESO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Iteraction" nillable="true" type="tns:Iteraction" />
+  <xs:complexType name="Evidence">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StrActivationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCommercialDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCreationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCustomerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDocumentExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDocumentPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDocumentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEvidenceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagEvidence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagExport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagMa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrLoadDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrServiceChannel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrServiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSuspensionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTransactionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTransactionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTransactionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTypificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTypificationDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrUserFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrUserLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Evidence" nillable="true" type="tns:Evidence" />
+  <xs:complexType name="ArrayOfListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListItem" nillable="true" type="tns:ListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListItem" nillable="true" type="tns:ArrayOfListItem" />
+  <xs:complexType name="ListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeTypeService" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Condition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdMotive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="ParameterId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListItem" nillable="true" type="tns:ListItem" />
+  <xs:complexType name="ParametersGeneratePDF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrListaInfo" nillable="true" type="tns:ArrayOfServiceArmaPlan" />
+      <xs:element minOccurs="0" name="FormatoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListDecoder" nillable="true" type="tns:ArrayOfServiceConstancy" />
+      <xs:element minOccurs="0" name="StrAccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAccionIFI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAccionRetencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAplicaCambioDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAplicaCambioNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAplicaEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAplicaOtroContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrAplicaProgramacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrBolsaSolesAdicionales" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCanalAtencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCantidadCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCantidadDesinstalar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCantidadInstalar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCantidadTotalCanjeDev" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCargoFijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCargoFijoConIGV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCarpetaPDFs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCarpetaTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCasoInter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCategoriaFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCentroAtencionArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCentroPobladoActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCentroPobladoDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCfServicioCom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCfServicioModif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCfTotalNuevo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCicloFacturacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodDesbloqueo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodigoAsesor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodigoLocalA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodigoLocalB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCodigoPlano" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContactoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContactoOtro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContenidoComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContenidoComercial2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCostoDesinstalacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCostoInstalacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCostoReactivacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCostoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCuentaPostpago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCustomerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDepartamentoLocalB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDepartamentoPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDescProductoCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDescripTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDescripcionServicioCom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDescuentoCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDireccionPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDireccionPostalC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDistritoPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDistrtitoLocalB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEmail1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEmail2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEnviarEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEscenarioMigracion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEscenarioRetencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEscenarioServicioCom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEstadoCivil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEstadoServicio4G" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFecAfiliacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFecDesistimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFecFinalReporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFecInicialReporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaActivacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaCancel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaCompromiso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaDesdeAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaEjecTopeCons" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaEjecucion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaEmisionDocFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaEmisionDocRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaHastaAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaNac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaPlazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaSuspension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaTransaccionProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFechaVencDocFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFidelizar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlag4G" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagExterInter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagGrilaAtp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagPlantillaPlazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagPosicionIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrFlagTipoDeco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrGrupoServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrIdInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrIdProductoCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrIgvTax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrImei" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrImporteConceptoAjusteSinIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMarcaEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMedio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrModalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrModeloEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMontSolicitad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMontoApadece" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMontoOCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMontoPcs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMontoRecargaCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMotivoCambioSim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMotivoCancelacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMotivoPariente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMotivoTipoBloqueo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMovil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNacionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNombreAgenteUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNombreArchivoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNombreAsesor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNombreServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNotas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNotasDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroDocContactoOtro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroDocFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroDocIdentidadRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroDocRepLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNroServicio2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNuevoPlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNuevoSim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNumeroContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNumeroFax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPaisA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPaisB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPeriodoCuotaServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPhone1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPhone2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPlanActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPlazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrProductos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrProvinciaLocalB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrProvinciaPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPuntoAtencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPuntosCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPuntosCcAntesTrans" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrReferenciaActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrReferenciaDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrRepresLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrResultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSecuencialOrden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSegmento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrServidorGenerarPDF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrServidorLeerPDF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSim4GLte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSubMotivoCancel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSubcategoriaFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSubcategoriaFactSinIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSubtotalAjusteSinIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTelfConfirmacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTelfOtroContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTelfReferencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTexto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoDocFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoPremioCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTitularCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTituloDesinstalacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTituloInstalacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTopeConsumo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTotalAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTotalConIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTransaccionBloqueo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrXEtiqueta2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strAccionEjecutar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strAccionEjecutiva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strAplicaCambioDirFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCargoFijoPromocion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCasoInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCentroAtencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCentroAtencionDAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodeTCRM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodigoBloqueo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodigoPlanoDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodigoPostalActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodigoPostallDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strContratoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCorreoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCostoLocucion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCostoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCuentaCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDepClienteActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDepClienteDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDirClienteDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDireccionClienteActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDireccionInstalac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDireccionInstalcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDistClienteDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDistritoClienteActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDuracionLocucion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEmailCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEmailEnviar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEnvioCorreo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEnviomail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFechaHoraAtención" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFechaTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFirmaDigitalHuella" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFlagBloqueo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaEncode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaFechaHora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaMinucia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaNomApeCli" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaNroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHuellaTipDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strIdIteraction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strLinea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strLocucion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMBIncluidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMarcaModelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMontoReintegro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMotDegradacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMotivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNotas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroAnterior" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroDocTitutar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroInter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroNuevo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroSot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNumPerProm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNumeroServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPaisClienteActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPaisClienteDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPaquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPaqueteVelDegradada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPlanVelDegradada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPrecioPaquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strProgramado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strProvClienteActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strProvClienteDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPuntoDeAtencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRefTransaccionActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRefTransaccionDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRepLegNroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRepresentanteLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSaldoPuntos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strServComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitanteApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitanteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitanteNro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitanteNroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSolicitanteTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTextoEnmarcado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoDocTitular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTransaccionDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strVigenciaPaquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strflagTipoTraslado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strtransaccion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametersGeneratePDF" nillable="true" type="tns:ParametersGeneratePDF" />
+  <xs:complexType name="ArrayOfServiceArmaPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceArmaPlan" nillable="true" type="tns:ServiceArmaPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceArmaPlan" nillable="true" type="tns:ArrayOfServiceArmaPlan" />
+  <xs:complexType name="ServiceArmaPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CARGO_FIJO" type="xs:decimal" />
+      <xs:element minOccurs="0" name="COD_SERVICIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DES_SERVICIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FEC_CREACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MOTIVO_EXCLUYE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERIODO" type="xs:int" />
+      <xs:element minOccurs="0" name="USUARIO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceArmaPlan" nillable="true" type="tns:ServiceArmaPlan" />
+  <xs:complexType name="ArrayOfServiceConstancy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceConstancy" nillable="true" type="tns:ServiceConstancy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceConstancy" nillable="true" type="tns:ArrayOfServiceConstancy" />
+  <xs:complexType name="ServiceConstancy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StrCargoFijoSinIGV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNombreEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrTipoServicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceConstancy" nillable="true" type="tns:ServiceConstancy" />
+  <xs:complexType name="ParameterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value_C" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value_L" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value_N" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParameterData" nillable="true" type="tns:ParameterData" />
+  <xs:complexType name="ArrayOfBusinessRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRules" nillable="true" type="tns:BusinessRules" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessRules" nillable="true" type="tns:ArrayOfBusinessRules" />
+  <xs:complexType name="BusinessRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NOTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGLA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUB_CLASE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRules" nillable="true" type="tns:BusinessRules" />
+  <xs:complexType name="ArrayOfTypification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Typification" nillable="true" type="tns:Typification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypification" nillable="true" type="tns:ArrayOfTypification" />
+  <xs:complexType name="Typification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLASE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INTERACCION_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBCLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBCLASE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_CODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Typification" nillable="true" type="tns:Typification" />
+  <xs:complexType name="Client">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APELLIDOS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASESOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CALLE_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CALLE_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANT_REG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CICLO_FACTURACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CIUDAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COD_CNT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COD_TIPO_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONSULTOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTACTO_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTRATO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNTRY_DES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNTRY_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREDIT_SCORE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPARTAMENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPARTEMENTO_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPARTEMENTO_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPOSITO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIRECCION_DESPACHO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DISTRITO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DISTRITO_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DISTRITO_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI_RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOMICILIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_CIVIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_CIVIL_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_CONTRATO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_CUENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_SITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_ACT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_NAC" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FLAG_EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FLAG_REGISTRADO" type="xs:int" />
+      <xs:element minOccurs="0" name="FORMA_PAGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUNCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INTERACT2CONTACT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIMITE_CREDITO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LONG_NRO_DOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LUGAR_NACIMIENTO_DES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LUGAR_NACIMIENTO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODALIDAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MOTIVO_REGISTRO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NACIONALIDAD" type="xs:long" />
+      <xs:element minOccurs="0" name="NACIONALIDAD_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="NICHO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_COMERCIAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_COMPLETO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_DOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBJID_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBJID_INTERACT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBJID_SITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OCUPACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAIS_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAIS_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PHONE1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PHONE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POSTAL_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POSTAL_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROVINCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROVINCIA_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROVINCIA_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PUNTO_VENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P_FLAG_CONSULTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P_MSG_TEXT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAZON_SOCIAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFERENCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPRESENTANTE_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESPONSABLE_PAGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROL_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEGMENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEGMENTO2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEXO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_APELLIDOS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_NOMBRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TELEFONO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TELEFONO_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TELEF_REFERENCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEXTO_NOTAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_DOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_CUENTAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_LINEAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URBANIZACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URBANIZACION_FAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URBANIZACION_LEGAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USUARIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USU_ASEG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZIPCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+  <xs:complexType name="InsertTemplateInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_ACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_ID_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_NOMBRE_TRANSACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_NRO_DIAS" type="xs:int" />
+      <xs:element minOccurs="0" name="_NRO_TARJETA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_NRO_TELEFONO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_P_OLD_ID_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_P_USUARIO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_SESSION_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_Script_IMEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_TICKET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_TIENE_DATOS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_ADDRESS5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_ADJUSTMENT_AMOUNT" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_ADJUSTMENT_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_AMOUNT_UNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_BASKET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_BIRTHDAY" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_X_CHARGE_AMOUNT" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_CITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARIFY_INTERACTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLAROLOCAL6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARO_LDN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARO_LDN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARO_LDN3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARO_LDN4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CLARO_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CONTACT_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_CONTACT_SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_DEPARTMENT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_DISTRICT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_DNI_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_DOCUMENT_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_EMAIL_CONFIRMATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_EXPIRE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_X_FAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FIXED_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_CHANGE_USER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_CHARGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_OTHER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_REGISTERED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_FLAG_TITULAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_ICCID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_IMEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_10" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_11" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_12" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_13" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_14" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_15" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_16" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_17" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_18" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_19" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_20" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_21" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_22" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_23" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_24" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_25" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_26" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_27" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_28" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_29" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_30" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_INTER_8" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_INTER_9" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_LASTNAME_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_LDI_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_LOT_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_MARITAL_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_MODEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_MONTH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_NAME_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_NRO_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OCCUPATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLAROLOCAL6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLARO_LDN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLARO_LDN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLARO_LDN3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_CLARO_LDN4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_DOC_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_FIXED_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_FIXED_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OLD_LDI_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OPERATION_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OST_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OTHER_DOC_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OTHER_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OTHER_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_OTHER_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_PHONE_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_PLUS_INTER2INTERACT" type="xs:double" />
+      <xs:element minOccurs="0" name="_X_POSITION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_RECHARGE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_X_REFERENCE_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_REFERENCE_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_REGISTRATION_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_TRIO_ANTIGUO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_TYPE_DOCUMENT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_X_ZIPCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsertTemplateInteraction" nillable="true" type="tns:InsertTemplateInteraction" />
+  <xs:complexType name="GlobalDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Document" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="strCodeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMesaggeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlobalDocument" nillable="true" type="tns:GlobalDocument" />
+  <xs:complexType name="InteractionTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_TRANSACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_DIAS" type="xs:int" />
+      <xs:element minOccurs="0" name="NRO_TARJETA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_TELEFONO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P_OLD_ID_CONTACTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P_USUARIO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SESSION_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Script_IMEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TICKET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIENE_DATOS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_ADDRESS5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_ADJUSTMENT_AMOUNT" type="xs:double" />
+      <xs:element minOccurs="0" name="X_ADJUSTMENT_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_AMOUNT_UNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_BASKET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_BIRTHDAY" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="X_CHARGE_AMOUNT" type="xs:double" />
+      <xs:element minOccurs="0" name="X_CITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARIFY_INTERACTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLAROLOCAL6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARO_LDN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARO_LDN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARO_LDN3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARO_LDN4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CLARO_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CONTACT_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_CONTACT_SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_DEPARTMENT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_DISTRICT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_DNI_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_DOCUMENT_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_EMAIL_CONFIRMATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_EXPIRE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="X_FAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FIXED_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_CHANGE_USER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_CHARGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_OTHER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_REGISTERED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_FLAG_TITULAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_ICCID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_IMEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_10" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_11" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_12" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_13" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_14" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_15" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_16" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_17" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_18" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_19" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_20" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_21" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_22" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_23" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_24" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_25" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_26" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_27" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_28" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_29" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_30" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_INTER_8" type="xs:double" />
+      <xs:element minOccurs="0" name="X_INTER_9" type="xs:double" />
+      <xs:element minOccurs="0" name="X_LASTNAME_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_LDI_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_LOT_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_MARITAL_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_MODEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_MONTH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_NAME_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_NRO_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OCCUPATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLAROLOCAL6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLARO_LDN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLARO_LDN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLARO_LDN3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_CLARO_LDN4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_DOC_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_FIXED_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_FIXED_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OLD_LDI_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OPERATION_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OST_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OTHER_DOC_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OTHER_FIRST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OTHER_LAST_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_OTHER_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_PHONE_LEGAL_REP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_PLUS_INTER2INTERACT" type="xs:double" />
+      <xs:element minOccurs="0" name="X_POSITION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_RECHARGE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="X_REFERENCE_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_REFERENCE_PHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_REGISTRATION_REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_TRIO_ANTIGUO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_TYPE_DOCUMENT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_ZIPCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InteractionTemplate" nillable="true" type="tns:InteractionTemplate" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AreaID" type="xs:int" />
+      <xs:element minOccurs="0" name="AreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionPermissions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profiles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SapVendorID" type="xs:int" />
+      <xs:element minOccurs="0" name="SearchUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Employee" nillable="true" type="tns:Employee" />
+  <xs:complexType name="ArrayOfPaginaOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaginaOption" nillable="true" type="tns:PaginaOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaginaOption" nillable="true" type="tns:ArrayOfPaginaOption" />
+  <xs:complexType name="PaginaOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaginaOption" nillable="true" type="tns:PaginaOption" />
+  <xs:complexType name="ArrayOfConsultSecurity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultSecurity" nillable="true" type="tns:ConsultSecurity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultSecurity" nillable="true" type="tns:ArrayOfConsultSecurity" />
+  <xs:complexType name="ConsultSecurity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apliccod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opccodpad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicabrev" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opciccod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicd1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicdes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicniv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicnivpad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicnompag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Opcicnumord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Perfccod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuaccod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuaccodvensap" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultSecurity" nillable="true" type="tns:ConsultSecurity" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeCac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeEmpress" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeRol" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeState" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeTypeCac" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeCac" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfParameterTerminalTPI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParameterTerminalTPI" nillable="true" type="tns:ParameterTerminalTPI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParameterTerminalTPI" nillable="true" type="tns:ArrayOfParameterTerminalTPI" />
+  <xs:complexType name="ParameterTerminalTPI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorN" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParameterTerminalTPI" nillable="true" type="tns:ParameterTerminalTPI" />
+  <xs:complexType name="ArrayOfReceiptPostPaid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceiptPostPaid" nillable="true" type="tns:ReceiptPostPaid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReceiptPostPaid" nillable="true" type="tns:ArrayOfReceiptPostPaid" />
+  <xs:complexType name="ReceiptPostPaid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCAddr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCAddr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ENVIO_CORREO" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FECHA_EMISION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_VENCIMIENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INVOICENUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INVOICE_NUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MTO_ULT_FACTURA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NUMERO_RECIBO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroCiclo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERIODO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECIBO_DETALLADO" nillable="true" type="tns:DetailReceiptPostPostPaid" />
+      <xs:element minOccurs="0" name="TotalAmountDue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCurrentCharges" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPaymentsRcvd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrevBalance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrevCharges" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalTaxes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptPostPaid" nillable="true" type="tns:ReceiptPostPaid" />
+  <xs:complexType name="DetailReceiptPostPostPaid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LARGA_DISTANCIA_INTERNACIONAL" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LARGA_DISTANCIA_NACIONAL" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ROAMING_INTERNACIONAL" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOTALACCESS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOTALOCCNIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOTALOCCS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOTALSUBSCRIPTION" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOTAL_CARGOS_DEL_MES" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TRAFICO_LOCAL_ADICIONAL" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TRAFICO_LOCAL_A_CONSUMO" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetailReceiptPostPostPaid" nillable="true" type="tns:DetailReceiptPostPostPaid" />
+  <xs:complexType name="ArrayOfQueuesCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueuesCase" nillable="true" type="tns:QueuesCase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueuesCase" nillable="true" type="tns:ArrayOfQueuesCase" />
+  <xs:complexType name="QueuesCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COD_SUBCLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COLA_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CORRELATIVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FEC_CREACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FEC_MODIFICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FLAG_ACTIVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TITLE_COLA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_CREACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_MODIFICACION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueuesCase" nillable="true" type="tns:QueuesCase" />
+  <xs:complexType name="ArrayOfIGVTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IGVTax" nillable="true" type="tns:IGVTax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIGVTax" nillable="true" type="tns:ArrayOfIGVTax" />
+  <xs:complexType name="IGVTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="igv" type="xs:double" />
+      <xs:element minOccurs="0" name="igvD" type="xs:double" />
+      <xs:element minOccurs="0" name="impudFecFinVigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="impudFecIniVigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="impudFecRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="impunTipDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="imputId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="impuvDes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IGVTax" nillable="true" type="tns:IGVTax" />
+  <xs:complexType name="Office">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="strCodeClasificationOffice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodeOffice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCodeUserSisac" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Office" nillable="true" type="tns:Office" />
+</xs:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfObtenerTipoTecnologia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObtenerTipoTecnologia" nillable="true" type="tns:ObtenerTipoTecnologia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObtenerTipoTecnologia" nillable="true" type="tns:ArrayOfObtenerTipoTecnologia" />
+  <xs:complexType name="ObtenerTipoTecnologia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PARAN_CODIGO" type="xs:long" />
+      <xs:element minOccurs="0" name="PARAN_FLAG_SISTEMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAN_GRUPO" type="xs:long" />
+      <xs:element minOccurs="0" name="PARAV_DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAV_VALOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAV_VALOR1" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerTipoTecnologia" nillable="true" type="tns:ObtenerTipoTecnologia" />
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDataPower" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDataPower" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="HeaderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consumer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="tns:Status" />
+      <xs:element minOccurs="0" name="timestamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="varArg" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeaderResponse" nillable="true" type="tns:HeaderResponse" />
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msgid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+</xs:schema>

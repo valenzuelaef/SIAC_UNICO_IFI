@@ -1,0 +1,602 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    #frmChangeMinor .error {
+        background: #ffffff !important;
+        padding: 0px !important;
+        position: relative;
+        margin-top: 5px;
+        color: #a94442;
+    }
+</style>
+
+<div id="INTChangeMinor" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-sm-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" aria-expanded="true" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+                    <input id="hidCasoId" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCasoId">
+                    <div class="panel-body" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Número de Servicio:</label></td>
+                                    <td class="col-sm-6">
+                                        <label id="lblNroTelefono"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblContacto"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                                </tr>                               
+                              
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                <td class="col-sm-6"><label id="lblDNI_RUC"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Nacionalidad:</label></td>
+                                <td class="col-sm-6"><label id="lblNacionalidad"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Fecha de Nacimiento:</label></td>
+                                <td class="col-sm-6"><label id="lblFechaNac"></label></td>
+                            </tr> 
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Estado Civil:</label></td>
+                                <td class="col-sm-6"><label id="lblEstadoCiv"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Sexo:</label></td>
+                                <td class="col-sm-6"><label id="lblSexoCli"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Cargo Desempeñado:</label></td>
+                                <td class="col-sm-6"><label id="lblCargDesemp"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Nombre Comercial:</label></td>
+                                <td class="col-sm-6"><label id="lblNomComercial"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Contacto Cliente:</label></td>
+                                <td class="col-sm-6"><label id="lblContactoCli"></label></td>
+                            </tr> 
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Teléfono Contacto:</label></td>
+                                <td class="col-sm-6"><label id="lblTelefono"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Email de contacto:</label></td>
+                                <td class="col-sm-6"><label id="lblEmail"></label></td>
+                            </tr> 
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Número Fax:</label></td>
+                                <td class="col-sm-6"><label id="lblFax"></label></td>
+                            </tr>                                                    
+                                      
+                            </tbody>
+                        </table>
+                       
+                    </div>
+                    <br />
+                    <br />
+                    <div id="businessRulesHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                    </div>
+                </div>
+
+                </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div id="tabProducts">
+
+                <div class="panel claro-panel-primary">
+                    <div class="panel-heading">
+                        CAMBIO DE DATOS MENORES
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12">
+
+                            <form id="frmChangeMinor">
+
+                                <div class="col-sm-2">
+
+                                </div>
+
+                                <div class="panel panel">
+                                    <div class="card">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="active">
+                                                <a role="tab" data-toggle="tab">
+                                                    <span>
+                                                        Nuevos Datos del Cliente
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+
+                                                        <label for="idContactocli">Nombre Contacto Cliente:</label>
+
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+
+                                                        <input type="text" id="txtContactocliChangeMinor" name="nmtxtContactocliChangeMinor" class="form-control input-sm text-left" />
+
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+
+                                                        <label>Fecha de Nacimiento:</label>
+
+                                                    </div>
+
+                                                    <div class=" col-sm-3">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="text" class="form-control input-sm" id="txtDateChangeMinor" name="nmtxtDateChangeMinor" placeholder="DD/MM/AAAA">
+                                                            <label id="txtCalendarDateChangeMinor" class="btn transaction-button input-group-addon" for="txtDateChangeMinor">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idMovil">Número de Contacto:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input id="txtMovilChangeMinor" name="nmtxtMovilChangeMinor" class="form-control input-sm text-left" maxlength="12" />
+                                                    </div>
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idNacionalidad">Nacionalidad:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <select id="cboNacionalidadChangeMinor" name="nmcboNacionalidadChangeMinor" class="form-control input-sm"></select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idTelefono">Teléfono de Contacto:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input id="txtPhoneChangeMinor" name="nmtxtPhoneChangeMinor" class="form-control input-sm text-left" maxlength="12" />
+                                                    </div>
+
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idcivilstatus">Estado Civil:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <select id="cbocivilstatus" name="nmcbocivilstatus" class="form-control input-sm"></select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idEmail">E-mail de Contacto:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3 error-input">
+                                                        <input type="text" id="txtEmailChangeMinor" name="nmtxtEmailChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                    <div class=" col-sm-3">
+                                                        <label for="idSexo">Sexo:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-1">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rdbSexo" id="rdbHombre" value="M"><strong>Hombre</strong>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-sm-1">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rdbSexo" id="rdbMujer" value="F"><strong>Mujer</strong>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-sm-1">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rdbSexo" id="rdbNA" value="U"><strong>NA</strong>
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class=" col-sm-3">
+                                                        <label for="idEmail">Confirmación correo E-mail:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3 error-input">
+                                                        <input type="text" id="txtConfirmarEmailChangeMinor" name="nmtxtConfEmailChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                                    <div class="form-group">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                <div class="form-group">
+
+                                </div>
+
+                                <div class="panel panel">
+
+                                    <div class="card">
+
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="active">
+                                                <a role="tab" data-toggle="tab">
+                                                    <span>
+                                                        Datos Adicionales
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idCargoDesem">Cargo Desempeñado:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input id="txtCargoDesem" name="nmtxtCargoDesem" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNomComerc">Nombre Comercial:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtNameComChangeMinor" name="nmtxtNameComChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idMovil">Número de Contacto 2:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtMovil3ChangeMinor" name="nmtxtMovil3ChangeMinor" class="form-control input-sm text-left" maxlength="12" />
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idMovil">Número de Contacto 3:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtMovil4ChangeMinor" name="nmtxtMovil4ChangeMinor" class="form-control input-sm text-left" maxlength="12" />
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNumberFax">E-mail de Contacto 2:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtEmail2ChangeMinor" name="nmtxtEmail2ChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNumberFax">E-mail de Contacto 3:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtEmail3ChangeMinor" name="nmtxtEmail3ChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNumberFax">Numero Fax:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <input type="text" id="txtNumberChangeMinor" name="nmtxtNumberChangeMinor" class="form-control input-sm text-left" maxlength="12" />
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                </div>
+
+                                <div class="panel panel">
+
+                                    <div class="card">
+
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="active">
+                                                <a role="tab" data-toggle="tab">
+                                                    <span>
+                                                        Dirección Alternativa
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idCargoDesem">País:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <select class="form-control select-list" id="cboPaisMod"></select>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNomComerc">Departamento:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <select class="form-control select-list" id="cboDepMod" name="nmcboDepMod"></select>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idMovil">Provincia:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <select class="form-control select-list" id="cboProvinciaMod" name="nmcboProvinciaMod"></select>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idMovil">Distrito:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+
+                                                        <select class="form-control select-list" id="cboDistritoMod" name="nmcboDistritoMod"></select>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+
+                                                    <div class="col-sm-3">
+                                                        <label for="idNumberFax">Dirección:</label>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <input type="text" id="txtCalleChangeMinor" name="nmtxtCalleChangeMinor" class="form-control input-sm text-left" />
+                                                    </div>
+
+                                                 
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+
+                                            <div class="col-sm-3">
+                                                <label>Envío por E-mail:</label>
+                                            </div>
+
+                                            <div class="col-sm-1">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input id="chkEmail" type="checkbox" value="">
+
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4 ">
+                                                <input type="text" class="form-control input-sm" id="txtEmail" name="nmtxtEmail" placeholder="Correo Electrónico" style="display: none" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+
+                                            <div class="col-sm-3">
+                                                <label for="txtStartHLR">Punto de Atención:</label>
+                                            </div>
+
+                                            <div class="col-sm-3 error-input">
+                                                <select class="form-control input-sm" name="nmcboCACDAC" id="cboCACDAC"></select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+
+                                            <div class="col-sm-3">
+                                                <label>Notas:</label>
+                                            </div>
+
+                                            <div class="col-sm-7">
+                                                <textarea id="txtNote" class="form-control" placeholder="Agregar Notas" name="nmtxtNote" rows="4"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </form>
+                            <br />
+
+                            <center>
+
+                                <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                <button id="btnConstancia" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                            </center>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong><span id="lblErrorMessage"></span></strong>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span> <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....</span>
+    </div>
+</div>
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<input id="hidCodOpcion" type="hidden" name="hidCodOpcion" />
+<input id="hidAccion" type="hidden" name="hidAccion" />
+
+@Scripts.Render("~/bundles/Content/Lib/BloqueoF12")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ChangeMinor")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/ReadRecordPDF/ReadRecord")
+@System.Web.Optimization.Scripts.Render("~/bundles/IFITransactions/Auth/AuthUser")

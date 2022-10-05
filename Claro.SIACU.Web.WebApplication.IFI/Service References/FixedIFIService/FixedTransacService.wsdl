@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FixedTransacService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd4" namespace="AuditService" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetListScheduledTransactions" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCustomer" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetServicesByInteraction" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetJobTypes" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.ETAFlowValidate" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderType" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetOrderSubType" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetRetentionCancelServices" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetAddDayWork" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetValidateCustomerID" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetService" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertDetailServiceInteraction" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertTransaction" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetInsertInteractionBusiness" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultationServiceByContract" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetMotiveSOTByTypeJob" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetTransactionScheduled" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostExecuteSuspension" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetReconeService" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostUpdateProgTaskLte" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostSuspensionLte" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostReconexionLte" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetUpdateInter29" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetPCRFConsultation" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.PostPCRFPaquetesAdic" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarClaroPuntos" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetDataPower" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetConsultarPaqDisponibles" />
+      <xsd:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetComprarPaquetes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFixedIFIService_GetDeleteScheduledTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeleteScheduledTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDeleteScheduledTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeleteScheduledTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetListScheduledTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListScheduledTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetListScheduledTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListScheduledTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetServicesByInteraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByInteraction" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetServicesByInteraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByInteractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetJobTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobTypes" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetJobTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ETAFlowValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ETAFlowValidate" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ETAFlowValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ETAFlowValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetOrderType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderType" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetOrderType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetOrderSubType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSubType" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetOrderSubType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSubTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetListarAccionesRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListarAccionesRC" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetListarAccionesRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListarAccionesRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotCancelacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotCancelacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSubMotiveCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMotiveCancel" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSubMotiveCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMotiveCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTypeWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeWork" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTypeWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSubTypeWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubTypeWork" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSubTypeWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubTypeWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotiveSOT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSOT" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotiveSOT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSOTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetAddDayWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddDayWork" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetAddDayWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddDayWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetObtainParameterTerminalTPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainParameterTerminalTPI" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetObtainParameterTerminalTPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainParameterTerminalTPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSoloTFIPostpago_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoloTFIPostpago" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetSoloTFIPostpago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoloTFIPostpagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetObtainPenalidadExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainPenalidadExt" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetObtainPenalidadExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainPenalidadExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ObtenerDatosBSCSExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosBSCSExt" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ObtenerDatosBSCSExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosBSCSExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetValidateCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetValidateCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetRegisterCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetRegisterCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCaseInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseInsert" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCaseInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetApadeceCancelRet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApadeceCancelRet" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetApadeceCancelRet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApadeceCancelRetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDesactivatedContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContract" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDesactivatedContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTelephoneByContractCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTelephoneByContractCode" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTelephoneByContractCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTelephoneByContractCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertDetailServiceInteraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertDetailServiceInteraction" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertDetailServiceInteraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertDetailServiceInteractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertInteractionBusiness_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionBusiness" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertInteractionBusiness_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetValidateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetValidateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCreateCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreateCase" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCreateCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreateCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertCase" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTemplateCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTemplateCase" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTemplateCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTemplateCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTemplateCaseContingent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTemplateCaseContingent" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInsertTemplateCaseContingent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertTemplateCaseContingentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ActualizaPlantillaCaso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaPlantillaCaso" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ActualizaPlantillaCaso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaPlantillaCasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetConsultationServiceByContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultationServiceByContract" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetConsultationServiceByContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultationServiceByContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotiveSOTByTypeJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSOTByTypeJob" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetMotiveSOTByTypeJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSOTByTypeJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTransactionScheduled_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionScheduled" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetTransactionScheduled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionScheduledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDesactivatedContract_LTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContract_LTE" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDesactivatedContract_LTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContract_LTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaSuspensionDeServicioCodRes_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSuspensionDeServicioCodRes" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaSuspensionDeServicioCodRes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSuspensionDeServicioCodResResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetReconectionService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReconectionService" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetReconectionService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReconectionServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomerLineNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerLineNumber" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomerLineNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerLineNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInteractIDforCaseID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteractIDforCaseID" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetInteractIDforCaseID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteractIDforCaseIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_UpdateProgTaskLte_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProgTaskLte" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_UpdateProgTaskLte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProgTaskLteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaSuspensionDeServicioLte_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSuspensionDeServicioLte" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaSuspensionDeServicioLte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSuspensionDeServicioLteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaReconexionDeServicioLte_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaReconexionDeServicioLte" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_EjecutaReconexionDeServicioLte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaReconexionDeServicioLteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetUpdateInter29_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateInter29" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetUpdateInter29_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateInter29Response" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ObtenerTelefonosClienteLTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonosClienteLTE" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ObtenerTelefonosClienteLTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonosClienteLTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFSuscriber_Quota_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFSuscriber_Quota" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFSuscriber_Quota_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFSuscriber_QuotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFSuscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFSuscriber" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFSuscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFSuscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomerClf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerClf" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetCustomerClf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerClfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFPaquetesAdic_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFPaquetesAdic" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFPaquetesAdic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFPaquetesAdicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarClaroPuntos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClaroPuntos" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarClaroPuntos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClaroPuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPaqDisponibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPaqDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPaqDisponibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPaqDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFDegradacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFDegradacion" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ConsultarPCRFDegradacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFDegradacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDatosporNroDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosporNroDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_GetDatosporNroDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosporNroDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ComprarPaquetesRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprarPaquetesRest" />
+  </wsdl:message>
+  <wsdl:message name="IFixedIFIService_ComprarPaquetesRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprarPaquetesRestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFixedIFIService">
+    <wsdl:operation name="GetDeleteScheduledTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetDeleteScheduledTransaction" message="tns:IFixedIFIService_GetDeleteScheduledTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetDeleteScheduledTransactionResponse" message="tns:IFixedIFIService_GetDeleteScheduledTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListScheduledTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetListScheduledTransactions" message="tns:IFixedIFIService_GetListScheduledTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetListScheduledTransactionsResponse" message="tns:IFixedIFIService_GetListScheduledTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomer" message="tns:IFixedIFIService_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomerResponse" message="tns:IFixedIFIService_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByInteraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetServicesByInteraction" message="tns:IFixedIFIService_GetServicesByInteraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetServicesByInteractionResponse" message="tns:IFixedIFIService_GetServicesByInteraction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetJobTypes" message="tns:IFixedIFIService_GetJobTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetJobTypesResponse" message="tns:IFixedIFIService_GetJobTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ETAFlowValidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ETAFlowValidate" message="tns:IFixedIFIService_ETAFlowValidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ETAFlowValidateResponse" message="tns:IFixedIFIService_ETAFlowValidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetOrderType" message="tns:IFixedIFIService_GetOrderType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetOrderTypeResponse" message="tns:IFixedIFIService_GetOrderType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSubType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetOrderSubType" message="tns:IFixedIFIService_GetOrderSubType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetOrderSubTypeResponse" message="tns:IFixedIFIService_GetOrderSubType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListarAccionesRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetListarAccionesRC" message="tns:IFixedIFIService_GetListarAccionesRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetListarAccionesRCResponse" message="tns:IFixedIFIService_GetListarAccionesRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotCancelacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotCancelacion" message="tns:IFixedIFIService_GetMotCancelacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotCancelacionResponse" message="tns:IFixedIFIService_GetMotCancelacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMotiveCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetSubMotiveCancel" message="tns:IFixedIFIService_GetSubMotiveCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetSubMotiveCancelResponse" message="tns:IFixedIFIService_GetSubMotiveCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetTypeWork" message="tns:IFixedIFIService_GetTypeWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetTypeWorkResponse" message="tns:IFixedIFIService_GetTypeWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubTypeWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetSubTypeWork" message="tns:IFixedIFIService_GetSubTypeWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetSubTypeWorkResponse" message="tns:IFixedIFIService_GetSubTypeWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSOT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotiveSOT" message="tns:IFixedIFIService_GetMotiveSOT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotiveSOTResponse" message="tns:IFixedIFIService_GetMotiveSOT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddDayWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetAddDayWork" message="tns:IFixedIFIService_GetAddDayWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetAddDayWorkResponse" message="tns:IFixedIFIService_GetAddDayWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainParameterTerminalTPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetObtainParameterTerminalTPI" message="tns:IFixedIFIService_GetObtainParameterTerminalTPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetObtainParameterTerminalTPIResponse" message="tns:IFixedIFIService_GetObtainParameterTerminalTPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoloTFIPostpago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetSoloTFIPostpago" message="tns:IFixedIFIService_GetSoloTFIPostpago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetSoloTFIPostpagoResponse" message="tns:IFixedIFIService_GetSoloTFIPostpago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainPenalidadExt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetObtainPenalidadExt" message="tns:IFixedIFIService_GetObtainPenalidadExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetObtainPenalidadExtResponse" message="tns:IFixedIFIService_GetObtainPenalidadExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosBSCSExt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ObtenerDatosBSCSExt" message="tns:IFixedIFIService_ObtenerDatosBSCSExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ObtenerDatosBSCSExtResponse" message="tns:IFixedIFIService_ObtenerDatosBSCSExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetValidateCustomerId" message="tns:IFixedIFIService_GetValidateCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetValidateCustomerIdResponse" message="tns:IFixedIFIService_GetValidateCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetRegisterCustomerId" message="tns:IFixedIFIService_GetRegisterCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetRegisterCustomerIdResponse" message="tns:IFixedIFIService_GetRegisterCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetCaseInsert" message="tns:IFixedIFIService_GetCaseInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetCaseInsertResponse" message="tns:IFixedIFIService_GetCaseInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApadeceCancelRet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetApadeceCancelRet" message="tns:IFixedIFIService_GetApadeceCancelRet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetApadeceCancelRetResponse" message="tns:IFixedIFIService_GetApadeceCancelRet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetDesactivatedContract" message="tns:IFixedIFIService_GetDesactivatedContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetDesactivatedContractResponse" message="tns:IFixedIFIService_GetDesactivatedContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTelephoneByContractCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetTelephoneByContractCode" message="tns:IFixedIFIService_GetTelephoneByContractCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetTelephoneByContractCodeResponse" message="tns:IFixedIFIService_GetTelephoneByContractCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertDetailServiceInteraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertDetailServiceInteraction" message="tns:IFixedIFIService_GetInsertDetailServiceInteraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertDetailServiceInteractionResponse" message="tns:IFixedIFIService_GetInsertDetailServiceInteraction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTransaction" message="tns:IFixedIFIService_GetInsertTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTransactionResponse" message="tns:IFixedIFIService_GetInsertTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionBusiness">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertInteractionBusiness" message="tns:IFixedIFIService_GetInsertInteractionBusiness_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertInteractionBusinessResponse" message="tns:IFixedIFIService_GetInsertInteractionBusiness_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetValidateCustomer" message="tns:IFixedIFIService_GetValidateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetValidateCustomerResponse" message="tns:IFixedIFIService_GetValidateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreateCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetCreateCase" message="tns:IFixedIFIService_GetCreateCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetCreateCaseResponse" message="tns:IFixedIFIService_GetCreateCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertCase" message="tns:IFixedIFIService_GetInsertCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertCaseResponse" message="tns:IFixedIFIService_GetInsertCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTemplateCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTemplateCase" message="tns:IFixedIFIService_GetInsertTemplateCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTemplateCaseResponse" message="tns:IFixedIFIService_GetInsertTemplateCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTemplateCaseContingent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTemplateCaseContingent" message="tns:IFixedIFIService_GetInsertTemplateCaseContingent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInsertTemplateCaseContingentResponse" message="tns:IFixedIFIService_GetInsertTemplateCaseContingent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPlantillaCaso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ActualizaPlantillaCaso" message="tns:IFixedIFIService_ActualizaPlantillaCaso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ActualizaPlantillaCasoResponse" message="tns:IFixedIFIService_ActualizaPlantillaCaso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultationServiceByContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetConsultationServiceByContract" message="tns:IFixedIFIService_GetConsultationServiceByContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetConsultationServiceByContractResponse" message="tns:IFixedIFIService_GetConsultationServiceByContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSOTByTypeJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotiveSOTByTypeJob" message="tns:IFixedIFIService_GetMotiveSOTByTypeJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetMotiveSOTByTypeJobResponse" message="tns:IFixedIFIService_GetMotiveSOTByTypeJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionScheduled">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetTransactionScheduled" message="tns:IFixedIFIService_GetTransactionScheduled_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetTransactionScheduledResponse" message="tns:IFixedIFIService_GetTransactionScheduled_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract_LTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetDesactivatedContract_LTE" message="tns:IFixedIFIService_GetDesactivatedContract_LTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetDesactivatedContract_LTEResponse" message="tns:IFixedIFIService_GetDesactivatedContract_LTE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSuspensionDeServicioCodRes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioCodRes" message="tns:IFixedIFIService_EjecutaSuspensionDeServicioCodRes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioCodResResponse" message="tns:IFixedIFIService_EjecutaSuspensionDeServicioCodRes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReconectionService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetReconectionService" message="tns:IFixedIFIService_GetReconectionService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetReconectionServiceResponse" message="tns:IFixedIFIService_GetReconectionService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerLineNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomerLineNumber" message="tns:IFixedIFIService_GetCustomerLineNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomerLineNumberResponse" message="tns:IFixedIFIService_GetCustomerLineNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInteractIDforCaseID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetInteractIDforCaseID" message="tns:IFixedIFIService_GetInteractIDforCaseID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetInteractIDforCaseIDResponse" message="tns:IFixedIFIService_GetInteractIDforCaseID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProgTaskLte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/UpdateProgTaskLte" message="tns:IFixedIFIService_UpdateProgTaskLte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/UpdateProgTaskLteResponse" message="tns:IFixedIFIService_UpdateProgTaskLte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSuspensionDeServicioLte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioLte" message="tns:IFixedIFIService_EjecutaSuspensionDeServicioLte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioLteResponse" message="tns:IFixedIFIService_EjecutaSuspensionDeServicioLte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaReconexionDeServicioLte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaReconexionDeServicioLte" message="tns:IFixedIFIService_EjecutaReconexionDeServicioLte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/EjecutaReconexionDeServicioLteResponse" message="tns:IFixedIFIService_EjecutaReconexionDeServicioLte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInter29">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetUpdateInter29" message="tns:IFixedIFIService_GetUpdateInter29_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetUpdateInter29Response" message="tns:IFixedIFIService_GetUpdateInter29_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonosClienteLTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ObtenerTelefonosClienteLTE" message="tns:IFixedIFIService_ObtenerTelefonosClienteLTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ObtenerTelefonosClienteLTEResponse" message="tns:IFixedIFIService_ObtenerTelefonosClienteLTE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFSuscriber_Quota">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriber_Quota" message="tns:IFixedIFIService_ConsultarPCRFSuscriber_Quota_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriber_QuotaResponse" message="tns:IFixedIFIService_ConsultarPCRFSuscriber_Quota_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFSuscriber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriber" message="tns:IFixedIFIService_ConsultarPCRFSuscriber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriberResponse" message="tns:IFixedIFIService_ConsultarPCRFSuscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerClf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomerClf" message="tns:IFixedIFIService_GetCustomerClf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetCustomerClfResponse" message="tns:IFixedIFIService_GetCustomerClf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFPaquetesAdic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFPaquetesAdic" message="tns:IFixedIFIService_ConsultarPCRFPaquetesAdic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFPaquetesAdicResponse" message="tns:IFixedIFIService_ConsultarPCRFPaquetesAdic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClaroPuntos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarClaroPuntos" message="tns:IFixedIFIService_ConsultarClaroPuntos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarClaroPuntosResponse" message="tns:IFixedIFIService_ConsultarClaroPuntos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPaqDisponibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPaqDisponibles" message="tns:IFixedIFIService_ConsultarPaqDisponibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPaqDisponiblesResponse" message="tns:IFixedIFIService_ConsultarPaqDisponibles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFDegradacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFDegradacion" message="tns:IFixedIFIService_ConsultarPCRFDegradacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ConsultarPCRFDegradacionResponse" message="tns:IFixedIFIService_ConsultarPCRFDegradacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosporNroDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/GetDatosporNroDocumentos" message="tns:IFixedIFIService_GetDatosporNroDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/GetDatosporNroDocumentosResponse" message="tns:IFixedIFIService_GetDatosporNroDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprarPaquetesRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedIFIService/ComprarPaquetesRest" message="tns:IFixedIFIService_ComprarPaquetesRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedIFIService/ComprarPaquetesRestResponse" message="tns:IFixedIFIService_ComprarPaquetesRest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFixedIFIService" type="tns:IFixedIFIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeleteScheduledTransaction">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetDeleteScheduledTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListScheduledTransactions">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetListScheduledTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByInteraction">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetServicesByInteraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobTypes">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetJobTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ETAFlowValidate">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ETAFlowValidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderType">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetOrderType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSubType">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetOrderSubType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListarAccionesRC">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetListarAccionesRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotCancelacion">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetMotCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMotiveCancel">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetSubMotiveCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeWork">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetTypeWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubTypeWork">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetSubTypeWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSOT">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetMotiveSOT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddDayWork">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetAddDayWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainParameterTerminalTPI">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetObtainParameterTerminalTPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoloTFIPostpago">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetSoloTFIPostpago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainPenalidadExt">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetObtainPenalidadExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosBSCSExt">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ObtenerDatosBSCSExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCustomerId">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetValidateCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterCustomerId">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetRegisterCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseInsert">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetCaseInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApadeceCancelRet">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetApadeceCancelRet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetDesactivatedContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelephoneByContractCode">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetTelephoneByContractCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertDetailServiceInteraction">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertDetailServiceInteraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTransaction">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionBusiness">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertInteractionBusiness" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetValidateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreateCase">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetCreateCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertCase">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTemplateCase">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertTemplateCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertTemplateCaseContingent">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInsertTemplateCaseContingent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPlantillaCaso">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ActualizaPlantillaCaso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultationServiceByContract">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetConsultationServiceByContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotiveSOTByTypeJob">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetMotiveSOTByTypeJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionScheduled">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetTransactionScheduled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract_LTE">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetDesactivatedContract_LTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSuspensionDeServicioCodRes">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioCodRes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReconectionService">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetReconectionService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerLineNumber">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetCustomerLineNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInteractIDforCaseID">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetInteractIDforCaseID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProgTaskLte">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/UpdateProgTaskLte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSuspensionDeServicioLte">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/EjecutaSuspensionDeServicioLte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaReconexionDeServicioLte">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/EjecutaReconexionDeServicioLte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInter29">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetUpdateInter29" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonosClienteLTE">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ObtenerTelefonosClienteLTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFSuscriber_Quota">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriber_Quota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFSuscriber">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarPCRFSuscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerClf">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetCustomerClf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFPaquetesAdic">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarPCRFPaquetesAdic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClaroPuntos">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarClaroPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPaqDisponibles">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarPaqDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFDegradacion">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ConsultarPCRFDegradacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosporNroDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/GetDatosporNroDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprarPaquetesRest">
+      <soap:operation soapAction="http://tempuri.org/IFixedIFIService/ComprarPaquetesRest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FixedTransacService">
+    <wsdl:port name="BasicHttpBinding_IFixedIFIService" binding="tns:BasicHttpBinding_IFixedIFIService">
+      <soap:address location="http://localhost:53727/FixedIFIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

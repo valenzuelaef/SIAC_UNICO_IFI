@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32ebe3d7-cd80-42ba-8e1d-65d9a9ad28bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53727/CommonIFIService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommonIFIService.xsd" MetadataType="Schema" ID="bd87fe77-605f-4faf-a7de-b1933da1e810" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CommonIFIService1.xsd" MetadataType="Schema" ID="0b8f1709-32d1-419a-a728-0bfa5b22d741" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CommonIFIService2.xsd" MetadataType="Schema" ID="f20fa530-a87b-4e5d-b5e4-d521c8700a74" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd9" />
+    <MetadataFile FileName="CommonTransacService.wsdl" MetadataType="Wsdl" ID="3e83cab4-de83-4699-998a-6d0316836ee1" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?wsdl" />
+    <MetadataFile FileName="CommonIFIService274.xsd" MetadataType="Schema" ID="a8d33750-faf7-4548-a890-03d3fc8d0145" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd68" />
+    <MetadataFile FileName="CommonIFIService4.xsd" MetadataType="Schema" ID="5f9bc1a6-c9f9-4810-aec5-9d736d62e263" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd28" />
+    <MetadataFile FileName="CommonIFIService5.xsd" MetadataType="Schema" ID="c5fa7c76-c084-4891-b99d-a2d0c3b074a3" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd29" />
+    <MetadataFile FileName="CommonIFIService6.xsd" MetadataType="Schema" ID="d8a308fe-d6c8-4fec-8107-6e6cae251135" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd27" />
+    <MetadataFile FileName="CommonIFIService7.xsd" MetadataType="Schema" ID="8b805eae-606e-47ff-a8b4-f92ceb52c8de" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd20" />
+    <MetadataFile FileName="CommonIFIService8.xsd" MetadataType="Schema" ID="a7cd5f01-9438-473f-80fa-54a1ab8bdc13" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd21" />
+    <MetadataFile FileName="CommonIFIService9.xsd" MetadataType="Schema" ID="1ed7f1b5-6c71-42ee-8794-f5866e93f32b" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd22" />
+    <MetadataFile FileName="CommonIFIService10.xsd" MetadataType="Schema" ID="c80c61a9-742e-426e-babf-495013ce982a" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd23" />
+    <MetadataFile FileName="CommonIFIService11.xsd" MetadataType="Schema" ID="9aa700b9-67e6-4685-abcf-2304091c6e8e" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd24" />
+    <MetadataFile FileName="CommonIFIService12.xsd" MetadataType="Schema" ID="02c0b484-80fe-4bd6-a0a7-1791907d5684" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd25" />
+    <MetadataFile FileName="CommonIFIService13.xsd" MetadataType="Schema" ID="43c5e6f3-7ed5-4058-81b0-f6d8d94fa668" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd26" />
+    <MetadataFile FileName="CommonIFIService142.xsd" MetadataType="Schema" ID="163139aa-23cf-45c6-b23e-cf07902e468d" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd48" />
+    <MetadataFile FileName="CommonIFIService151.xsd" MetadataType="Schema" ID="b250928e-3443-4f9d-a3dd-f120c0ad207c" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd49" />
+    <MetadataFile FileName="CommonIFIService16.xsd" MetadataType="Schema" ID="2a9930f8-3e0f-4824-a995-0529c9df521c" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommonIFIService17.xsd" MetadataType="Schema" ID="9f0eb5e9-7980-42b1-a464-9c2581f32a86" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd40" />
+    <MetadataFile FileName="CommonIFIService18.xsd" MetadataType="Schema" ID="e34a63ae-cf52-4603-9c21-8cbbfa27224c" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd41" />
+    <MetadataFile FileName="CommonIFIService31.xsd" MetadataType="Schema" ID="cd48f9f5-8617-41a8-b9cb-9fb21cc0eea6" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd42" />
+    <MetadataFile FileName="CommonIFIService32.xsd" MetadataType="Schema" ID="7dda55c8-561d-41fd-8b29-8ee9d6b32396" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd43" />
+    <MetadataFile FileName="CommonIFIService3.xsd" MetadataType="Schema" ID="d8c884a6-f7a3-4256-aae3-ad1bc9b78ad2" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd44" />
+    <MetadataFile FileName="CommonIFIService141.xsd" MetadataType="Schema" ID="44a9c0b0-99a0-4e69-887e-ff5dc1bd2ecc" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd45" />
+    <MetadataFile FileName="CommonIFIService143.xsd" MetadataType="Schema" ID="702d5539-c656-4e84-ac18-f10370685440" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd46" />
+    <MetadataFile FileName="CommonIFIService14.xsd" MetadataType="Schema" ID="0a6c4ace-e518-46a0-b0ef-b88c6b16367b" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd47" />
+    <MetadataFile FileName="CommonIFIService26.xsd" MetadataType="Schema" ID="4b7e00fd-6c99-4b68-9100-3bd6cf6faa52" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CommonIFIService20.xsd" MetadataType="Schema" ID="b4c98ec0-c79e-4603-9749-0daf591cd4ac" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd60" />
+    <MetadataFile FileName="CommonIFIService21.xsd" MetadataType="Schema" ID="2cc03108-1764-483e-88f0-d43ebf00eba7" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd61" />
+    <MetadataFile FileName="CommonIFIService22.xsd" MetadataType="Schema" ID="94f16b7f-0dd4-4c03-b367-90b9fc425f4a" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd62" />
+    <MetadataFile FileName="CommonIFIService23.xsd" MetadataType="Schema" ID="426a0012-73ff-45e2-8eb0-d12031f502b4" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd63" />
+    <MetadataFile FileName="CommonIFIService24.xsd" MetadataType="Schema" ID="332aeff9-21ca-4fa4-aca2-2c60bfd74ef2" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd64" />
+    <MetadataFile FileName="CommonIFIService25.xsd" MetadataType="Schema" ID="a69f7277-d5d4-40c6-8637-11526052da42" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd65" />
+    <MetadataFile FileName="CommonIFIService275.xsd" MetadataType="Schema" ID="cf3c00da-8a0c-4bcf-817c-b1115c4a20fe" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd66" />
+    <MetadataFile FileName="CommonIFIService276.xsd" MetadataType="Schema" ID="340823e5-7306-479b-b956-40c0873c15d2" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd67" />
+    <MetadataFile FileName="CommonIFIService35.xsd" MetadataType="Schema" ID="cb4dfe5d-4ef9-493b-b20b-c1c11bac98bc" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommonIFIService36.xsd" MetadataType="Schema" ID="957354d7-f040-4a99-982b-70cbcc7dfa17" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CommonIFIService37.xsd" MetadataType="Schema" ID="130266f7-66f0-48b4-a997-12b474f2e32c" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd38" />
+    <MetadataFile FileName="CommonIFIService38.xsd" MetadataType="Schema" ID="e071534a-d28e-4dc7-94fc-c6dd537f596a" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd8" />
+    <MetadataFile FileName="CommonIFIService39.xsd" MetadataType="Schema" ID="352b18da-44cc-49f8-a358-c44204323250" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd18" />
+    <MetadataFile FileName="CommonIFIService40.xsd" MetadataType="Schema" ID="a18a388c-47ee-48e5-982f-c77ea5b7e112" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd19" />
+    <MetadataFile FileName="CommonIFIService41.xsd" MetadataType="Schema" ID="26819c48-ff02-4822-a4ff-85d5ef120b82" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd10" />
+    <MetadataFile FileName="CommonIFIService42.xsd" MetadataType="Schema" ID="ca022cfa-89e4-440f-8eda-2377d097492f" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd11" />
+    <MetadataFile FileName="CommonIFIService43.xsd" MetadataType="Schema" ID="37cc9f9d-7457-48c1-8575-d8c6fd3e5409" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd12" />
+    <MetadataFile FileName="CommonIFIService44.xsd" MetadataType="Schema" ID="a3a3e5cb-677d-4e08-bf88-60d4459481de" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd13" />
+    <MetadataFile FileName="CommonIFIService45.xsd" MetadataType="Schema" ID="da0bd9e0-96de-4e21-9c18-a142ef1dd182" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd14" />
+    <MetadataFile FileName="CommonIFIService46.xsd" MetadataType="Schema" ID="8abcd9f1-bfda-4c3e-8f47-20abfec74097" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd15" />
+    <MetadataFile FileName="CommonIFIService47.xsd" MetadataType="Schema" ID="6add18bd-f04b-42e7-963a-f288086320f7" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd16" />
+    <MetadataFile FileName="CommonIFIService48.xsd" MetadataType="Schema" ID="965f0ef7-5a0d-4350-b0e8-6dedffc472df" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd17" />
+    <MetadataFile FileName="CommonIFIService49.xsd" MetadataType="Schema" ID="cd7d24ca-e4e8-4667-9b84-457511ff075d" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd39" />
+    <MetadataFile FileName="CommonIFIService50.xsd" MetadataType="Schema" ID="1e14ceb7-90fb-4f06-860a-88f6014cab9b" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd30" />
+    <MetadataFile FileName="CommonIFIService51.xsd" MetadataType="Schema" ID="39900d2c-2215-4584-9965-f339eed55090" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd31" />
+    <MetadataFile FileName="CommonIFIService52.xsd" MetadataType="Schema" ID="e69794aa-3915-4bef-9af1-072313a7d9e0" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd32" />
+    <MetadataFile FileName="CommonIFIService53.xsd" MetadataType="Schema" ID="577af6c0-fbfd-4144-90ba-3ea809999a82" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd33" />
+    <MetadataFile FileName="CommonIFIService54.xsd" MetadataType="Schema" ID="497e5191-be02-4cc8-b367-a1b0c4c7a400" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd34" />
+    <MetadataFile FileName="CommonIFIService55.xsd" MetadataType="Schema" ID="b5c49ac6-6206-46ec-9a09-3b6d53736106" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd35" />
+    <MetadataFile FileName="CommonIFIService56.xsd" MetadataType="Schema" ID="039fafd7-60f7-45d0-958c-10e9318aaa71" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd36" />
+    <MetadataFile FileName="CommonIFIService201.xsd" MetadataType="Schema" ID="66994796-1a5c-43e9-8818-3eb39eb3dfa8" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd58" />
+    <MetadataFile FileName="CommonIFIService202.xsd" MetadataType="Schema" ID="85e22510-ff79-4ee3-b91b-6d0c16746756" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd59" />
+    <MetadataFile FileName="CommonIFIService59.xsd" MetadataType="Schema" ID="c3542237-9927-45db-af18-14359f4a9c3d" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CommonIFIService152.xsd" MetadataType="Schema" ID="74305415-80e8-4305-912c-e3cd4c813cce" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd50" />
+    <MetadataFile FileName="CommonIFIService153.xsd" MetadataType="Schema" ID="24a1467a-c74e-44a9-9958-18063db13e83" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd51" />
+    <MetadataFile FileName="CommonIFIService15.xsd" MetadataType="Schema" ID="274a74fb-3dc4-4a76-8a17-36e47c675be8" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd52" />
+    <MetadataFile FileName="CommonIFIService154.xsd" MetadataType="Schema" ID="976d7fd9-134a-4e2d-8fff-cbc1e9366620" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd53" />
+    <MetadataFile FileName="CommonIFIService155.xsd" MetadataType="Schema" ID="99a171d6-9a30-4846-9603-6d5cacab7066" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd54" />
+    <MetadataFile FileName="CommonIFIService19.xsd" MetadataType="Schema" ID="be86af87-efd4-47b1-916d-132d96ea7318" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd55" />
+    <MetadataFile FileName="CommonIFIService204.xsd" MetadataType="Schema" ID="f287e542-44f0-4704-ad20-696977df2bdb" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd56" />
+    <MetadataFile FileName="CommonIFIService203.xsd" MetadataType="Schema" ID="8038f899-42a6-4d56-8b88-17bd19bd8ced" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd57" />
+    <MetadataFile FileName="CommonIFIService68.xsd" MetadataType="Schema" ID="b076f2c1-b40c-4edd-9c18-c8f4cd33b044" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd37" />
+    <MetadataFile FileName="CommonIFIService69.xsd" MetadataType="Schema" ID="baf5bfbd-9135-4c26-86da-fd298b1ca6f4" SourceId="1" SourceUrl="http://localhost:53727/CommonIFIService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

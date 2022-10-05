@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="InsertTerminalLockUnlockEquipmentRequestIFI">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="isTransactionLock" type="xs:boolean" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid" minOccurs="0" name="objTerminal" nillable="true" type="q2:Terminal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsertTerminalLockUnlockEquipmentRequestIFI" nillable="true" type="tns:InsertTerminalLockUnlockEquipmentRequestIFI" />
+  <xs:complexType name="InsertTerminalLockUnlockEquipmentResponseIFI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resTerminal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsertTerminalLockUnlockEquipmentResponseIFI" nillable="true" type="tns:InsertTerminalLockUnlockEquipmentResponseIFI" />
+</xs:schema>

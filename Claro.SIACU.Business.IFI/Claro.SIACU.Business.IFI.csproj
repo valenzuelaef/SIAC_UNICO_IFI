@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA3E3305-497A-4764-818D-A04C45740B34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Claro.SIACU.Business.IFI</RootNamespace>
+    <AssemblyName>Claro.SIACU.Business.IFI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Fixed\Fixed.cs" />
+    <Compile Include="Fixed\PCRFConsultation.cs" />
+    <Compile Include="Fixed\ProgramTask.cs" />
+    <Compile Include="Fixed\RetentionCancelServ.cs" />
+    <Compile Include="Fixed\SuspensionService.cs" />
+    <Compile Include="Postpaid\ChangeBillingCycle.cs" />
+    <Compile Include="Postpaid\ChangeMinor.cs" />
+    <Compile Include="Postpaid\ChangePostalAddress.cs" />
+    <Compile Include="Fixed\PackagePurchaseService.cs" />
+    <Compile Include="Postpaid\ChangeServiceAddress.cs" />
+    <Compile Include="Postpaid\PlanMigration.cs" />
+    <Compile Include="Postpaid\DuplicateReceipts.cs" />
+    <Compile Include="Postpaid\MailReceipt.cs" />
+    <Compile Include="Postpaid\Postpaid.cs" />
+    <Compile Include="Postpaid\RetentionCancelServ.cs" />
+    <Compile Include="Postpaid\ServiceLock.cs" />
+    <Compile Include="Postpaid\UnlockService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wireless\RetentionCancelServ.cs" />
+    <Compile Include="Wireless\Wireless.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Claro.SIACU.Data.IFI\Claro.SIACU.Data.IFI.csproj">
+      <Project>{aeea6a42-936e-4bb6-a7ea-810c65755f9a}</Project>
+      <Name>Claro.SIACU.Data.IFI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claro.SIACU.Entity.IFI\Claro.SIACU.Entity.IFI.csproj">
+      <Project>{f9517f61-3891-4917-baa6-634ced2d28b9}</Project>
+      <Name>Claro.SIACU.Entity.IFI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claro.SIACU.ProxyService.IFI\Claro.SIACU.ProxyService.IFI.csproj">
+      <Project>{1ac8c921-de6d-426e-b16e-80e7ccf0b7f6}</Project>
+      <Name>Claro.SIACU.ProxyService.IFI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claro.SIACU\Claro.SIACU.csproj">
+      <Project>{0b643a37-2757-48e9-a3e7-c15561aa1b86}</Project>
+      <Name>Claro.SIACU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Data\Claro.Data.csproj">
+      <Project>{7dc4fcdb-62d7-4151-957a-984fa98fca74}</Project>
+      <Name>Claro.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Entity\Claro.Entity.csproj">
+      <Project>{5b432611-cd37-4a2b-bcba-7509064e68ba}</Project>
+      <Name>Claro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro.Web\Claro.Web.csproj">
+      <Project>{1630f11c-9caa-4a49-9bb2-7a3ccba1cd17}</Project>
+      <Name>Claro.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Claro\Claro.csproj">
+      <Project>{3126dd91-815a-4367-bb9e-8b241c73f4d0}</Project>
+      <Name>Claro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

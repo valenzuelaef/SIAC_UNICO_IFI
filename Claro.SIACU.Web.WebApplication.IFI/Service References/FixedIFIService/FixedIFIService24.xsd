@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetCaseInsert" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="CaseInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ACCOUNT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APELLIDO_AGENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CASO_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CASO_PADRE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLASE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COD_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COLA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONDICION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONTRATO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CUENTA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DUMMY_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FECHA_CREACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_CREACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_WORKGROUP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAT_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCIDENCIA_SD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCONVENIENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCONVENIENTE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="METODO_CONTACTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMBRE_AGENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOTAS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NRO_RECLAMO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NRO_REPORTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_CONTACTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_SITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ORIGEN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAGINA_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PLANO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRIORIDAD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PROPIETARIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RESOLUCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RESULTADO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICIO_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEVERIDAD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SITIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SUBCLASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SUBCLASE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TELEFONO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPIFICACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USUARIO_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USUARIO_PROCESO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VALOR_1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VALOR_2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CaseInsertRequest" nillable="true" type="tns:CaseInsertRequest" />
+  <xs:complexType name="CaseInsertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rCasoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rFlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaseInsertResponse" nillable="true" type="tns:CaseInsertResponse" />
+</xs:schema>

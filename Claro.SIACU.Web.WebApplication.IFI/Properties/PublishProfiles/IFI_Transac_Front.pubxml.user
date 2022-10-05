@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Publicados\FT</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/IFITransactions/Content/bootstrap.css">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/bootstrap.min.css">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap-theme.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap-theme.css.map">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap-theme.min.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap-theme.min.css.map">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap.css.map">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap.min.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap.min.css.map">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/bootstrap4.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/dataTables.bootstrap.min.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/datepicker.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/font-awesome.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/font-awesome.min.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/Footer.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/Header.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/isotope.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/jquery-ui.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/jquery.bar.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/jquery.dataTables.min.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/jquery.dataTables.select.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/jquery.smartmenus.bootstrap.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/magic-check.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/MyContainer.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/Site-Transaction.css">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/Site.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/stilo1.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/css/TreeView.css">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/bootstrap-datepicker.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/bootstrap.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/dataTables.bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/hoverIntent-touch.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-1.8.3.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-1.9.1.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-2.0.0.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-2.0.0.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-2.0.0.min.map">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery-ui.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.bar.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.blockUI.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.dataTables.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.dataTables.select.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.numeric.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.scrollbar.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.scrollbar.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.smartmenus.bootstrap.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.smartmenus.bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.smartmenus.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.smartmenus.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.sticky.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.validate.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.validate.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.validate.unobtrusive.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/moment-es.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/moment.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/respond.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/respond.matchmedia.addListener.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/respond.matchmedia.addListener.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Lib/respond.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/AuthUser/AuthUser.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroAppCommon.js">
+      <publishTime>02/11/2019 18:49:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroCommon.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroLayout.js">
+      <publishTime>02/11/2019 18:50:00</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroModalLoad.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroModalTemplate.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroOptionsDefault.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroRedirect.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroSession.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ClaroValidate.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ContactoGrilla.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/EditSuspensionReconnectionCustomer.js">
+      <publishTime>02/11/2019 18:50:27</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/plupload.full.min.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/ReadRecordPdf/ReadRecord.js">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/RetentionCancelServices.js">
+      <publishTime>02/11/2019 18:51:29</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Scripts/SuspensionReconnectionCustomer.js">
+      <publishTime>02/11/2019 18:52:10</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Content/Site.css">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ChangeBillingCycle/ChangeBillingCycle.js">
+      <publishTime>02/12/2019 10:39:50</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ChangeMinor/ChangeMinor.js">
+      <publishTime>02/12/2019 10:40:15</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ChangePostalAddress/ChangePostalAddress.js">
+      <publishTime>02/15/2019 20:06:48</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/DuplicateReceipts/DuplicateReceipts.js">
+      <publishTime>02/18/2019 21:48:38</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/MailReceipt/MailReceipt.js">
+      <publishTime>02/18/2019 10:11:02</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/PCRFConsultation/PCRFConsultation.js">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/PlanMigration/PlanMigration.js">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ScheduledTasks/ScheduledTasks.js">
+      <publishTime>02/12/2019 10:45:04</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ServiceLock/ServiceLock.js">
+      <publishTime>02/18/2019 16:16:59</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/ServiceLock/ValidateServiceLock.js">
+      <publishTime>02/15/2019 19:23:25</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/TestSecurity/TestSecurity.js">
+      <publishTime>02/12/2019 10:45:34</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/UnlockService/UnlockService.js">
+      <publishTime>02/18/2019 16:17:20</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Scripts/UnlockService/ValidateUnlockService.js">
+      <publishTime>02/15/2019 19:24:25</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Template/ScheduledTasksLTE.xlsx">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/Auth/AuthUserHtml.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ChangeBillingCycle/ChangeBillingCycle.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ChangeMinor/ChangeMinor.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ChangePostalAddress/ChangePostalAddress.cshtml">
+      <publishTime>02/15/2019 19:11:44</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/DuplicateReceipts/DuplicateReceipts.cshtml">
+      <publishTime>02/15/2019 19:11:44</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/EditSuspensionReconnectionCustomer/EditSuspensionReconnectionCustomer.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/MailReceipt/MailReceipt.cshtml">
+      <publishTime>02/15/2019 19:11:43</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/PCRFConsultation/PCRFConsultation.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/PlanMigration/PlanMigration.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/Redirect/BritgeRedirect.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/RetentionCancelServices.cshtml">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ScheduledTasks/ScheduledTasks.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ServiceLock/Index.cshtml">
+      <publishTime>02/15/2019 19:11:44</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/ServiceLock/QuestionSecurity.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/Shared/_Layout.cshtml">
+      <publishTime>02/11/2019 12:10:52</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/SuspensionReconnectionCustomer.cshtml">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/UnlockService/Index.cshtml">
+      <publishTime>02/18/2019 11:44:06</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/UnlockService/ShowBiometrics.cshtml">
+      <publishTime>02/18/2019 12:58:39</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/web.config">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="Areas/IFITransactions/Views/_ViewStart.cshtml">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>02/11/2019 12:10:41</publishTime>
+    </File>
+    <File Include="bin/Claro.dll">
+      <publishTime>02/18/2019 22:52:06</publishTime>
+    </File>
+    <File Include="bin/Claro.Entity.dll">
+      <publishTime>02/18/2019 22:52:06</publishTime>
+    </File>
+    <File Include="bin/Claro.Helpers.dll">
+      <publishTime>02/18/2019 22:52:07</publishTime>
+    </File>
+    <File Include="bin/Claro.Security.dll">
+      <publishTime>02/18/2019 22:52:06</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.dll">
+      <publishTime>02/18/2019 22:52:07</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Web.WebApplication.IFI.dll">
+      <publishTime>02/18/2019 22:52:08</publishTime>
+    </File>
+    <File Include="bin/Claro.Web.dll">
+      <publishTime>02/18/2019 22:52:07</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/02/2018 10:30:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>07/02/2018 10:30:40</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="bin/es/EntityFramework.resources.dll">
+      <publishTime>07/02/2018 10:30:43</publishTime>
+    </File>
+    <File Include="bin/es/EntityFramework.SqlServer.resources.dll">
+      <publishTime>07/02/2018 10:30:43</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.AspNet.Identity.Core.resources.dll">
+      <publishTime>07/02/2018 10:30:53</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
+      <publishTime>07/02/2018 10:30:59</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.AspNet.Identity.Owin.resources.dll">
+      <publishTime>07/02/2018 10:31:06</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Host.SystemWeb.resources.dll">
+      <publishTime>07/02/2018 10:31:51</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.resources.dll">
+      <publishTime>07/02/2018 10:31:43</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Security.Facebook.resources.dll">
+      <publishTime>07/02/2018 10:32:07</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Security.Google.resources.dll">
+      <publishTime>07/02/2018 10:32:14</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Security.MicrosoftAccount.resources.dll">
+      <publishTime>07/02/2018 10:32:20</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Security.resources.dll">
+      <publishTime>07/02/2018 10:32:01</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Owin.Security.Twitter.resources.dll">
+      <publishTime>07/02/2018 10:32:30</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>07/09/2013 11:33:54</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>07/09/2013 11:33:54</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Optimization.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>02/11/2019 12:10:51</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>07/02/2018 10:19:00</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>07/02/2018 10:30:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>07/02/2018 10:30:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>07/02/2018 10:31:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>07/02/2018 10:31:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>07/02/2018 10:31:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>07/02/2018 10:31:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>07/02/2018 10:31:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>07/02/2018 10:32:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>07/02/2018 10:32:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>07/02/2018 10:32:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>07/02/2018 10:32:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>07/02/2018 10:32:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>07/02/2018 10:32:37</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/09/2013 11:04:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/09/2013 11:04:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2019 12:10:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/11/2019 12:10:49</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>07/02/2018 10:18:49</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>07/02/2018 10:18:50</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/02/2018 10:18:49</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/02/2018 10:18:50</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css.map">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.min.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.min.css.map">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css.map">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css.map">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap4.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/dataTables.bootstrap.min.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/datepicker.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/Footer.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/Header.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/isotope.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/jquery.bar.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/jquery.dataTables.min.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/jquery.dataTables.select.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/jquery.smartmenus.bootstrap.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/jquery.steps.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/magic-check.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/MyContainer.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/Site-Transaction.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/Site.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/css/stilo1.css">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/css/TreeView.css">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/bootstrap-datepicker.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/bootstrap.js">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/Lib/bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/dataTables.bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/hoverIntent-touch.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-1.8.3.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-1.9.1.min.js">
+      <publishTime>02/11/2019 12:10:46</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-2.0.0.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-2.0.0.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-2.0.0.min.map">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery-ui.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.bar.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.blockUI.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.dataTables.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.dataTables.select.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.numeric.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.scrollbar.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.scrollbar.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.smartmenus.bootstrap.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.smartmenus.bootstrap.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.smartmenus.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.smartmenus.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.steps.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.steps.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.sticky.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.validate.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.validate.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.validate.unobtrusive.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/moment-es.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/moment.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/respond.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/respond.matchmedia.addListener.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/respond.matchmedia.addListener.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/respond.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Lib/steps.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroAppCommon.js">
+      <publishTime>02/12/2019 10:48:00</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroCommon.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroLayout.js">
+      <publishTime>02/12/2019 10:48:11</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroModalLoad.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroModalTemplate.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroOptionsDefault.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroRedirect.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroSession.js">
+      <publishTime>02/12/2019 10:48:19</publishTime>
+    </File>
+    <File Include="Content/Scripts/ClaroValidate.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/ContactoGrilla.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/plupload.full.min.js">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Content/Scripts/Redirect/Redirect.js">
+      <publishTime>02/12/2019 10:47:47</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/02/2018 10:18:51</publishTime>
+    </File>
+    <File Include="DataIFI/Data.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConfig.config">
+      <publishTime>07/04/2018 00:18:58</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConfigMsg.config">
+      <publishTime>07/04/2018 00:18:23</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConfigurationIPConstance.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConfigurationIPConstance.xslt">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConstance.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/HFCConstance.xslt">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/HFCDatos.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/IFIConfig.config">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="DataIFI/IFIConfigMsg.config">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="DataIFI/IFIData.xml">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="DataIFI/INTConfigMsg.config">
+      <publishTime>05/03/2018 17:00:20</publishTime>
+    </File>
+    <File Include="DataIFI/LTEConstance.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/LTEConstance.xslt">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SIACDatosPre.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SIACPOConfig.config">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SIACPODatosPos.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SiactUnico.config">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SiacutData.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="DataIFI/SiacutDataPrepaid.xml">
+      <publishTime>06/11/2018 13:07:48</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/11/2019 12:10:38</publishTime>
+    </File>
+    <File Include="Images/btn_Buscar.gif">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/check.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/cross.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/cross_hover.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/delete.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/details_close.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/details_open.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/favicon.ico">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/hm_tim.gif">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/IFI.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/img_claro.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/img_marca.png">
+      <publishTime>02/11/2019 12:10:43</publishTime>
+    </File>
+    <File Include="Images/loading.gif">
+      <publishTime>02/11/2019 12:10:43</publishTime>
+    </File>
+    <File Include="Images/loading2.gif">
+      <publishTime>02/11/2019 12:10:43</publishTime>
+    </File>
+    <File Include="Images/logo-claro.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/sort_asc.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/sort_asc_disabled.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/sort_both.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Images/sort_desc.png">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/11/2019 12:10:38</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.BuildingsResponsePvuCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.BusinessInteraction2ResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.BusinessRulesResponse.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CacDacTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CenterPopulatPvuResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CheckingUserResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.CivilStatusResponsePrepaid.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ConsultIGVResponse.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ContractByPhoneNumberResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DatTempInteractionResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DepartmentsPvuResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DistrictsPvuResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.DynamicCaseTemplateDataResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EmployeeResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EstCivTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.EvaluateAmountResponse.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.FileDefaultImpersonationResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GenerateConstancyResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GeneratePDFDataResponseHfc.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetCaseLaResponse.datasource">
+      <publishTime>02/18/2019 15:20:17</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetClientResponseComon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetEmployerDateResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.GetInteractionClientResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertDetailResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertEvidenceResponse.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertGeneralResponse.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertInteractHFCResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertInteractResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertIntResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertLogTrxResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertTemplateGeneralResponse.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsertTemplateInteractionResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InsTemplateInteractionResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InteractionSubClasDetailResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.InterioresTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.IsOkGetKeyResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:17</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.LastInvoiceDataResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ListClientDocumentTypeResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ListItem.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ListItemResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ManzanasTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.MotiveSotResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.MzBloEdiTypeResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NacTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NoteInteractionResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberEAIResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberGWPResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.NumberSMSResponse.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.OccupationClientResponsePrepaid.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.PagOptionXuserNVResponse.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.PagOptionXuserResponse.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ParameterDataResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ParameterTerminalTPIResponse.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.PenaltyChangePlanResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ProgramTaskResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ProvincesPvuResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.QueuesCaseResponse.datasource">
+      <publishTime>02/18/2019 15:20:17</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ReadOptionsByUserResponse.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ReasonRegistryResponsePrepaid.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ReceiptsResponse.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SaveAuditMResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SaveAuditResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:12</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SendEmailResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:14</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SendEmailSBResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.SequenceCodeResponse.datasource">
+      <publishTime>02/18/2019 15:20:17</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.StateTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TipDptIntResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TransactionTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TypeTransactionResponse.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.TypificationResponse.datasource">
+      <publishTime>02/18/2019 15:20:13</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UbigeosTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UpdateNotesResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UpdateXInter29ResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UpdatexInter30Response.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UploadDocumentOnBaseResponse.datasource">
+      <publishTime>02/18/2019 15:20:17</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UrbsTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.UserResponse.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ValidateCommunicationResponse.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ValidateMailResponse.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ValueXmlResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.VerifyUserResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ViasTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.WorkSubTypeResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:46</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.WorkTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:15</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ZonesTypeResponseCommon.datasource">
+      <publishTime>02/18/2019 15:20:16</publishTime>
+    </File>
+    <File Include="Service References/CommonIFIService/Claro.SIACU.Web.WebApplication.IFI.CommonIFIService.ZoneTypeCobsResponseCommon.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.AddDayWorkResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CaseInsertResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CaseTemplate.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ConsultationServiceByContractResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.CustomerResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.DeleteProgramTaskResponse.datasource">
+      <publishTime>07/02/2018 10:18:48</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.DeleteProgTaskHfcResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.DeleteScheduledTransactionResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ETAFlowResponseHfc.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ExecuteSuspensionResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.GenerateOCCResponse.datasource">
+      <publishTime>07/02/2018 10:18:48</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertDecoAdditionalResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertDetailServiceInteractionResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertETASelectionResponse.datasource">
+      <publishTime>07/02/2018 10:18:48</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertInteractionBusinessResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertLoyaltyResponse.datasource">
+      <publishTime>07/02/2018 10:18:47</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InsertTransactionResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.Interaction.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.InteractionServiceResponseHfc.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.JobTypesResponseHfc.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ListScheduledTransactionsResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.MotiveSOTByTypeJobResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.OrderSubTypesResponseHfc.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.OrderTypesResponseHfc.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PCRFConnectorResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.PostSuspensionLteResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ReconeServiceResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ReconexionLteResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.RetentionCancelServicesResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.SaveOCCResponse.datasource">
+      <publishTime>07/02/2018 10:18:48</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ServiceDTHResponse.datasource">
+      <publishTime>07/02/2018 10:18:48</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ServiceResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.TransactionScheduledResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.UpdateInter29Response.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.UpdateProgTaskLteResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/FixedIFIService/Claro.SIACU.Web.WebApplication.IFI.FixedIFIService.ValidateCustomerIdResponse.datasource">
+      <publishTime>02/12/2019 11:20:51</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.AmountIncomingCallResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.BillingCycleResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ClientDataAddResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.CurrentLockResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DataCustomerResponsePostPaid1.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DataLineResponsePostPaid.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DeleteLockEquipmentResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:01</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.DeleteLockLineResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetActivateServiceMailIFIResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetLinesTelephoneIFIResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.GetStatedebtIFIResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ImeisResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertLockEquipmentPerResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertLockLinePerResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.InsertTerminalLockUnlockEquipmentResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.LockUnlockEquipmentResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorClarifyResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorClientDataAddResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorFijoClarifyResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangeMinorResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveChangePostalAddressResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.SaveDuplicateReceiptsResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.ServiceLockResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.TestSecurityIFIResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.TypeTransactionBRMSResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UnlockServiceResponse.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockEquipmentCodeResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockEquipmentResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockLineCodeResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/PostIFIService/Claro.SIACU.Web.WebApplication.IFI.PostIFIService.UpdateUnlockLineRollbackResponseIFI.datasource">
+      <publishTime>02/12/2019 11:31:00</publishTime>
+    </File>
+    <File Include="Service References/WirelessIFIService/Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.ApadeceResponse.datasource">
+      <publishTime>02/12/2019 11:21:43</publishTime>
+    </File>
+    <File Include="Service References/WirelessIFIService/Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.OCCResponse.datasource">
+      <publishTime>02/12/2019 11:21:43</publishTime>
+    </File>
+    <File Include="Service References/WirelessIFIService/Claro.SIACU.Web.WebApplication.IFI.WirelessIFIService.TransactionScheduledResponse.datasource">
+      <publishTime>02/12/2019 11:21:43</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveAccountPartial.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/11/2019 12:10:45</publishTime>
+    </File>
+    <File Include="Views/Redirect/BritgeRedirect.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/11/2019 12:10:42</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/02/2018 10:18:45</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/18/2019 22:52:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

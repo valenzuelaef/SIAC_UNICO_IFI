@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WirelessTransacService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless.GetTransactionScheduled" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd3" namespace="Claro" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd4" namespace="AuditService" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless.GenerateOCC" />
+      <xsd:import schemaLocation="http://localhost:53727/WirelessIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless.GetApadece" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWirelessIFIService_GetListScheduledTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListScheduledTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GetListScheduledTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListScheduledTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GetDesactivatedContract_INT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContract_INT" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GetDesactivatedContract_INT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDesactivatedContract_INTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GenerateOCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOCC" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GenerateOCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GetApadece_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApadece" />
+  </wsdl:message>
+  <wsdl:message name="IWirelessIFIService_GetApadece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApadeceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWirelessIFIService">
+    <wsdl:operation name="GetListScheduledTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWirelessIFIService/GetListScheduledTransactions" message="tns:IWirelessIFIService_GetListScheduledTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWirelessIFIService/GetListScheduledTransactionsResponse" message="tns:IWirelessIFIService_GetListScheduledTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract_INT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWirelessIFIService/GetDesactivatedContract_INT" message="tns:IWirelessIFIService_GetDesactivatedContract_INT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWirelessIFIService/GetDesactivatedContract_INTResponse" message="tns:IWirelessIFIService_GetDesactivatedContract_INT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWirelessIFIService/GenerateOCC" message="tns:IWirelessIFIService_GenerateOCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWirelessIFIService/GenerateOCCResponse" message="tns:IWirelessIFIService_GenerateOCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApadece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWirelessIFIService/GetApadece" message="tns:IWirelessIFIService_GetApadece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWirelessIFIService/GetApadeceResponse" message="tns:IWirelessIFIService_GetApadece_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWirelessIFIService" type="tns:IWirelessIFIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListScheduledTransactions">
+      <soap:operation soapAction="http://tempuri.org/IWirelessIFIService/GetListScheduledTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesactivatedContract_INT">
+      <soap:operation soapAction="http://tempuri.org/IWirelessIFIService/GetDesactivatedContract_INT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOCC">
+      <soap:operation soapAction="http://tempuri.org/IWirelessIFIService/GenerateOCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApadece">
+      <soap:operation soapAction="http://tempuri.org/IWirelessIFIService/GetApadece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WirelessTransacService">
+    <wsdl:port name="BasicHttpBinding_IWirelessIFIService" binding="tns:BasicHttpBinding_IWirelessIFIService">
+      <soap:address location="http://localhost:53727/WirelessIFIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,5 @@
+D:\RTC\sisact_postventa_FNZ\SIAC_UNICO_IFI\NET\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll.config
+D:\RTC\sisact_postventa_FNZ\SIAC_UNICO_IFI\NET\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll
+D:\RTC\sisact_postventa_FNZ\SIAC_UNICO_IFI\NET\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.pdb
+D:\RTC\sisact_postventa_FNZ\SIAC_UNICO_IFI\NET\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.dll
+D:\RTC\sisact_postventa_FNZ\SIAC_UNICO_IFI\NET\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.pdb

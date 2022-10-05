@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataLine" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetAmountIncomingCall" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTypeTransactionBRMS" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinor" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClarify" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLinesTelephone" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataCustomer" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDuplicateReceipts" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTestSecurity" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangePostalAddress" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetStatedebt" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorFijoClarify" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClientDataAdd" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetClientDataAdd" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetBillingCycle" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.ServiceLock" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.CurrentLock" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockLinePer" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockEquipmentPer" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetImeis" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UnlockService" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineCode" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipmentCode" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockLine" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineRollback" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipment" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockEquipment" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetPlans" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByPlan" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByCurrentPlan" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetEquipmentByCurrentPlan" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeServiceAddress" />
+  <xs:import schemaLocation="http://localhost:53727/PostIFIService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" />
+  <xs:element name="GetDataLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataLine" minOccurs="0" name="objRequest" nillable="true" type="q1:DataLineRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataLine" minOccurs="0" name="GetDataLineResult" nillable="true" type="q2:DataLineResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountIncomingCall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetAmountIncomingCall" minOccurs="0" name="objRequest" nillable="true" type="q3:AmountIncomingCallRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountIncomingCallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetAmountIncomingCall" minOccurs="0" name="GetAmountIncomingCallResult" nillable="true" type="q4:AmountIncomingCallResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransactionBRMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTypeTransactionBRMS" minOccurs="0" name="objRequest" nillable="true" type="q5:TypeTransactionBRMSRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransactionBRMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTypeTransactionBRMS" minOccurs="0" name="GetTypeTransactionBRMSResult" nillable="true" type="q6:TypeTransactionBRMSResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinor" minOccurs="0" name="objRequest" nillable="true" type="q7:SaveChangeMinorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinor" minOccurs="0" name="SaveChangeMinorResult" nillable="true" type="q8:SaveChangeMinorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorClarify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClarify" minOccurs="0" name="objRequest" nillable="true" type="q9:SaveChangeMinorClarifyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorClarifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClarify" minOccurs="0" name="SaveChangeMinorClarifyResult" nillable="true" type="q10:SaveChangeMinorClarifyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivateServiceMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" minOccurs="0" name="objRequest" nillable="true" type="q11:GetActivateServiceMailIFIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivateServiceMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetActivateServiceMail" minOccurs="0" name="GetActivateServiceMailResult" nillable="true" type="q12:GetActivateServiceMailIFIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLinesTelephone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLinesTelephone" minOccurs="0" name="objRequest" nillable="true" type="q13:GetLinesTelephoneIFIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLinesTelephoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLinesTelephone" minOccurs="0" name="GetLinesTelephoneResult" nillable="true" type="q14:GetLinesTelephoneIFIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataCustomer" minOccurs="0" name="objRequest" nillable="true" type="q15:DataCustomerRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataCustomer" minOccurs="0" name="GetDataCustomerResult" nillable="true" type="q16:DataCustomerResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDuplicateReceipts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDuplicateReceipts" minOccurs="0" name="objRequest" nillable="true" type="q17:SaveDuplicateReceiptsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDuplicateReceiptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDuplicateReceipts" minOccurs="0" name="SaveDuplicateReceiptsResult" nillable="true" type="q18:SaveDuplicateReceiptsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestSecurity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTestSecurity" minOccurs="0" name="objRequest" nillable="true" type="q19:TestSecurityIFIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestSecurityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetTestSecurity" minOccurs="0" name="GetTestSecurityResult" nillable="true" type="q20:TestSecurityIFIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaveChangePostalAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangePostalAddress" minOccurs="0" name="objSaveChangePostalAddressRequest" nillable="true" type="q21:SaveChangePostalAddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaveChangePostalAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangePostalAddress" minOccurs="0" name="GetSaveChangePostalAddressResult" nillable="true" type="q22:SaveChangePostalAddressResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatedebt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetStatedebt" minOccurs="0" name="objRequest" nillable="true" type="q23:GetStatedebtIFIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatedebtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetStatedebt" minOccurs="0" name="GetStatedebtResult" nillable="true" type="q24:GetStatedebtIFIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorFijoClarify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorFijoClarify" minOccurs="0" name="objRequest" nillable="true" type="q25:SaveChangeMinorFijoClarifyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorFijoClarifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorFijoClarify" minOccurs="0" name="SaveChangeMinorFijoClarifyResult" nillable="true" type="q26:SaveChangeMinorFijoClarifyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorClientDataAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClientDataAdd" minOccurs="0" name="objRequest" nillable="true" type="q27:SaveChangeMinorClientDataAddRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangeMinorClientDataAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeMinorClientDataAdd" minOccurs="0" name="SaveChangeMinorClientDataAddResult" nillable="true" type="q28:SaveChangeMinorClientDataAddResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientDataAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetClientDataAdd" minOccurs="0" name="objRequest" nillable="true" type="q29:ClientDataAddRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientDataAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetClientDataAdd" minOccurs="0" name="GetClientDataAddResult" nillable="true" type="q30:ClientDataAddResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingCycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetBillingCycle" minOccurs="0" name="objRequest" nillable="true" type="q31:BillingCycleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingCycleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetBillingCycle" minOccurs="0" name="GetBillingCycleResult" nillable="true" type="q32:BillingCycleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.ServiceLock" minOccurs="0" name="objRequest" nillable="true" type="q33:ServiceLockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.ServiceLock" minOccurs="0" name="GetServiceLockResult" nillable="true" type="q34:ServiceLockResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurrentBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.CurrentLock" minOccurs="0" name="objRequest" nillable="true" type="q35:CurrentLockRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurrentBlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.CurrentLock" minOccurs="0" name="CurrentBlockResult" nillable="true" type="q36:CurrentLockResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" minOccurs="0" name="objRequest" nillable="true" type="q37:LockUnlockEquipmentRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" minOccurs="0" name="GetEquipmentLockResult" nillable="true" type="q38:LockUnlockEquipmentResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentUnLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" minOccurs="0" name="objRequest" nillable="true" type="q39:LockUnlockEquipmentRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentUnLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetLockUnlockEquipment" minOccurs="0" name="GetEquipmentUnLockResult" nillable="true" type="q40:LockUnlockEquipmentResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLockLinePer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockLinePer" minOccurs="0" name="objRequest" nillable="true" type="q41:InsertLockLinePerRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLockLinePerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockLinePer" minOccurs="0" name="InsertLockLinePerResult" nillable="true" type="q42:InsertLockLinePerResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLockEquipmentPer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockEquipmentPer" minOccurs="0" name="objRequest" nillable="true" type="q43:InsertLockEquipmentPerRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLockEquipmentPerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertLockEquipmentPer" minOccurs="0" name="InsertLockEquipmentPerResult" nillable="true" type="q44:InsertLockEquipmentPerResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImeis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetImeis" minOccurs="0" name="objRequest" nillable="true" type="q45:ImeisRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImeisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetImeis" minOccurs="0" name="GetImeisResult" nillable="true" type="q46:ImeisResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnlockService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UnlockService" minOccurs="0" name="objRequest" nillable="true" type="q47:UnlockServiceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnlockServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UnlockService" minOccurs="0" name="GetUnlockServiceResult" nillable="true" type="q48:UnlockServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockLineCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineCode" minOccurs="0" name="objRequest" nillable="true" type="q49:UpdateUnlockLineCodeRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockLineCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineCode" minOccurs="0" name="UpdateUnlockLineCodeResult" nillable="true" type="q50:UpdateUnlockLineCodeResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockEquipmentCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipmentCode" minOccurs="0" name="objRequest" nillable="true" type="q51:UpdateUnlockEquipmentCodeRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockEquipmentCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipmentCode" minOccurs="0" name="UpdateUnlockEquipmentCodeResult" nillable="true" type="q52:UpdateUnlockEquipmentCodeResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLockLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockLine" minOccurs="0" name="objRequest" nillable="true" type="q53:DeleteLockLineRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLockLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockLine" minOccurs="0" name="DeleteLockLineResult" nillable="true" type="q54:DeleteLockLineResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockLineRollback">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineRollback" minOccurs="0" name="objRequest" nillable="true" type="q55:UpdateUnlockLineRollbackRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockLineRollbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockLineRollback" minOccurs="0" name="UpdateUnlockLineRollbackResult" nillable="true" type="q56:UpdateUnlockLineRollbackResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTerminalLockUnlockEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" minOccurs="0" name="objRequest" nillable="true" type="q57:InsertTerminalLockUnlockEquipmentRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTerminalLockUnlockEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.InsertTerminalLockUnlockEquipment" minOccurs="0" name="InsertTerminalLockUnlockEquipmentResult" nillable="true" type="q58:InsertTerminalLockUnlockEquipmentResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipment" minOccurs="0" name="objRequest" nillable="true" type="q59:UpdateUnlockEquipmentRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnlockEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.UpdateUnlockEquipment" minOccurs="0" name="UpdateUnlockEquipmentResult" nillable="true" type="q60:UpdateUnlockEquipmentResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLockEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockEquipment" minOccurs="0" name="objRequest" nillable="true" type="q61:DeleteLockEquipmentRequestIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLockEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.DeleteLockEquipment" minOccurs="0" name="DeleteLockEquipmentResult" nillable="true" type="q62:DeleteLockEquipmentResponseIFI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetPlans" minOccurs="0" name="objRequest" nillable="true" type="q63:PlansRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlansResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetPlans" minOccurs="0" name="GetPlansResult" nillable="true" type="q64:PlansResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByPlan" minOccurs="0" name="objRequest" nillable="true" type="q65:PlanServiceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByPlan" minOccurs="0" name="GetServicesByPlanResult" nillable="true" type="q66:PlanServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByCurrentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByCurrentPlan" minOccurs="0" name="objRequest" nillable="true" type="q67:ServicesByCurrentPlanRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesByCurrentPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetServicesByCurrentPlan" minOccurs="0" name="GetServicesByCurrentPlanResult" nillable="true" type="q68:ServicesByCurrentPlanResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentByCurrentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetEquipmentByCurrentPlan" minOccurs="0" name="objRequest" nillable="true" type="q69:EquipmentByCurrentPlanRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentByCurrentPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetEquipmentByCurrentPlan" minOccurs="0" name="GetEquipmentByCurrentPlanResult" nillable="true" type="q70:EquipmentByCurrentPlanResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostPlanMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" minOccurs="0" name="objRequest" nillable="true" type="q71:PlanMigrationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostPlanMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.PostPlanMigration" minOccurs="0" name="PostPlanMigrationResult" nillable="true" type="q72:PlanMigrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerParametrosPorTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaccion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerParametrosPorTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed" minOccurs="0" name="obtenerParametrosPorTipoResult" nillable="true" type="q73:ArrayOfGenericItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeServiceAddress" minOccurs="0" name="oregistrarDireccionRequest" nillable="true" type="q74:registrarDireccionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarDireccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetSaveChangeServiceAddress" minOccurs="0" name="registrarDireccionResult" nillable="true" type="q75:registrarDireccionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarCoberturaDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" minOccurs="0" name="ovalidarCoberturaMessageRequest" nillable="true" type="q76:validarCoberturaMessageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarCoberturaDireccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetCoberturaIfi" minOccurs="0" name="consultarCoberturaDireccionResult" nillable="true" type="q77:validarCoberturaMessageResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

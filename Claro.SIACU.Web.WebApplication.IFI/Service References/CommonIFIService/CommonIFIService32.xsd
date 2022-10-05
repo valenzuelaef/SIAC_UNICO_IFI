@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetTransactionType" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetTransactionType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" />
+  <xs:complexType name="TransactionTypeRequestCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransactionTypeRequestCommon" nillable="true" type="tns:TransactionTypeRequestCommon" />
+  <xs:complexType name="TransactionTypeResponseCommon">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common" minOccurs="0" name="TransactionTypes" nillable="true" type="q2:ArrayOfListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionTypeResponseCommon" nillable="true" type="tns:TransactionTypeResponseCommon" />
+</xs:schema>

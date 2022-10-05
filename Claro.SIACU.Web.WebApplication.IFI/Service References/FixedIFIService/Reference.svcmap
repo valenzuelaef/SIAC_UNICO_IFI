@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ad0d9d6-84e5-4ee0-8c42-f15428ffd9a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53727/FixedIFIService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FixedIFIService.xsd" MetadataType="Schema" ID="87612b01-9a35-42da-a675-6b316fdbffe3" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd19" />
+    <MetadataFile FileName="FixedIFIService1.xsd" MetadataType="Schema" ID="4393643d-9b9c-4228-ad03-2c65c3bfc1b4" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FixedIFIService2.xsd" MetadataType="Schema" ID="d5fd3c2e-54d5-4edb-891e-f2c74f2e8edb" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FixedIFIService3.xsd" MetadataType="Schema" ID="84e6216d-3f42-4fb7-9238-850be8903f24" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FixedIFIService4.xsd" MetadataType="Schema" ID="56082c51-4f78-4c2a-ba3f-450b1c425527" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd20" />
+    <MetadataFile FileName="FixedIFIService5.xsd" MetadataType="Schema" ID="c501329f-b9f2-489a-ac7d-5e1c343e94c7" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd13" />
+    <MetadataFile FileName="FixedIFIService6.xsd" MetadataType="Schema" ID="10b9d63e-41d6-471f-bbbf-0eea227a5a3f" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd6" />
+    <MetadataFile FileName="FixedIFIService7.xsd" MetadataType="Schema" ID="d6067583-d75f-4624-b215-fef382219108" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd25" />
+    <MetadataFile FileName="FixedIFIService8.xsd" MetadataType="Schema" ID="0d962eb4-ee4c-432b-9a9a-a10b91bf87a3" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd14" />
+    <MetadataFile FileName="FixedIFIService1712.xsd" MetadataType="Schema" ID="17eee819-df83-4f7a-b6c2-3978384c7c7c" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd35" />
+    <MetadataFile FileName="FixedIFIService9.xsd" MetadataType="Schema" ID="2c6aef20-18cf-4a8f-b8b1-9c35f33ba863" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd29" />
+    <MetadataFile FileName="FixedIFIService11.xsd" MetadataType="Schema" ID="795b89ee-695d-4d4c-930a-bade2784ecdf" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd18" />
+    <MetadataFile FileName="FixedIFIService12.xsd" MetadataType="Schema" ID="8243d3cd-5d51-4b8c-9de6-a1e60f7a80a5" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd15" />
+    <MetadataFile FileName="FixedIFIService13.xsd" MetadataType="Schema" ID="ac0e3aff-5821-4385-8e48-4930a4cfa7d1" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd32" />
+    <MetadataFile FileName="FixedIFIService14.xsd" MetadataType="Schema" ID="f8d8bde3-96a4-4dfb-894c-65729a36c28a" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FixedIFIService15.xsd" MetadataType="Schema" ID="159ad3a2-96e6-44c9-968f-f0d16ad8daa4" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd23" />
+    <MetadataFile FileName="FixedIFIService16.xsd" MetadataType="Schema" ID="520267fb-8e83-443d-b74e-00f1d994a3b6" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd12" />
+    <MetadataFile FileName="FixedIFIService1713.xsd" MetadataType="Schema" ID="c69323be-152b-4ae3-912b-5204498bd027" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd33" />
+    <MetadataFile FileName="FixedIFIService18.xsd" MetadataType="Schema" ID="d12c4783-5785-454a-93cb-8dbe0da1a8d7" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd24" />
+    <MetadataFile FileName="FixedIFIService19.xsd" MetadataType="Schema" ID="ed8495d4-58c5-4a22-90f3-62dd4fe7fb6c" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd17" />
+    <MetadataFile FileName="FixedIFIService1714.xsd" MetadataType="Schema" ID="6a86f056-ac1e-46cf-8abc-1f1168152a34" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd34" />
+    <MetadataFile FileName="FixedIFIService21.xsd" MetadataType="Schema" ID="36d334f9-ab37-4a4b-baf5-447f88fb437c" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd10" />
+    <MetadataFile FileName="FixedIFIService1715.xsd" MetadataType="Schema" ID="1531a679-2a1c-41fa-9dcb-0132835ed3d9" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd38" />
+    <MetadataFile FileName="FixedIFIService22.xsd" MetadataType="Schema" ID="fe6f8162-67ba-4c49-8363-32a11e0d7310" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd22" />
+    <MetadataFile FileName="FixedIFIService23.xsd" MetadataType="Schema" ID="e461e129-a14e-43e4-bec2-06b9a41d6960" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd27" />
+    <MetadataFile FileName="FixedIFIService24.xsd" MetadataType="Schema" ID="2caecd9a-ef19-47a1-8186-25bbff1aba3c" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd16" />
+    <MetadataFile FileName="FixedIFIService1716.xsd" MetadataType="Schema" ID="050447bb-82b8-4d1e-a021-8ee67bcdfe7f" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd37" />
+    <MetadataFile FileName="FixedIFIService25.xsd" MetadataType="Schema" ID="01ba7bb4-e273-469d-98df-735303f71f8f" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd26" />
+    <MetadataFile FileName="FixedIFIService26.xsd" MetadataType="Schema" ID="7510fd2c-26da-4195-98f0-1157d88da455" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd11" />
+    <MetadataFile FileName="FixedIFIService91.xsd" MetadataType="Schema" ID="369bfa92-59ae-42fc-8e7a-b9fa65ff9255" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd30" />
+    <MetadataFile FileName="FixedIFIService28.xsd" MetadataType="Schema" ID="0217cb20-0c5e-4a5c-a0ab-24e45a749482" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd8" />
+    <MetadataFile FileName="FixedIFIService29.xsd" MetadataType="Schema" ID="ac0ab9d8-3f63-45df-9bfe-5d0ed58210e7" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd28" />
+    <MetadataFile FileName="FixedIFIService30.xsd" MetadataType="Schema" ID="961ab474-1ca2-4eb7-b0fd-7c7788d93453" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd9" />
+    <MetadataFile FileName="FixedIFIService1717.xsd" MetadataType="Schema" ID="eeb742ff-fdd3-4dbb-a8d5-1863e812e84d" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd36" />
+    <MetadataFile FileName="FixedTransacService.wsdl" MetadataType="Wsdl" ID="9e47fb8f-c95e-4a3c-9bd1-5f23d140267f" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?wsdl" />
+    <MetadataFile FileName="FixedIFIService32.xsd" MetadataType="Schema" ID="fa449151-d704-4288-a9f9-8445b29c17d1" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd7" />
+    <MetadataFile FileName="FixedIFIService33.xsd" MetadataType="Schema" ID="5535affb-6c4a-43a9-b0ff-bb9a09013a47" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd21" />
+    <MetadataFile FileName="FixedIFIService34.xsd" MetadataType="Schema" ID="73c416fe-91fb-49f2-96c4-d8c24a866e88" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="FixedIFIService10.xsd" MetadataType="Schema" ID="8cab7615-84f1-4f3f-b6c3-2590327fc9a3" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd31" />
+    <MetadataFile FileName="FixedIFIService36.xsd" MetadataType="Schema" ID="76d96939-cedc-46a8-a86b-c113ab6beb62" SourceId="1" SourceUrl="http://localhost:53727/FixedIFIService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

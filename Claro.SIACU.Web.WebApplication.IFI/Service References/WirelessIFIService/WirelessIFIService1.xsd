@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Wireless" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTransactionScheduled">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionScheduled" nillable="true" type="tns:TransactionScheduled" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransactionScheduled" nillable="true" type="tns:ArrayOfTransactionScheduled" />
+  <xs:complexType name="TransactionScheduled">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESC_ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESC_SERVI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_CODIGO_INTERACCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_CO_SER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_DES_CO_SER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_ESBATCH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_NROCUENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_PUNTOVENTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_TIPO_REG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVC_TIPO_SERV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVD_FECHAPROG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVD_FECHA_EJEC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVD_FECHA_REG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVI_COD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_COD_ERROR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_EMAIL_USUARIO_APP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_ID_BATCH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_ID_EAI_SW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_MEN_ERROR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_USUARIO_APLICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_USUARIO_SISTEMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVV_XMLENTRADA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionScheduled" nillable="true" type="tns:TransactionScheduled" />
+</xs:schema>

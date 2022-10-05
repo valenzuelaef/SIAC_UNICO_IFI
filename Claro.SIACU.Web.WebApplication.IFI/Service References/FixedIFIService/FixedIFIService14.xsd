@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Fixed.GetDeleteScheduledTransaction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/FixedIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="DeleteScheduledTransactionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strApplicationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strApplicationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strServiCoId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strServiceState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strUserApp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteScheduledTransactionRequest" nillable="true" type="tns:DeleteScheduledTransactionRequest" />
+  <xs:complexType name="DeleteScheduledTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorrectProcess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteScheduledTransactionResponse" nillable="true" type="tns:DeleteScheduledTransactionResponse" />
+</xs:schema>

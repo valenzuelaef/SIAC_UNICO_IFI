@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Postpaid.GetDataPower" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="HeaderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consumer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dispositivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msgType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timestamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wsIp" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeaderRequest" nillable="true" type="tns:HeaderRequest" />
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detail" nillable="true" type="tns:FaultDetail" />
+      <xs:element minOccurs="0" name="FaultActor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fault" nillable="true" type="tns:Fault" />
+  <xs:complexType name="FaultDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IntegrationError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultDetail" nillable="true" type="tns:FaultDetail" />
+  <xs:complexType name="HeaderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Consumer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:Status" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarArg" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeaderResponse" nillable="true" type="tns:HeaderResponse" />
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsgId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+</xs:schema>

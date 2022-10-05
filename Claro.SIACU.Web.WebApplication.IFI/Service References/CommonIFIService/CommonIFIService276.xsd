@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetPaquetesAdquiridosHistorico" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.IFI.Common.GetPaquetesAdquiridosHistorico" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53727/CommonIFIService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="PaquetesAdquiridosHistoricoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strCodeUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaquetesAdquiridosHistoricoRequest" nillable="true" type="tns:PaquetesAdquiridosHistoricoRequest" />
+  <xs:complexType name="PaquetesAdquiridosHistoricoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listaFact" nillable="true" type="tns:ArrayOfPaquetesAdqueridos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaquetesAdquiridosHistoricoResponse" nillable="true" type="tns:PaquetesAdquiridosHistoricoResponse" />
+  <xs:complexType name="ArrayOfPaquetesAdqueridos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaquetesAdqueridos" nillable="true" type="tns:PaquetesAdqueridos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaquetesAdqueridos" nillable="true" type="tns:ArrayOfPaquetesAdqueridos" />
+  <xs:complexType name="PaquetesAdqueridos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="canal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cargoFijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cicloFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaAct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCPR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="motivoDeg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="planBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoProducto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaquetesAdqueridos" nillable="true" type="tns:PaquetesAdqueridos" />
+</xs:schema>
